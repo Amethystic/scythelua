@@ -29,7 +29,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      sound:Play() -- Play the sound
 
 local UI = Material.Load({
-     Title = "ScytheStation :: Interiumized",
+     Title = "ScytheStation :: Interiumized :: V1",
      Style = 1,
      SizeX = 700,
      SizeY = 400,
@@ -37,18 +37,18 @@ local UI = Material.Load({
 })
 
 -- // Main \\ --
-local main = UI.New({
-    Title = "Crazyness"
+local Exploits = UI.New({
+    Title = "Exploits"
 })
 
-main.TextField({
+Exploits.TextField({
     Text = "",
     Callback = function(v)
         getgenv().Text = v
     end
 })
 
-main.Toggle({
+Exploits.Toggle({
     Text = "Spam Chat",
     Enabled = false,
     Callback = function(v)
@@ -71,7 +71,7 @@ main.Toggle({
     end
 })
 
-main.Button({
+Exploits.Button({
     Text = "Earrape Audio (Admin Only?)",
         Callback = function(sound)
         getgenv().Send = sound
