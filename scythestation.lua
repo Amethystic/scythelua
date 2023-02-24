@@ -7,12 +7,15 @@ local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinl
      sound.Volume = 1
      sound:Play() -- Play the sound
 
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Now starting up...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Made by Scyt#1337 - NOW STARTING UP...";
+        Text = "Made by Scyt#1337 - Now starting up...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 5;
         wait(5)
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION V1.2";
         Text = "Loading interface...";
@@ -27,6 +30,8 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      sound.Volume = 1
      wait(1)
      sound:Play() -- Play the sound
+     
+     game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 local UI = Material.Load({
      Title = "ScytheStation :: Interiumized :: V1.2",
@@ -73,92 +78,7 @@ Exploits.Toggle({
     end
 })
 
-Exploits.Button({
-    Text = "Earrape Audio (PERM)",
-        Callback = function(sound)
-        getgenv().Send = sound
-        
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play()
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Playing Loud ass noise.. forever...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(1)
-        
-        local sound = Instance.new("Sound", Workspace)
-        sound.Parent = game.Workspace
-        sound.SoundId = "rbxassetid://3900067524"
-        sound.Volume = 10
-        sound.Looped = true
-        sound:Play()
-        wait(3)
-
-    sound2:Destroy()
-    end
-})
-
--- // User \\ --
-local User = UI.New({
-    Title = "User"
-})
-
-User.Button({
-    Text = "GodMode",
-    Callback = function(d)
-        
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play()
-     
-    getgenv().Send = d
-            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').MaxHealth = 9999999999
-            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = 9999999999
-            
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Godmode'd";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        
-    sound2:Destroy()
-    end
-})
-
-User.Button({
-    Text = "Refresh",
-        Callback = function(d)
-        getgenv().Send = d
-        local player = game.Players.LocalPlayer.Character
-        game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = inf
-        player.Humanoid:Remove()
-        Instance.new('Humanoid', player)
-        
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Refreshing...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        
-    sound2:Destroy()
-    end
-})
-
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Exploits loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // Movement \\ --
 local Movement = UI.New({
     Title = "Movement"
@@ -191,6 +111,28 @@ end)
 	end
 })
 
+
+Movement.Button({
+    Text = "Click TP Item",
+    Callback = function(Ge)
+    loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
+    
+    local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Spawned Click TP Item";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        
+    sound2:Destroy()
+	end
+})
 
 Movement.Button({
     Text = "Unlock Fly",
@@ -267,8 +209,8 @@ Movement.Button({
         Text = "Im a rage user";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        
-                local sound2 = Instance.new("Sound", Workspace)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am a rage user", "All")
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -277,7 +219,6 @@ Movement.Button({
     while wait() do
     Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
     end
-    
     sound2:Destroy()
     end
 })
@@ -305,6 +246,8 @@ Movement.Button({
     end
 })
 
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
 -- // Ironic \\ -- 
 local Lovense = UI.New({
     Title = "Lovense"
@@ -320,7 +263,7 @@ Lovense.Button({
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
@@ -336,13 +279,12 @@ Lovense.Button({
         Callback = function(g)
         getgenv().Send = g
         
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
@@ -358,18 +300,18 @@ Lovense.Button({
         Callback = function(g)
         getgenv().Send = g
         
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
+    
         wait(3)
         Game:Shutdown()
     end
@@ -380,19 +322,18 @@ Lovense.Button({
         Callback = function(g)
         getgenv().Send = g
         
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+                wait(3)
         Game:Shutdown()
     end
 })
@@ -402,19 +343,18 @@ Lovense.Button({
         Callback = function(g)
         getgenv().Send = g
         
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+                wait(3)
         Game:Shutdown()
     end
 })
@@ -424,59 +364,27 @@ Lovense.Button({
         Callback = function(g)
         getgenv().Send = g
         
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://896501604"
         sound2.Volume = 10
         sound2:Play()
-        
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+                wait(3)
         Game:Shutdown()
     end
 })
 
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
 -- // ERP \\ --
 local ERP = UI.New({
     Title = "ERP"
-})
-
-ERP.Button({
-    Text = "Bend Over (R15 Only)",
-    Callback = function(BendOver)
-    getgenv().Send = BendOver
-    
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Oh daddy~";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play()
-    
-    local b={} local c={} local _={ID=0;Type="Animation";Properties={Name="Sleep";AnimationId="http://www.roblox.com/asset/?id=4686925579"};Children={{ID=1;Type="NumberValue";Properties={Name="ThumbnailBundleId";Value=515};Children={}};{ID=2;Type="NumberValue";Properties={Name="ThumbnailKeyframe";Value=13};Children={}};{ID=3;Type="NumberValue";Properties={Name="ThumbnailZoom";Value=1.1576576576577};Children={}};{ID=4;Type="NumberValue";Properties={Name="ThumbnailHorizontalOffset";Value=-0.0025025025025025};Children={}};{ID=5;Type="NumberValue";Properties={Name="ThumbnailVerticalOffset";Value=-0.0025025025025025};Children={}};{ID=6;Type="NumberValue";Properties={Name="ThumbnailCharacterRotation"};Children={}}}} local function a(d,_)local e=Instance.new(d.Type) if(d.ID)then local _=c[d.ID] if(_)then _[1][_[2]]=e c[d.ID]=nil else b[d.ID]=e end end for _,d in pairs(d.Properties)do if(type(d)=="string")then local a=tonumber(d:match("^_R:(%w+)_$")) if(a)then if(b[a])then d=b[a]else c[a]={e,_} d=nil end end end e[_]=d end for _,_ in pairs(d.Children)do a(_,e)end e.Parent=_ return e end
-    create=function()return a(_,nil)end
-
-    local animation = create();
-    local character = game:GetService("Players").LocalPlayer.Character;
-    local animate = character:WaitForChild("Animate");
-    local bindable = animate:WaitForChild("PlayEmote");
-
-    bindable:Invoke(animation);
-    wait(.3)
-    animate:Destroy();
-
-    sound2:Destroy()
-    end
 })
 
 ERP.Button({
@@ -495,6 +403,7 @@ ERP.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/r3kLtDtw'),true))();
     sound2:Destroy()
@@ -517,6 +426,7 @@ ERP.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/t7mwxPzE'),true))();
     sound2:Destroy()
@@ -534,11 +444,12 @@ ERP.Button({
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/9gXqcz1a'),true))();
     sound2:Destroy()
@@ -556,16 +467,108 @@ ERP.Button({
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/Lc8fExUj'),true))();
     sound2:Destroy()
     end
 })
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ERP loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+-- // User \\ --
+local User = UI.New({
+    Title = "User"
+})
+
+User.Button({
+    Text = "Refresh",
+        Callback = function(d)
+        getgenv().Send = d
+        local player = game.Players.LocalPlayer.Character
+        game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = inf
+        player.Humanoid:Remove()
+        Instance.new('Humanoid', player)
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play() 
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Brb", "All")
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Refreshing...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+    sound2:Destroy()
+    end
+})
+
+User.Button({
+    Text = "GodMode",
+    Callback = function(d)
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+     
+    getgenv().Send = d
+            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').MaxHealth = 9999999999
+            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = 9999999999
+            
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Godmode'd";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        
+    sound2:Destroy()
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("U can NOT kill me", "All")
+
+    end
+})
+
+User.Button({
+    Text = "Earrape Yourself (PERM)",
+        Callback = function(sound)
+        getgenv().Send = sound
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Playing Loud ass noise.. forever...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(1)
+        
+        local sound = Instance.new("Sound", Workspace)
+        sound.Parent = game.Workspace
+        sound.SoundId = "rbxassetid://3900067524"
+        sound.Volume = 10
+        sound.Looped = true
+        sound:Play()
+        wait(3)
+
+    sound2:Destroy()
+    end
+})
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] User loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // ETC \\ --
 local Etc = UI.New({
@@ -573,11 +576,32 @@ local Etc = UI.New({
 })
 
 Etc.Button({
+    Text = "Rep",
+        Callback = function(serv)
+        getgenv().Send = serv
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Thank you!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[SCYTHESTATION] Yeah i love ScytheStation!", "All")
+
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Repped lol";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+    end
+})
+
+Etc.Button({
     Text = "Load Cool Esp Script (uwuware)",
         Callback = function(Esp)
         getgenv().Send = Esp
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -599,7 +623,7 @@ Etc.Button({
         Callback = function(Esp)
         getgenv().Send = Esp
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -622,7 +646,7 @@ Etc.Button({
         Callback = function(Esp)
         getgenv().Send = Esp
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -641,9 +665,9 @@ Etc.Button({
 })
 
 Etc.Button({
-    Text = "Close Game",
-        Callback = function(d)
-        getgenv().Send = d
+    Text = "ServerHop (Make Sure 2 reinject)",
+        Callback = function(serv)
+        getgenv().Send = serv
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
@@ -651,18 +675,38 @@ Etc.Button({
         sound2.Volume = 1
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
-                     wait(3)
-     sound2:Destroy()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Im going to a different server lel bye", "All")
+
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Exiting Game... Goodbye..";
+        Text = "Switching Servers...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(5)
-        game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = inf
         wait(3)
-        Game:Shutdown()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
+    end
+})
+
+Etc.Button({
+    Text = "ServerRejoin (Make Sure 2 reinject)",
+        Callback = function(serv)
+        getgenv().Send = serv
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://3101925827"
+        sound2.Volume = 1
+        sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
+        sound2:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Im rejoining hold on", "All")
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Rejoining...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
     end
 })
 
@@ -676,6 +720,7 @@ Etc.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Reinjecting...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -700,9 +745,38 @@ Etc.Button({
         game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = inf
     sound3:Destroy()
     sound2:Destroy()
+    game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Reinjection Complete!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/scythestation.lua'),true))();
     end
 })
+
+Etc.Button({
+    Text = "Close Game",
+        Callback = function(d)
+        getgenv().Send = d
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://3101925827"
+        sound2.Volume = 1
+        sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
+        sound2:Play()
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Exiting Game", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Exiting the game, bye guys.", "All")
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Exiting Game... Goodbye..";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        Game:Shutdown()
+    end
+})
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -710,5 +784,5 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
 
-          wait(5)
-     sound:Destroy()
+    wait(5)
+    sound:Destroy()
