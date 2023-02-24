@@ -9,7 +9,7 @@ local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinl
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Made by Scyt#1337";
+        Text = "Made by Scyt#1337 - NOW STARTING UP...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 5;
         wait(5)
@@ -29,7 +29,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      sound:Play() -- Play the sound
 
 local UI = Material.Load({
-     Title = "ScytheStation :: Interiumized :: V1",
+     Title = "ScytheStation :: Interiumized :: V1.1",
      Style = 1,
      SizeX = 700,
      SizeY = 400,
@@ -182,9 +182,9 @@ end)
 Movement.Button({
     Text = "Unlock Fly",
     Callback = function(Ge)
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/zackdoesstuff/ROBLOX-Fly-Script/main/Fly%20Script'),true))();
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
     
-            local sound2 = Instance.new("Sound", Workspace)
+    local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -193,6 +193,26 @@ Movement.Button({
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "Spawned Fly gui";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+	end
+})
+
+Movement.Button({
+    Text = "Unlock Walking Thru Walls",
+    Callback = function(Ge)
+    loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
+    
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play() 
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Can now walk thru walls";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(3)
@@ -236,7 +256,7 @@ Movement.Button({
         sound2:Play() 
         
     while wait() do
-    Character.HumanoidRootPart.CFrame = Character.Torso.CFrame * CFrame.Angles(0, math.rad(1000), 0)
+    Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
     end
     end
 })
@@ -532,6 +552,20 @@ Etc.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play() 
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Preparing to reinject...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        
+        local sound3 = Instance.new("Sound", Workspace)
+        sound3.Parent = game.Workspace
+        sound3.SoundId = "rbxassetid://3101925827"
+        sound.Pitch = 0.2 -- Speed of the song (Preffer not to change it)
+        sound3.Volume = 1
+        sound3:Play() 
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
