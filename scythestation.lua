@@ -14,7 +14,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         Duration = 5;
         wait(5)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHESTATION V1.1";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
