@@ -72,7 +72,7 @@ Exploits.Toggle({
 })
 
 Exploits.Button({
-    Text = "Earrape Audio (Admin Only?)",
+    Text = "Earrape Audio (PERM)",
         Callback = function(sound)
         getgenv().Send = sound
         local sound = Instance.new("Sound", Workspace)
