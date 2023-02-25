@@ -17,7 +17,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION V1.2";
+        Title = "SCYTHESTATION V1.3";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -34,7 +34,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 local UI = Material.Load({
-     Title = "ScytheStation :: Interiumized :: V1.2",
+     Title = "ScytheStation :: Interiumized :: V1.3",
      Style = 1,
      SizeX = 700,
      SizeY = 400,
@@ -201,29 +201,6 @@ Movement.Button({
 })
 
 Movement.Button({
-    Text = "Spin",
-    Callback = function(Ge)
-    local Character = game.Players.LocalPlayer.Character
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Im a rage user";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am a rage user", "All")
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play()
-        
-    while wait() do
-    Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
-    end
-    sound2:Destroy()
-    end
-})
-
-Movement.Button({
     Text = "Unlock Speed",
     Callback = function(speed)
     getgenv().Send = speed
@@ -248,6 +225,87 @@ Movement.Button({
 
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
+-- // AA (Anti-Aim) \\ --
+local AntiAim = UI.New({
+    Title = "Anti-Aim"
+})
+
+AntiAim.Button({
+    Text = "No Head Spin",
+    Callback = function(da)
+    local Character = game.Players.LocalPlayer.Character
+    local X = 1
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "So no Head?";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+    for X = 1, math.huge, 0.1 do wait()
+    Character.Torso.Neck.C0 = CFrame.new(0,10,0) * CFrame.fromAxisAngle(Vector3.new(0,50,0), X)
+    Character.Torso.Neck.C1 = CFrame.new(0,50,0)
+    Character.HumanoidRootPart.CFrame = Character.Torso.CFrame * CFrame.Angles(0, math.rad(-100000), 0)
+    end
+    sound2:Destroy()
+    end
+})
+
+AntiAim.Button({
+    Text = "Normal Spin",
+    Callback = function(Ge)
+    local Character = game.Players.LocalPlayer.Character
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Im a rage user";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am a rage user", "All")
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        
+    while wait() do
+    Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
+    end
+    sound2:Destroy()
+    end
+})
+
+AntiAim.Button({
+    Text = "Upside down",
+    Callback = function(Ge)
+    local Character = game.Players.LocalPlayer.Character
+    local X = 1
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Shit";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        
+    for X = 1, math.huge, 0.1 do wait()
+    Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
+    Character.HumanoidRootPart.RootJoint.C0 = Character.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(math.pi, 0, math.pi)
+    end
+    sound2:Destroy()
+    end
+})
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+
 -- // Ironic \\ -- 
 local Lovense = UI.New({
     Title = "Lovense"
@@ -270,6 +328,8 @@ Lovense.Button({
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -291,6 +351,8 @@ Lovense.Button({
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -313,6 +375,8 @@ Lovense.Button({
         Duration = 3;
     
         wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -333,7 +397,9 @@ Lovense.Button({
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-                wait(3)
+        wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -354,7 +420,9 @@ Lovense.Button({
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-                wait(3)
+        wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -375,7 +443,9 @@ Lovense.Button({
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-                wait(3)
+        wait(3)
+        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
+        wait(1)
         Game:Shutdown()
     end
 })
@@ -394,7 +464,7 @@ ERP.Button({
     
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Oh yes daddy~";
+        Text = "Oh daddy~"; -- turned out filtered LOL so i revcerted it
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
@@ -530,11 +600,9 @@ User.Button({
         Text = "Godmode'd";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("U can NOT kill me", "All")
         wait(3)
-        
     sound2:Destroy()
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("U can NOT kill me", "All")
-
     end
 })
 
@@ -569,6 +637,98 @@ User.Button({
 })
 
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] User loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+-- // SongSinger \\ --
+local Song = UI.New({
+    Title = "Sing Song"
+})
+
+Song.Button({
+    Text = "BBY GOYARD - GRANT ME ACCESS",
+        Callback = function(serv)
+        getgenv().Send = serv
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] BBY GOYARD - GRANT ME ACCESS", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Now singing: BBY GOYARD - GRANT ME ACCESS";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+        wait(2.1)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+        wait(3.3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+        wait(2.1)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+        wait(17.7)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+        wait(2.1)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+        wait(3.3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Watch out, all the floors will move underneath you", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Dont look down, don't look down", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Flyest out the face", "All")
+        wait(1.4)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("So hard to find a faith", "All")
+        wait(1.3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Print it on the face, just another corpse laid to waste", "All")
+        wait(4)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Step out of my body and watch myself hit the wake", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Open casket likе the dang dead faces ha", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Thеres so much to hate but I'm glad you came", "All")
+        wait(2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("*but I'm glad you came*", "All")
+        wait(1.3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("BODY DO THE LEAN LIKE THE PISA", "All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("KEEP RUNNIN WITH THEM KNEES UP", "All")
+        wait(1.5)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("SLOW THE BEAT UP", "All")
+        wait(6)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+        wait(3.8)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+        wait(3.8)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+        wait(3.1)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+        wait(4.6)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+        wait(3.8)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+        wait(3.8)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+        wait(3.1)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+        wait(2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Song | BBY GOYARD - GRANT ME ACCESS", "All")
+        sound2:Destroy()
+    end
+})
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] SongSinger loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // ETC \\ --
 local Etc = UI.New({
