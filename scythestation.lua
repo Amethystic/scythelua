@@ -394,16 +394,16 @@ ERP.Button({
     
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Oh daddy~";
+        Text = "Oh yes daddy~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
-                local sound2 = Instance.new("Sound", Workspace)
+        local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh yes daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/r3kLtDtw'),true))();
     sound2:Destroy()
@@ -417,7 +417,7 @@ ERP.Button({
     
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Oh daddy~";
+        Text = "Yum~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
@@ -426,7 +426,7 @@ ERP.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yum~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/t7mwxPzE'),true))();
     sound2:Destroy()
@@ -440,7 +440,7 @@ ERP.Button({
     
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Oh daddy~";
+        Text = "Keep Going~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
@@ -449,7 +449,7 @@ ERP.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Keep Going~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/9gXqcz1a'),true))();
     sound2:Destroy()
@@ -463,7 +463,7 @@ ERP.Button({
     
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Oh yeah~";
+        Text = "u liek dat bbgrill~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         
