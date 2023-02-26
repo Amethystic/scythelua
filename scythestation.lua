@@ -17,7 +17,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION V1.3";
+        Title = "SCYTHESTATION V1.4";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -34,7 +34,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 local UI = Material.Load({
-     Title = "ScytheStation :: Interiumized :: V1.3",
+     Title = "ScytheStation :: Interiumized :: V1.4",
      Style = 1,
      SizeX = 700,
      SizeY = 400,
@@ -188,7 +188,6 @@ Movement.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-    
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "Spawned Bhop gui";
@@ -204,22 +203,49 @@ Movement.Button({
     Text = "Unlock Speed",
     Callback = function(speed)
     getgenv().Send = speed
-    game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').WalkSpeed = 100
+    
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+local Humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+Humanoid.Changed:Connect(function(state)
+if state == "WalkSpeed" then Humanoid.WalkSpeed = 100 end end)
+
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Gatta go fast";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+    wait(3)
+    sound2:Destroy()
+    end
+})
+
+Movement.Button({
+    Text = "Unlock JumpPower",
+    Callback = function(jump)
+    getgenv().Send = jump
+    
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+local Humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+Humanoid.Changed:Connect(function(state)
+if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
     
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
         Text = "Gatta go fast";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-
-
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-                     wait(3)
-     sound2:Destroy()
+    wait(3)
+    sound2:Destroy()
     end
 })
 
@@ -237,10 +263,9 @@ AntiAim.Button({
     local X = 1
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "So no Head?";
+        Text = "Press 'X' to make players miss shots";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
@@ -261,16 +286,15 @@ AntiAim.Button({
     local Character = game.Players.LocalPlayer.Character
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Im a rage user";
+        Text = "Press 'X' to make players miss shots";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am a rage user", "All")
+        sound2:Play()
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
-        sound2:Play()
-        
+
     while wait() do
     Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
     end
@@ -285,10 +309,9 @@ AntiAim.Button({
     local X = 1
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Shit";
+        Text = "Press 'X' to make players miss shots";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
@@ -299,6 +322,25 @@ AntiAim.Button({
     Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
     Character.HumanoidRootPart.RootJoint.C0 = Character.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(math.pi, 0, math.pi)
     end
+    sound2:Destroy()
+    end
+})
+
+AntiAim.Button({
+    Text = "Load Desyncer Script",
+    Callback = function(Ge)
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Press 'X' to make players miss shots";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        loadstring(game:HttpGet(('https://pastebin.com/raw/N6YqG3HA'),true))();
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        wait(3)
     sound2:Destroy()
     end
 })
@@ -582,36 +624,11 @@ User.Button({
 })
 
 User.Button({
-    Text = "GodMode",
-    Callback = function(d)
-        
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
-        sound2:Play()
-     
-    getgenv().Send = d
-            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').MaxHealth = 9999999999
-            game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = 9999999999
-            
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Godmode'd";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("U can NOT kill me", "All")
-        wait(3)
-    sound2:Destroy()
-    end
-})
-
-User.Button({
     Text = "Earrape Yourself (PERM)",
         Callback = function(sound)
         getgenv().Send = sound
         
-        local sound2 = Instance.new("Sound", Workspace)
+        sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
@@ -730,6 +747,51 @@ Song.Button({
 
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] SongSinger loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
+-- // Antis \\ --
+local Anti = UI.New({
+    Title = "Anti's"
+})
+
+Anti.Button({
+    Text = "Anti Fling",
+    Callback = function(Ge)
+    loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))();   
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Anti'd annoying flingers";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+    sound2:Destroy()
+	end
+})
+
+Anti.Button({
+    Text = "Anti AFK",
+    Callback = function(Ge)
+    loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();   
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Anti'd AFKing";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+    sound2:Destroy()
+	end
+})
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
 -- // ETC \\ --
 local Etc = UI.New({
     Title = "Etc"
@@ -774,6 +836,28 @@ Etc.Button({
         Duration = 3;
         wait(3)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jan5106/uwuware_final/main/main.lua'),true))();
+    sound2:Destroy()
+    end
+})
+
+Etc.Button({
+    Text = "Load My main favorite Script (Domain-X)",
+        Callback = function(Esp)
+        getgenv().Send = Esp
+        
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "I love Domain-X!.. lets inject it!";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(3)
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/DomainX/main/source'),true))();
     sound2:Destroy()
     end
 })
