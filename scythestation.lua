@@ -34,7 +34,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 local UI = Material.Load({
-     Title = "ScytheStation :: Interiumized :: V1.4",
+     Title = "ScytheStation :: Interiumized :: V1.4 :: Fin",
      Style = 1,
      SizeX = 700,
      SizeY = 400,
