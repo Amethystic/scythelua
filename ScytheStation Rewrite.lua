@@ -1,3 +1,10 @@
+--// Api Example
+-- local CreateButton = Page:CreateButton("Test", "Desc test")
+-- local CreateToggle = Page:CreateToggle("Test", "Desc test")
+-- local CreateSlider = Page:CreateSlider("Test", "Desc test")
+
+
+-- // Api Load \\ --
 local cheatname = "                                                  ScytheStation"
 local version = "Interiumized REWRITE | V1.5"
 
@@ -34,44 +41,49 @@ local library = loadstring(game:HttpGet('https://pastebin.com/raw/HFdVYzNd'))()
     wait(1)
     sound:Play() -- Play the sound
 
+-- // Api Start \\ --
+
 local Window = library:CreateWindow(cheatname, version)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 local Tab = Window:CreateTab("")
---[[
-local Page = Tab:CreateFrame("Movement")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("Anti-Aim")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("Lovense")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("ERP")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ERP loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("Local")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Local loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("SongWriter")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] SongWriter loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("Anti's")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Page = Tab:CreateFrame("ETC")
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // Movement \\ --
-
+local Page = Tab:CreateFrame("Movement")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // AA (Anti-Aim) \\ --
-
+local Page = Tab:CreateFrame("Anti-Aim")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // Lovense \\ -- 
-
+local Page = Tab:CreateFrame("Lovense")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // ERP \\ --
-
+local Page = Tab:CreateFrame("ERP")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ERP loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // User \\ --
-
+local Page = Tab:CreateFrame("Local")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Local loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // SongSinger \\ --
-
+local Page = Tab:CreateFrame("SongWriter")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] SongWriter loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // Antis \\ --
-
+local Page = Tab:CreateFrame("Anti's")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // ETC \\ --
-]]
+local Page = Tab:CreateFrame("ETC")
+local CreateButton = Page:CreateButton("Test", "Desc test")
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+-- // Api End \\ --
+
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION REWRITE";
         Text = "Interface Loaded!";
