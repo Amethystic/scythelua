@@ -25,7 +25,7 @@ local Games = {
    [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
    [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
    [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
-   [10243982775] = "https://raw.githubusercontent.com/AtomGotIce/Scripts/main/RedBox%202", -- REDBOX
+   [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
 }
 
 if Games[game.PlaceId] then
