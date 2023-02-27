@@ -23,6 +23,7 @@ local Games = {
    [4898339524] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Ragdolls.lua", -- Broken Ragdolls
    [6407649031] = "https://pastebin.com/raw/WZnPL6jK", -- NSA
    [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
+   [1224212277] = "https://raw.githubusercontent.com/ECLIPSEXHUB/ECLIPSE-X/main/ECLIPSE%20X.txt", -- MAD CITY
 }
 
 if Games[game.PlaceId] then
