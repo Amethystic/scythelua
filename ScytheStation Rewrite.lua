@@ -4,12 +4,12 @@
 -- local CreateSlider = Page:CreateSlider("Test", "Desc test")
 
 -- // Api Load \\ --
-local cheatname = "                                                  ScytheStation"
-local version = "Interiumized REWRITE | V1.5"
+local cheatname = "                                            ScytheStation"
+local version = "Interiumized REWRITE (PRIV) | V1.5"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
-     sound.SoundId = "rbxassetid://5515669992" -- copy the url and paste it
+     sound.SoundId = "rbxassetid://1862048961" -- copy the url and paste it
      sound.Looped = false -- If you want it to repeat
      sound.Volume = 1
      sound:Play() -- Play the sound
@@ -33,8 +33,8 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 local library = loadstring(game:HttpGet('https://pastebin.com/raw/HFdVYzNd'))()
 
     local sound = Instance.new("Sound", Workspace)
-    sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
-    sound.SoundId = "rbxassetid://3101925304" -- copy the url and paste it
+    sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
+    sound.SoundId = "rbxassetid://1555493683" -- copy the url and paste it
     sound.Looped = false -- If you want it to repeat
     sound.Volume = 1
     wait(1)
@@ -52,8 +52,8 @@ local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spamme
     getgenv().CTS = CTS
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()    
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -73,8 +73,8 @@ local CreateButton = Page:CreateButton("Spam chat normally", "Chat Spammer", fun
     getgenv().CzS = CzS
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()    
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -105,8 +105,8 @@ local CreateButton = Page:CreateButton("Infinite Jump", "U know if u know", func
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -125,8 +125,8 @@ local CreateButton = Page:CreateButton("Click TP", "Spawns a click tp item", fun
     loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
     local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -144,8 +144,8 @@ local CreateButton = Page:CreateButton("Noclip", "Walk thru walls", function(WTW
     loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -163,8 +163,8 @@ local CreateButton = Page:CreateButton("Fly", "im a bird!", function(BIRD)
     loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
     local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -191,8 +191,8 @@ if state == "WalkSpeed" then Humanoid.WalkSpeed = 100 end end)
         Duration = 3;
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     wait(3)
     sound2:Destroy()
@@ -214,8 +214,8 @@ if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
         Duration = 3;
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
     wait(3)
     sound2:Destroy()
@@ -238,8 +238,8 @@ local CreateButton = Page:CreateButton("Load Desyncer", "Creds to whomever made 
         loadstring(game:HttpGet(('https://pastebin.com/raw/N6YqG3HA'),true))();
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         wait(3)
     sound2:Destroy()
@@ -258,8 +258,8 @@ local CreateButton = Page:CreateButton("Upside down", "Flips ur local lol n show
         Duration = 3;
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         
     for X = 1, math.huge, 0.1 do wait()
@@ -396,8 +396,8 @@ local CreateButton = Page:CreateButton("BendOver", "Show daddy your pussy/bussy"
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh daddy~", "All")
     
@@ -417,8 +417,8 @@ local CreateButton = Page:CreateButton("BJ", "Give GOOD head", function(Head)
         
                 local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Yum~", "All")
     
@@ -438,8 +438,8 @@ local CreateButton = Page:CreateButton("Spread Legs", "Same as BendOver but by l
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Keep Going~", "All")
     
@@ -459,8 +459,8 @@ local CreateButton = Page:CreateButton("Rape", "Stick ur dick in some random per
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("u liek dat bbgrill~", "All")
     
@@ -484,8 +484,8 @@ local CreateButton = Page:CreateButton("Reset", "Kills u basically", function(Re
         
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play() 
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Brb", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -508,8 +508,8 @@ local CreateButton = Page:CreateButton("BBY GOYARD - GRANT ME ACCESS", "Sings th
         local chat = getgenv().chat
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] BBY GOYARD - GRANT ME ACCESS", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
@@ -598,8 +598,8 @@ local CreateButton = Page:CreateButton("Anti Fling", "Stops infyieldadmin users 
         loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))();   
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1637297605"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -617,8 +617,8 @@ local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk
         loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();   
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1637297605"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -636,8 +636,8 @@ local CreateButton = Page:CreateButton("Bypass FE", "lets FE do FE stuff", funct
         loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();   
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1637297605"
+        sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -659,11 +659,11 @@ local CreateButton = Page:CreateButton("Rep", "Thx lol", function(Rep)
         local Rep = getgenv().Rep
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1962462038"
+        sound2.Volume = 1
         sound2:Play()
         game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Thank you!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[SCYTHESTATION]  This user loves SCYTHESTATION, download for free today!  [SCYTHESTATION]", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[<3]  This user loves $ c y 7 h e s 7 a t i 0 n . l u a, download for free today!  [<3]", "All")
 
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
@@ -678,8 +678,8 @@ local CreateButton = Page:CreateButton("Load", "UwUWare", function(ESP)
         local ESP = getgenv().ESP
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -698,8 +698,8 @@ local CreateButton = Page:CreateButton("Load", "Domain-X", function(DomainX)
         local DomainX = getgenv().DomainX
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
         sound2:Play()
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -718,7 +718,7 @@ local CreateButton = Page:CreateButton("ServerHop", "Make sure to Reinject", fun
         local SH = getgenv().SH
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://3101925827"
+        sound2.SoundId = "rbxassetid://2122440437"
         sound2.Volume = 1
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
@@ -738,7 +738,7 @@ local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", functi
         local RJ = getgenv().RJ
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://3101925827"
+        sound2.SoundId = "rbxassetid://2122440437"
         sound2.Volume = 1
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
@@ -757,8 +757,8 @@ local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supp
         local Support = getgenv().Support
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://2122440437"
+        sound2.Volume = 1
         sound2:Play() 
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -776,8 +776,8 @@ local CreateButton = Page:CreateButton("Load Old Script", "Loads a Old ScytheSta
         local Old = getgenv().Old
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://998971542"
-        sound2.Volume = 10
+        sound2.SoundId = "rbxassetid://2122440437"
+        sound2.Volume = 1
         sound2:Play() 
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -795,7 +795,7 @@ local CreateButton = Page:CreateButton("Close Game", "Exits game from script", f
         local Exit = getgenv().Exit
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://3101925827"
+        sound2.SoundId = "rbxassetid://2122440437"
         sound2.Volume = 1
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
