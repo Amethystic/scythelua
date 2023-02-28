@@ -30,6 +30,7 @@ local Games = {
    [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
    [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
    [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
+   [4282985734] = "https://projecthook.xyz/scripts/free.lua", -- CW
 }
 
 if Games[game.PlaceId] then
