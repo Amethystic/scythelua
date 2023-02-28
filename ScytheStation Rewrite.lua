@@ -5,7 +5,7 @@
 
 -- // Api Load \\ --
 local cheatname = "                                            ScytheStation"
-local version = "Interiumized REWRITE (PRIV) | V1.5"
+local version = "Interiumized REWRITE (PRIV) | V1.6"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -24,13 +24,13 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION REWRITE | V1.5";
+        Title = "SCYTHESTATION REWRITE | V1.6";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(3)
-        
 local library = loadstring(game:HttpGet('https://pastebin.com/raw/HFdVYzNd'))()
+loadstring(game:HttpGet(('https://pastebin.com/raw/pAXg2PGC'), true))();
 
     local sound = Instance.new("Sound", Workspace)
     sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -48,6 +48,50 @@ local Tab = Window:CreateTab("Features")
 
 -- // Exploits \\ --
 local Page = Tab:CreateFrame("Exploits")
+local CreateButton = Page:CreateButton("Spam chat", "Chat Spammer", function(CzS)
+    getgenv().CzS = CzS
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
+        sound2:Play()    
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "ChatSpammer Active";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        while task.wait() do
+        local CzS = getgenv().CzS
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("_______________________________________________________________________________________________________________________", "All")
+        end
+        wait(3)
+        sound2:Destroy()
+end)
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created Exploits!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+
+
+-- // Visuals \\ --
+local Page = Tab:CreateFrame("Scythe Visuals")
+local CreateButton = Page:CreateButton("Load Radar", "Loads a Radar script", function(RDFAR)
+    getgenv().RDFAR = RDFAR
+        task.wait() do
+        local RDFAR = getgenv().RDFAR
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
+        sound2:Play() 
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Loading Radar...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(2)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
+        sound2:Destroy()
+    end
+end)
 local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spammer", function(CTS)
     getgenv().CTS = CTS
         local sound2 = Instance.new("Sound", Workspace)
@@ -69,25 +113,7 @@ local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spamme
         sound2:Destroy()
 end)
 
-local CreateButton = Page:CreateButton("Spam chat normally", "Chat Spammer", function(CzS)
-    getgenv().CzS = CzS
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()    
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "ChatSpammer Active";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        while task.wait() do
-        local CzS = getgenv().CzS
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("_______________________________________________________________________________________________________________________", "All")
-        end
-        wait(3)
-        sound2:Destroy()
-end)
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created Visuals!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // Movement \\ --
 local Page = Tab:CreateFrame("Movement")
@@ -606,7 +632,7 @@ local CreateButton = Page:CreateButton("Anti Fling", "Stops infyieldadmin users 
         Text = "Anti'd annoying flingers";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
     sound2:Destroy()
     end 
 end)
@@ -625,30 +651,10 @@ local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk
         Text = "Anti'd AFKing";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
     sound2:Destroy()
     end
 end)
-local CreateButton = Page:CreateButton("Bypass FE", "lets FE do FE stuff", function(FE)
-    getgenv().FE = FE
-        task.wait() do
-        local FE = getgenv().FE
-        loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();   
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1637297605"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Bypassed FE, Be aware you wont be able to inject again.";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-    sound2:Destroy()
-    end
-end)
-
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // ETC \\ --
@@ -670,6 +676,28 @@ local CreateButton = Page:CreateButton("Rep", "Thx lol", function(Rep)
         Text = "Repped lol";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
+        wait(5)
+        sound2:Destroy()
+    end
+end)
+local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supported script", function(Support)
+    getgenv().Support = Support
+        task.wait() do
+        local Support = getgenv().Support
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://2122440437"
+        sound2.Volume = 1
+        sound2:Play() 
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Checking...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(5)
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/ScytheGameChecker.lua'),true))();
+        sound2:Destroy()
     end
 end)
 local CreateButton = Page:CreateButton("Load", "UwUWare", function(ESP)
@@ -687,7 +715,7 @@ local CreateButton = Page:CreateButton("Load", "UwUWare", function(ESP)
         Text = "I love uwuware!.. lets inject it!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jan5106/uwuware_final/main/main.lua'),true))();
     sound2:Destroy()
     end
@@ -707,7 +735,7 @@ local CreateButton = Page:CreateButton("Load", "Domain-X", function(DomainX)
         Text = "I love Domain-X!.. lets inject it!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/DomainX/main/source'),true))();
     sound2:Destroy()
     end
@@ -728,8 +756,9 @@ local CreateButton = Page:CreateButton("ServerHop", "Make sure to Reinject", fun
         Text = "Switching Servers...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
         loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
+                sound2:Destroy()
     end
 end)
 local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", function(RJ)
@@ -747,27 +776,28 @@ local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", functi
         Text = "Rejoining...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
         loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
+        sound2:Destroy()
     end
 end)
-local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supported script", function(Support)
-    getgenv().Support = Support
+local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf", function(FPS)
+    getgenv().FPS = FPS
         task.wait() do
-        local Support = getgenv().Support
+        local FPS = getgenv().FPS
         local sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://2122440437"
         sound2.Volume = 1
         sound2:Play() 
-        
+                setfpscap(9999)
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Checking...";
+        Text = "Uncapped FPS";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/ScytheGameChecker.lua'),true))();
+        wait(5)
+                sound2:Destroy()
     end
 end)
 local CreateButton = Page:CreateButton("Load Old Script", "Loads a Old ScytheStation script", function(Old)
@@ -785,8 +815,9 @@ local CreateButton = Page:CreateButton("Load Old Script", "Loads a Old ScytheSta
         Text = "Checking...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
-        wait(3)
+        wait(5)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/scythestation.lua'),true))();
+                sound2:Destroy()
     end
 end)
 local CreateButton = Page:CreateButton("Close Game", "Exits game from script", function(Exit)
