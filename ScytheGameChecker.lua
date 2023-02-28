@@ -28,7 +28,7 @@ local Games = {
    [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
    [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
    [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
-   [2788229376] = "https://raw.githubusercontent.com/Eprx/scripts/master/vortexhub", -- DAHOOD
+   [2788229376] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- DAHOOD
 }
 
 if Games[game.PlaceId] then
