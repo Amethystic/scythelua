@@ -27,7 +27,6 @@ local Games = {
    [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
    [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
    [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
-   [1677554931] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
 }
 
 if Games[game.PlaceId] then
