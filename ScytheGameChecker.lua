@@ -33,6 +33,7 @@ local Games = {
    [4282985734] = "https://projecthook.xyz/scripts/free.lua", -- CW
    [286090429] = "https://pastebin.com/raw/vTxLJQzu", -- ARSENAL
    [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
+   [6722284015] = "https://lunahub.cf/Loader.lua", -- P1v1
 }
 
 if Games[game.PlaceId] then
