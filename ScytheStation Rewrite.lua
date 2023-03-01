@@ -106,7 +106,13 @@ local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spamme
         Duration = 3;
         while task.wait() do
         local CTS = getgenv().CTS
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 7 h e s 7 a t i 0 n . l u a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 7 h e s 7 a t i 0 n . l u a  |  v 2", "All")
+        wait(14.5)
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E s 7 a T i 0 n . l u a  |  v 2", "All")
+        wait(14.5)
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h e s 7 a t i X n . l U a  |  v 2", "All")
+        wait(14.5)
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E s 7 a T i 0 n . l u a  |  v 2", "All")
         wait(14.5)
         end
         wait(3)
