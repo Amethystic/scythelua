@@ -31,6 +31,8 @@ local Games = {
    [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
    [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
    [4282985734] = "https://projecthook.xyz/scripts/free.lua", -- CW
+   [286090429] = "https://pastebin.com/raw/vTxLJQzu", -- ARSENAL
+   [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
 }
 
 if Games[game.PlaceId] then
