@@ -5,7 +5,7 @@
 
 -- // Api Load \\ --
 local cheatname = "                                            ScytheStation"
-local version = "Interiumized REWRITE (PRIV) | V1.6"
+local version = "Interiumized REWRITE (PRIV) | V1.7"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -24,7 +24,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION REWRITE | V1.6";
+        Title = "SCYTHESTATION REWRITE | V1.7";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -241,7 +241,7 @@ if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
     
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHESTATION";
-        Text = "Gatta go fast";
+        Text = "Boing!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         local sound2 = Instance.new("Sound", Workspace)
@@ -806,7 +806,7 @@ local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", functi
         sound2:Destroy()
     end
 end)
-local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf", function(FPS)
+local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf (If your on Syn-X dont mind about it)", function(FPS)
     getgenv().FPS = FPS
         task.wait() do
         local FPS = getgenv().FPS
