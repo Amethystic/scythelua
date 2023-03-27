@@ -5,7 +5,7 @@
 
 -- // Api Load \\ --
 local cheatname = "                                            ScytheStation"
-local version = "Interiumized REWRITE (PRIV) | V1.7"
+local version = "Interiumized REWRITE (PRIV) | V1.8"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -24,7 +24,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION REWRITE | V1.7";
+        Title = "SCYTHESTATION REWRITE | V1.8";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -822,26 +822,6 @@ local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf (If your on S
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
-                sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Load Old Script", "Loads a Old ScytheStation script", function(Old)
-    getgenv().Old = Old
-        task.wait() do
-        local Old = getgenv().Old
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
-        Text = "Checking...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/scythestation.lua'),true))();
                 sound2:Destroy()
     end
 end)
