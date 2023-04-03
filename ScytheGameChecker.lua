@@ -45,7 +45,7 @@ if Games[game.PlaceId] then
     sound2:Play() 
     
     game.StarterGui:SetCore("SendNotification", {
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Game found, injecting script...";
         Duration = 5;
     })
@@ -55,7 +55,7 @@ if Games[game.PlaceId] then
     sound:Destroy()
 else
     game.StarterGui:SetCore("SendNotification", {
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "This game is not supported lol";
         Duration = 5;
     })
