@@ -4,8 +4,8 @@
 -- local CreateSlider = Page:CreateSlider("Test", "Desc test")
 
 -- // Api Load \\ --
-local cheatname = "                                            ScytheStation"
-local version = "Interiumized REWRITE (PRIV) | V1.8"
+local cheatname = "                                            Scythenentic"
+local version = "Interiumized REWRITE (PRIV) | V1.9"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -14,7 +14,7 @@ local version = "Interiumized REWRITE (PRIV) | V1.8"
      sound.Volume = 1
      sound:Play() -- Play the sound
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Now starting up...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Now starting up...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "Loading... ";
@@ -22,9 +22,9 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 5;
         wait(5)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION REWRITE | V1.8";
+        Title = "SCYTHENENTIC REWRITE | V1.9";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -43,7 +43,7 @@ loadstring(game:HttpGet(('https://pastebin.com/raw/pAXg2PGC'), true))();
 -- // Api Start \\ --
 
 local Window = library:CreateWindow(cheatname, version)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 local Tab = Window:CreateTab("Features")
 
 -- // Exploits \\ --
@@ -56,7 +56,7 @@ local CreateButton = Page:CreateButton("Spam chat", "Chat Spammer", function(CzS
         sound2.Volume = 1
         sound2:Play()    
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ChatSpammer Active";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -67,7 +67,7 @@ local CreateButton = Page:CreateButton("Spam chat", "Chat Spammer", function(CzS
         wait(3)
         sound2:Destroy()
 end)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created Exploits!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Created Exploits!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 
 -- // Visuals \\ --
@@ -83,7 +83,7 @@ local CreateButton = Page:CreateButton("Load Radar", "Loads a Radar script", fun
         sound2:Play() 
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Loading Radar...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -100,26 +100,26 @@ local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spamme
         sound2.Volume = 1
         sound2:Play()    
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ClanTag ChatSpammer Active";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         while task.wait() do
         local CTS = getgenv().CTS
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 7 h e s 7 a t i 0 n . l u a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 7 h e n 7 n t i c . l u a  |  v 2", "All")
         wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E s 7 a T i 0 n . l u a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E n 7 n T 1 C . l u a  |  v 2", "All")
         wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h e s 7 a t i X n . l U a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h e n 7 n t i c . l U a  |  v 2", "All")
         wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E s 7 a T i 0 n . l u a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h E N 7 n T i c . l u a  |  v 2", "All")
         wait(14.5)
         end
         wait(3)
         sound2:Destroy()
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Created Visuals!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Created Visuals!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // Movement \\ --
 local Page = Tab:CreateFrame("Movement")
@@ -141,7 +141,7 @@ local CreateButton = Page:CreateButton("Infinite Jump", "U know if u know", func
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Removed hop limit (as known as physical gravity lol";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -161,7 +161,7 @@ local CreateButton = Page:CreateButton("Click TP", "Spawns a click tp item", fun
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Spawned Click TP Item";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -180,7 +180,7 @@ local CreateButton = Page:CreateButton("Noclip", "Walk thru walls", function(WTW
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Can now walk thru walls";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -199,7 +199,7 @@ local CreateButton = Page:CreateButton("Fly", "im a bird!", function(BIRD)
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Spawned Fly gui";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -217,7 +217,7 @@ Humanoid.Changed:Connect(function(state)
 if state == "WalkSpeed" then Humanoid.WalkSpeed = 100 end end)
 
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Gatta go fast";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -240,7 +240,7 @@ Humanoid.Changed:Connect(function(state)
 if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
     
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Boing!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -254,7 +254,7 @@ if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
     end
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // AA (Anti-Aim) \\ --
 local Page = Tab:CreateFrame("Anti-Aim")
@@ -263,7 +263,7 @@ local CreateButton = Page:CreateButton("Load Desyncer", "Creds to whomever made 
         task.wait() do
         local Desync = getgenv().Desync
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Press 'X' to make players miss shots";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -284,7 +284,7 @@ local CreateButton = Page:CreateButton("Upside down", "Flips ur local lol n show
         local Character = game.Players.LocalPlayer.Character
         local X = 1
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Locally upside down | Globally spinning";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -302,7 +302,7 @@ local CreateButton = Page:CreateButton("Upside down", "Flips ur local lol n show
     end
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // Lovense \\ -- 
 local Page = Tab:CreateFrame("Lovense")
@@ -317,7 +317,7 @@ local CreateButton = Page:CreateButton("Squirter", "winky face", function(Squirt
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -338,7 +338,7 @@ local CreateButton = Page:CreateButton("HorseCock GSpot Toucher Pattern", "oohai
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -359,7 +359,7 @@ local CreateButton = Page:CreateButton("Vagina tsunami Pattern", "makes the puss
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -380,7 +380,7 @@ local CreateButton = Page:CreateButton("Nutinizer V3 Pattern", "WOAH!", function
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -401,7 +401,7 @@ local CreateButton = Page:CreateButton("Baddragon cumflation spotter Pattern", "
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "ew wtf";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -412,7 +412,7 @@ local CreateButton = Page:CreateButton("Baddragon cumflation spotter Pattern", "
     end
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // ERP \\ --
 local Page = Tab:CreateFrame("ERP")
@@ -421,7 +421,7 @@ local CreateButton = Page:CreateButton("BendOver", "Show daddy your pussy/bussy"
         task.wait() do
         local Bend = getgenv().Bend
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Oh daddy~"; -- turned out filtered LOL so i revcerted it
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -442,7 +442,7 @@ local CreateButton = Page:CreateButton("BJ", "Give GOOD head", function(Head)
         task.wait() do
         local Head = getgenv().Head
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Yum~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -463,7 +463,7 @@ local CreateButton = Page:CreateButton("Spread Legs", "Same as BendOver but by l
         task.wait() do
         local Spread = getgenv().Spread
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Keep Going~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -484,7 +484,7 @@ local CreateButton = Page:CreateButton("Rape", "Stick ur dick in some random per
         task.wait() do
         local Rape = getgenv().Rape
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "u liek dat bbgrill~";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -501,7 +501,7 @@ local CreateButton = Page:CreateButton("Rape", "Stick ur dick in some random per
     end
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ERP loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] ERP loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // User \\ --
 local Page = Tab:CreateFrame("Local")
@@ -521,7 +521,7 @@ local CreateButton = Page:CreateButton("Reset", "Kills u basically", function(Re
         sound2:Play() 
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Brb", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Refreshing...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -540,7 +540,7 @@ local CreateButton = Page:CreateButton("Spawn Dog", "I cant tell if this is loca
         sound2:Play()
         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("cmere puppy! whos a good boy! :3", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Spawning pet...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -565,7 +565,7 @@ local CreateButton = Page:CreateButton("BBY GOYARD - GRANT ME ACCESS", "Sings th
         game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] BBY GOYARD - GRANT ME ACCESS", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Now singing: BBY GOYARD - GRANT ME ACCESS";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -638,7 +638,7 @@ local CreateButton = Page:CreateButton("BBY GOYARD - GRANT ME ACCESS", "Sings th
     end 
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] SongWriter loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] SongWriter loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // Antis \\ --
 local Page = Tab:CreateFrame("Anti's")
@@ -653,7 +653,7 @@ local CreateButton = Page:CreateButton("Anti Fling", "Stops infyieldadmin users 
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Anti'd annoying flingers";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -672,7 +672,7 @@ local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk
         sound2.Volume = 1
         sound2:Play()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Anti'd AFKing";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -680,7 +680,7 @@ local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk
     sound2:Destroy()
     end
 end)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 -- // ETC \\ --
 local Page = Tab:CreateFrame("ETC")
@@ -693,11 +693,11 @@ local CreateButton = Page:CreateButton("Rep", "Thx lol", function(Rep)
         sound2.SoundId = "rbxassetid://1962462038"
         sound2.Volume = 1
         sound2:Play()
-        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Thank you!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[<3]  This user loves $ c y 7 h e s 7 a t i 0 n . l u a, download for free today!  [<3]", "All")
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Thank you!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[<3]  This user loves $ c y 7 h e n 7 n t i c . l u a, download for free today!  [<3]", "All")
 
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Repped lol";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -716,12 +716,12 @@ local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supp
         sound2:Play() 
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Checking...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/ScytheGameChecker.lua'),true))();
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/SCYTHENENTICGameChecker.lua'),true))();
         sound2:Destroy()
     end
 end)
@@ -736,7 +736,7 @@ local CreateButton = Page:CreateButton("Load", "UwUWare", function(ESP)
         sound2:Play()
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "I love uwuware!.. lets inject it!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -756,7 +756,7 @@ local CreateButton = Page:CreateButton("Load", "Domain-X", function(DomainX)
         sound2:Play()
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "I love Domain-X!.. lets inject it!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -777,7 +777,7 @@ local CreateButton = Page:CreateButton("ServerHop", "Make sure to Reinject", fun
         sound2:Play()
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Im going to a different server lel bye", "All")
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Switching Servers...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -797,7 +797,7 @@ local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", functi
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Rejoining...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -817,11 +817,31 @@ local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf (If your on S
         sound2:Play() 
                 setfpscap(9999)
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Uncapped FPS";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
+                sound2:Destroy()
+    end
+end)
+local CreateButton = Page:CreateButton("Load Old Script", "Loads a Old SCYTHENENTIC script", function(Old)
+    getgenv().Old = Old
+        task.wait() do
+        local Old = getgenv().Old
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://2122440437"
+        sound2.Volume = 1
+        sound2:Play() 
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHENENTIC";
+        Text = "Checking...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(5)
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/scythestation.lua'),true))();
                 sound2:Destroy()
     end
 end)
@@ -835,11 +855,11 @@ local CreateButton = Page:CreateButton("Close Game", "Exits game from script", f
         sound2.Volume = 1
         sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
         sound2:Play()
-        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Exiting Game", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Exiting Game", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Exiting the game, bye guys.", "All")
         
         game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION";
+        Title = "SCYTHENENTIC";
         Text = "Exiting Game... Goodbye..";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -848,13 +868,13 @@ local CreateButton = Page:CreateButton("Close Game", "Exits game from script", f
     end
 end)
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 -- // Api End \\ --
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHESTATION REWRITE";
+        Title = "SCYTHENENTIC REWRITE";
         Text = "Interface Loaded!";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
