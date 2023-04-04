@@ -34,7 +34,7 @@ local Games = {
    [286090429] = "https://pastebin.com/raw/vTxLJQzu", -- ARSENAL
    [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
    [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
-   [487316] = "https://pastebin.com/raw/k064pnM1" -- Sword shit #1
+   [487316] = "https://pastebin.com/raw/k064pnM1" -- Sword shit
 }
 
 if Games[game.PlaceId] then
