@@ -651,7 +651,7 @@ local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supp
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/SCYTHENENTICGameChecker.lua'),true))();
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/SCYTHNENTICGameChecker.lua'),true))();
         sound2:Destroy()
     end
 end)
