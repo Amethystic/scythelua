@@ -150,7 +150,7 @@ local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spamme
         wait(14.5)
         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h n 7 n T 1 C . l u a  |  v 2", "All")
         wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h  n 7 n t i c . l U a  |  v 2", "All")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h n 7 n t i c . l U a  |  v 2", "All")
         wait(14.5)
         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h N 7 n T i c . l u a  |  v 2", "All")
         wait(14.5)
