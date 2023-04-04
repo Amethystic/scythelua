@@ -24,7 +24,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC REWRITE | V1.9";
+        Title = "SCYTHNENTIC REWRITE | V2";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
