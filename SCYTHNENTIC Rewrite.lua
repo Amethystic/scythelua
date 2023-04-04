@@ -4,7 +4,7 @@
 -- local CreateSlider = Page:CreateSlider("Test", "Desc test")
 
 -- // Api Load \\ --
-local cheatname = "                                            Scythnentic"
+local cheatname = "Scythnentic"
 local version = "Interiumized REWRITE | V2"
 
      local sound = Instance.new("Sound", Workspace)
