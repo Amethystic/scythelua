@@ -57,7 +57,7 @@ if Games[game.PlaceId] then
 else
     game.StarterGui:SetCore("SendNotification", {
         Title = "SCYTHENENTIC";
-        Text = "This game is not supported lol";
+        Text = "This game is not supported...";
         Duration = 5;
     })
 end
