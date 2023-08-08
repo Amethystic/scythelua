@@ -73,6 +73,26 @@ game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Creat
 -- // Visuals \\ --
 local Page = Tab:CreateFrame("Scythe Visuals")
 local CreateButton = Page:CreateButton("Load Radar", "Loads a Radar script", function(RDFAR)
+    getgenv().ESP = ESP
+        task.wait() do
+        local ESP = getgenv().ESP
+        local sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://1862047553"
+        sound2.Volume = 1
+        sound2:Play() 
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "SCYTHNENTIC";
+        Text = "Loading ESP...";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+        Duration = 3;
+        wait(2)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
+        sound2:Destroy()
+    end
+end)
+local CreateButton = Page:CreateButton("Load Radar", "Loads a Radar script", function(RDFAR)
     getgenv().RDFAR = RDFAR
         task.wait() do
         local RDFAR = getgenv().RDFAR
@@ -691,7 +711,7 @@ local CreateButton = Page:CreateButton("Load", "Domain-X", function(DomainX)
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/DomainX/main/source'),true))();
+        loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
     sound2:Destroy()
     end
 end)
@@ -745,14 +765,14 @@ local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf (If your on S
         sound2.SoundId = "rbxassetid://2122440437"
         sound2.Volume = 1
         sound2:Play() 
-                setfpscap(9999)
+        setfpscap(9999)
         game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "SCYTHNENTIC";
         Text = "Uncapped FPS";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(5)
-                sound2:Destroy()
+        sound2:Destroy()
     end
 end)
 local CreateButton = Page:CreateButton("Close Game", "Exits game from script", function(Exit)
