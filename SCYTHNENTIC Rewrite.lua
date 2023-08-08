@@ -86,7 +86,7 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(2)
-        loadstring(game:HttpGet(('https://pastebin.com/raw/jDq73NB6'),true))();
+        loadstring(game:HttpGet(('https://pastebin.com/raw/eZbnTVYK'),true))();
         sound2:Destroy()
     end
 end)
