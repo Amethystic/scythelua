@@ -24,7 +24,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         wait(5)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC REWRITE | V1.9";
+        Title = "SCYTHNENTIC REWRITE | V2.2";
         Text = "Loading interface...";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
@@ -40,7 +40,6 @@ local library = loadstring(game:HttpGet('https://pastebin.com/raw/rS2635sh'))()
     sound:Play() -- Play the sound
 
 -- // Api Start \\ --
-local Sence = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Window = library:CreateWindow(cheatname, version)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 local Tab = Window:CreateTab("Features")
@@ -87,12 +86,7 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(2)
-        
-        Sense.Load()
-        Sense.teamSettings.enemy.enabled = true
-        Sense.teamSettings.enemy.box = true
-        Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
-
+        loadstring(game:HttpGet(('https://pastebin.com/raw/hnwdZWBK'),true))();
         sound2:Destroy()
     end
 end)
