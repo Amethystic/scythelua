@@ -29,7 +29,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(3)
-local library = loadstring(game:HttpGet('https://pastebin.com/raw/HFdVYzNd'))()
+local library = loadstring(game:HttpGet('https://pastebin.com/raw/rS2635sh'))()
 loadstring(game:HttpGet(('https://pastebin.com/raw/pAXg2PGC'), true))();
 
     local sound = Instance.new("Sound", Workspace)
