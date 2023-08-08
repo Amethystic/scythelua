@@ -40,7 +40,7 @@ local library = loadstring(game:HttpGet('https://pastebin.com/raw/rS2635sh'))()
     sound:Play() -- Play the sound
 
 -- // Api Start \\ --
-
+local Sence = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Window = library:CreateWindow(cheatname, version)
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
 local Tab = Window:CreateTab("Features")
@@ -87,7 +87,6 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(2)
-        loadstring(game:HttpGet('https://sirius.menu/sense'))()
 
 -- 2. Change the configuration.
 Sense.teamSettings.enemy.enabled = true
