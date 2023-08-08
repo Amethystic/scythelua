@@ -87,13 +87,11 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(2)
-
--- 2. Change the configuration.
-Sense.teamSettings.enemy.enabled = true
-Sense.teamSettings.enemy.box = false
-Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
-
-Sense.Load()
+        
+        Sense.Load()
+        Sense.teamSettings.enemy.enabled = true
+        Sense.teamSettings.enemy.box = true
+        Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
 
         sound2:Destroy()
     end
