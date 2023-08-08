@@ -5,7 +5,7 @@
 
 -- // Api Load \\ --
 local cheatname = "                                                    Scythnentic"
-local version = "Byfronteriored REWRITE | V2.1"
+local version = "Byfronteriored REWRITE | V2.2"
 
      local sound = Instance.new("Sound", Workspace)
      sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
