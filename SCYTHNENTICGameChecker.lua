@@ -47,19 +47,37 @@ if Games[game.PlaceId] then
     sound2.Volume = 10
     sound2:Play() 
     
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "SCYTHENENTIC";
-        Text = "Game found, injecting script...";
-        Duration = 5;
-    })
+    Rayfield:Notify({
+   Title = games,
+   Content = "Game found, now loading...",
+   Duration = 6.5,
+   Image = 12995567730,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
     wait(3)
     loadstring(game:HttpGet(Games[game.PlaceId]))()
     wait(3)
     sound:Destroy()
 else
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "SCYTHENENTIC";
-        Text = "This game is not supported...";
-        Duration = 5;
-    })
+    Rayfield:Notify({
+   Title = games,
+   Content = "Game not found",
+   Duration = 6.5,
+   Image = 12995567730,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
 end
