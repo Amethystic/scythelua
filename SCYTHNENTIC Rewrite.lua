@@ -87,19 +87,15 @@ local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", functio
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
         Duration = 3;
         wait(2)
-        -- 1. Load the library
-local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+        loadstring(game:HttpGet('https://sirius.menu/sense'))()
 
 -- 2. Change the configuration.
 Sense.teamSettings.enemy.enabled = true
-Sense.teamSettings.enemy.box = true
+Sense.teamSettings.enemy.box = false
 Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
 
--- 3. Load the esp. It doesn't really matter where you put this, but it's recommended you put it at the end of your script.
 Sense.Load()
 
--- 4. Unload the esp. When you unload Sense, it will clean up every drawing object and instance it has made.
---Sense.Unload()
         sound2:Destroy()
     end
 end)
