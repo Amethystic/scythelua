@@ -1,810 +1,671 @@
---// Api Example
--- local CreateButton = Page:CreateButton("Test", "Desc test")
--- local CreateToggle = Page:CreateToggle("Test", "Desc test")
--- local CreateSlider = Page:CreateSlider("Test", "Desc test")
+getgenv().SecureMode = true
 
--- // Api Load \\ --
-local cheatname = "                                                    Scythnentic"
-local version = "Byfronteriored REWRITE | V2.2"
+-- // Init Requirement \\ --
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
+local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+local cheatname = "Scythnentic"
+local version = "Version 2.3 | REBIRTH REWRITE"
 
-     local sound = Instance.new("Sound", Workspace)
-     sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
-     sound.SoundId = "rbxassetid://1862048961" -- copy the url and paste it
-     sound.Looped = false -- If you want it to repeat
-     sound.Volume = 1
-     sound:Play() -- Play the sound
-
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Now starting up...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "Loading... ";
-        Text = "Made by Scyt#1337 - Now starting up...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 5;
-        wait(5)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Loading interface...", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC REWRITE | V2.2";
-        Text = "Loading interface...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-local library = loadstring(game:HttpGet('https://pastebin.com/raw/rS2635sh'))()
-
-    local sound = Instance.new("Sound", Workspace)
-    sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
-    sound.SoundId = "rbxassetid://1555493683" -- copy the url and paste it
-    sound.Looped = false -- If you want it to repeat
-    sound.Volume = 1
-    wait(1)
-    sound:Play() -- Play the sound
-
--- // Api Start \\ --
-local Window = library:CreateWindow(cheatname, version)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Created MenuStyle!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-local Tab = Window:CreateTab("Features")
-
--- // Exploits \\ --
-local Page = Tab:CreateFrame("Exploits")
-local CreateButton = Page:CreateButton("Spam chat", "Chat Spammer", function(CzS)
-    getgenv().CzS = CzS
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()    
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ChatSpammer Active";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        while task.wait() do
-        local CzS = getgenv().CzS
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("_______________________________________________________________________________________________________________________", "All")
-        end
-        wait(3)
-        sound2:Destroy()
-end)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Created Exploits!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
-
--- // Visuals \\ --
-local Page = Tab:CreateFrame("Scythe Visuals")
-local CreateButton = Page:CreateButton("Load ESP", "Loads a ESP script", function(RDFAR)
-    getgenv().ESP = ESP
-        task.wait() do
-        local ESP = getgenv().ESP
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Loading ESP...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(2)
-        loadstring(game:HttpGet(('https://pastebin.com/raw/eZbnTVYK'),true))();
-        sound2:Destroy()
+Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
+    Actions = { -- Notification Buttons
+        Ignore = {
+        Name = "Okay!",
+        Callback = function()
+        print("The user tapped Okay!")
     end
-end)
-local CreateButton = Page:CreateButton("Load Radar", "Loads a Radar script", function(RDFAR)
-    getgenv().RDFAR = RDFAR
-        task.wait() do
-        local RDFAR = getgenv().RDFAR
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Loading Radar...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(2)
-        loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("See anyones health if hurt", "Ur on 1 hp retard u need a heal", function(HEAL)
-    getgenv().HEAL = HEAL
-        task.wait() do
-        local HEAL = getgenv().HEAL
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Yeah";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(2)
-        game:GetService("Players").LocalPlayer.HealthDisplayDistance = math.huge
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Unlock Camera", "math.fucks the camera zoom like nologicxc!", function(Zoom)
-    getgenv().Zoom = Zoom
-        task.wait() do
-        local Zoom = getgenv().Zoom
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "U can see further now";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(2)
-        game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = math.huge
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Spam chat with ClanTag", "ClanTag Spammer", function(CTS)
-    getgenv().CTS = CTS
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()    
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ClanTag ChatSpammer Active";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        while task.wait() do
-        local CTS = getgenv().CTS
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 7 h n 7 n t i c . l u a  |  v 2", "All")
-        wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h n 7 n T 1 C . l u a  |  v 2", "All")
-        wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("s C 8 7 h n 7 n t i c . l U a  |  v 2", "All")
-        wait(14.5)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("$ c y 8 h N 7 n T i c . l u a  |  v 2", "All")
-        wait(14.5)
-        end
-        wait(3)
-        sound2:Destroy()
-end)
+   },
+},
+})
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Created Visuals!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+local sound = Instance.new("Sound", Workspace)
+sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
+sound.SoundId = "rbxassetid://6712558779" -- copy the url and paste it
+sound.Looped = false -- If you want it to repeat
+sound.Volume = 1
+wait(1)
+sound:Play() -- Play the sound
 
--- // Movement \\ --
-local Page = Tab:CreateFrame("Movement")
-local CreateButton = Page:CreateButton("Infinite Jump", "U know if u know", function(HopL)
-    getgenv().HopL = HopL
-        task.wait() do
-        local HopL = getgenv().HopL
-        local InfiniteJumpEnabled = true
-        
-       game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
-		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	end
-    end)
-        
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Removed hop limit (as known as physical gravity lol";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Click TP", "Spawns a click tp item", function(CTP)
-    getgenv().CTP = CTP
-        task.wait() do
-        local CTP = getgenv().CTP
-    loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
-    local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Spawned Click TP Item";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Noclip", "Walk thru walls", function(WTW)
-    getgenv().WTW = WTW
-        task.wait() do
-        local WTW = getgenv().WTW
-    loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Can now walk thru walls";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Fly", "im a bird!", function(BIRD)
-    getgenv().BIRD = BIRD
-        task.wait() do
-        local BIRD = getgenv().BIRD
-    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-    local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Spawned Fly gui";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Buff up WalkSpeed", "100!", function(WS)
-    getgenv().WS = WS
-        task.wait() do
-        local WS = getgenv().WS
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-local Humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
-Humanoid.Changed:Connect(function(state)
-if state == "WalkSpeed" then Humanoid.WalkSpeed = 100 end end)
+-- // Init Window \\ --
+local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
+ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
+Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
+KeySystem = false, KeySettings = { Title = "Untitled", Subtitle = "Key System", Note = "No method of obtaining the key is provided", FileName = "Key", SaveKey = true, GrabKeyFromSite = false, Key = {"Hello"} }
+})
 
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Gatta go fast";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    wait(3)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Buff up JumpPower", "100!", function(JP)
-    getgenv().JP = JP
-        task.wait() do
-        local JP = getgenv().JP
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
-local Humanoid = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
-Humanoid.Changed:Connect(function(state)
-if state == "JumpPower" then Humanoid.JumpPower = 100 end end)
-    
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Boing!";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-    wait(3)
-    sound2:Destroy()
-    end
-end)
+local Main = Window:CreateTab("User", 12995567709) -- Title, Image
+local Exploits = Window:CreateTab("Exploits") -- Title, Image
+local Visuals = Window:CreateTab("Visuals") -- Title, Image
+local Movement = Window:CreateTab("Movement") -- Title, Image
+local LocalPlayer = Window:CreateTab("LocalPlayer") -- Title, Image
+local AntiAim = Window:CreateTab("Anti-Aim") -- Title, Image
+local SS = Window:CreateTab("S-Singer") -- Title, Image
+local Antis = Window:CreateTab("Antis") -- Title, Image
+local Others = Window:CreateTab("Others") -- Title, Image
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Movement loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+-- // Button API \\ --
 
--- // AA (Anti-Aim) \\ --
-local Page = Tab:CreateFrame("Anti-Aim")
-local CreateButton = Page:CreateButton("Load Desyncer", "Creds to whomever made this", function(Desync)
-    getgenv().Desync = Desync
-        task.wait() do
-        local Desync = getgenv().Desync
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Press 'X' to make players miss shots";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
+-- // Exploits
+local ChatSpammer = Exploits:CreateToggle({ Name = "Chat Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
+    enabled = ChatSpammerToggle
+
+    while enabled and wait(0.01) do 
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(":3", "All") wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You're a silly boykisser", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    
+    print("Spammed in chat")
+    end
+end,
+})
+-- // Exploits
+
+-- // Visuals
+local ESPLabel = Visuals:CreateLabel("Main ESP Options")
+local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = false, Flag = "ESPMaster",  Callback = function(ESPToggle) 
+    enabled = ESPToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.enabled = true
+        Sense.Load()
+    elseif enabled == false then
+        Sense.Unload()
+    end
+end,
+})
+
+local ESPb = Visuals:CreateToggle({ Name = "ESP - Box", CurrentValue = false, Flag = "ESPBox",  Callback = function(ESPbToggle) 
+    enabled = ESPbToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.box = true
+        Sense.teamSettings.enemy.boxColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.box = false
+    end
+end,
+})
+
+local ESPb3d = Visuals:CreateToggle({ Name = "ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox",  Callback = function(ESPb3dToggle) 
+    enabled = ESPb3dToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.box3d  = true
+        Sense.teamSettings.enemy.box3dColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.box3d = false
+    end
+end,
+})
+
+local ESPw = Visuals:CreateToggle({ Name = "ESP - Item", CurrentValue = false, Flag = "ESPItemBox",  Callback = function(ESPbwToggle) 
+    enabled = ESPbwToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.weapon   = true
+        Sense.teamSettings.enemy.weaponColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.weapon = false
+    end
+end,
+})
+
+local ESPb = Visuals:CreateToggle({ Name = "ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag",  Callback = function(ESPgtToggle) 
+    enabled = ESPgtToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.name = true
+    elseif enabled == false then
+        Sense.teamSettings.enemy.name = false
+    end
+end,
+})
+
+local ESPhel = Visuals:CreateToggle({ Name = "ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel",  Callback = function(HealthbarToggle) 
+    enabled = HealthbarToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.healthBar = true
+        Sense.teamSettings.enemy.healthText = true
+    elseif enabled == false then
+        Sense.teamSettings.enemy.healthBar = false
+        Sense.teamSettings.enemy.healthText = false
+    end
+end,
+})
+
+local Chams = Visuals:CreateToggle({ Name = "ESP - Chams", CurrentValue = false, Flag = "ESPChams",  Callback = function(ChamsToggle) 
+    enabled = ChamsToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.chams = true
+        Sense.teamSettings.enemy.chamsOutlineColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.chams = false
+    end
+end,
+})
+
+local ESPd = Visuals:CreateToggle({ Name = "ESP - Distance", CurrentValue = false, Flag = "ESPDistance",  Callback = function(ESPdToggle) 
+    enabled = ESPdToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.distance = true
+        Sense.teamSettings.enemy.distanceColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.distance = false
+    end
+end,
+})
+
+local ESPt = Visuals:CreateToggle({ Name = "ESP - Lines", CurrentValue = false, Flag = "ESPtracer",  Callback = function(ESPtToggle) 
+    enabled = ESPtToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.tracer = true
+        Sense.teamSettings.enemy.tracerColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.tracer = false
+    end
+end,
+})
+
+local ESPa = Visuals:CreateToggle({ Name = "ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow",  Callback = function(ESPaToggle) 
+    enabled = ESPaToggle
+    if enabled == true then
+        Sense.teamSettings.enemy.offScreenArrow  = true
+        Sense.teamSettings.enemy.offScreenArrowColor[1] = Color3.new(1, 1, 1)
+    elseif enabled == false then
+        Sense.teamSettings.enemy.offScreenArrow  = false
+    end
+end,
+})
+
+local ESPLabel = Visuals:CreateLabel("Customizable ESP Options")
+local ESPBoxColor = Visuals:CreateColorPicker({ Name = "ESP - Box Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.boxColor[1] = Value
+    end
+})
+local ESP3DBoxColor = Visuals:CreateColorPicker({ Name = "ESP - Box3D Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.box3dColor[1] = Value
+    end
+})
+local ESPGTColor = Visuals:CreateColorPicker({ Name = "ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.nameColor[1] = Value
+    end
+})
+local ESPDistColor = Visuals:CreateColorPicker({ Name = "ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.distanceColor[1] = Value
+    end
+})
+local ESPTColor = Visuals:CreateColorPicker({ Name = "ESP - Line Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.tracerColor[1] = Value
+    end
+})
+local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.offScreenArrowColor[1] = Value
+    end
+})
+local ChamsColor = Visuals:CreateColorPicker({ Name = "ESP - Chams Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.chamsOutlineColor[1] = Value
+    end
+})
+local ChamsFillColor = Visuals:CreateColorPicker({ Name = "ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.enemy.chamsFillColor[1] = Value
+    end
+})
+
+local OOFArrowsRadius = Visuals:CreateSlider({
+    Name = "ESP - OOF Arrows | Radius",
+    Range = {50, 500},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 50,
+    Flag = "OARSlider",
+    Callback = function(Value)
+        Sense.teamSettings.enemy.offScreenArrowRadius = Value
+    end,
+})
+local OOFArrowsSize = Visuals:CreateSlider({
+    Name = "ESP - OOF Arrows | Size",
+    Range = {5, 80},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 5,
+    Flag = "OARSlider2",
+    Callback = function(Value)
+        Sense.teamSettings.enemy.offScreenArrowSize = Value
+    end,
+})
+
+local Label = Visuals:CreateLabel("ETC Visuals")
+local Radar = Visuals:CreateButton({ Name = "Load Radar",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
+end,
+})
+
+local CameraSlider = Visuals:CreateSlider({
+    Name = "Camera Zoomout Farness",
+    Range = {0, 5000},
+    Increment = 1,
+    Suffix = "Camera Zoom",
+    CurrentValue = 16,
+    Flag = "CSlider",
+    Callback = function(Value)
+        game.Players.LocalPlayer.CameraMaxZoomDistance = Value
+    end,
+})
+-- // Visuals
+
+-- // LocalPlayer
+local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
+end,
+})
+local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
+end,
+})
+-- // LocalPlayer
+
+-- // Movement
+local SpeedSlider = Movement:CreateSlider({
+    Name = "Walkspeed",
+    Range = {0, 500},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 16,
+    Flag = "WSlider",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end,
+})
+
+local JumpSlider = Movement:CreateSlider({
+    Name = "Jumppower",
+    Range = {0, 500},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 50,
+    Flag = "JPSlider",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end,
+})
+
+local Fly = Movement:CreateButton({
+    Name = "Load Fly",
+    Callback = function()
+        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+    end,
+})
+-- // Movement
+
+-- // AntiAim
+local Jitter = AntiAim:CreateButton({
+    Name = "Load Jitter",
+    Callback = function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/N6YqG3HA'),true))();
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-        wait(3)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("SpinBot", "Flips ur local lol n shows others u spinning", function(Upsidedown)
-    getgenv().Upsidedown = Upsidedown
-        task.wait() do
-        local Upsidedown = getgenv().Upsidedown
-        local Character = game.Players.LocalPlayer.Character
-        local X = 1
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Locally upside down | Globally spinning";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-        
-    for X = 1, math.huge, 0.1 do wait()
-    Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(1000), 0)
-    Character.HumanoidRootPart.RootJoint.C0 = Character.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(math.pi, 0, math.pi)
-    end
-    sound2:Destroy()
-    end
-end)
+    end,
+})
+-- // AntiAim
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Anti-Aim loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+-- // S-Singer
+local BBYGOYARD = SS:CreateButton({ Name = "BBY GOYARD - GRANT ME ACCESS",
+   Callback = function()
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+    wait(2.1)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+    wait(3.3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+    wait(2.1)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+    wait(17.7)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+    wait(2.1)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+    wait(3.3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Watch out, all the floors will move underneath you", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Dont look down, don't look down", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Flyest out the face", "All")
+    wait(1.4)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("So hard to find a faith", "All")
+    wait(1.3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Print it on the face, just another corpse laid to waste", "All")
+    wait(4)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Step out of my body and watch myself hit the wake", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Open casket likе the dang dead faces ha", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Thеres so much to hate but I'm glad you came", "All")
+    wait(2)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("*but I'm glad you came*", "All")
+    wait(1.3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EVRYBODY DO THE LEAN LIKE THE PISA", "All")
+    wait(3)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("KEEP RUNNIN WITH THEM KNEES UP", "All")
+    wait(1.5)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("SLOW THE BEAT UP", "All")
+    wait(6)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+    wait(3.8)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+    wait(3.8)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+    wait(3.1)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+    wait(4.6)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
+    wait(3.8)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
+    wait(3.8)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
+    wait(3.1)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
+    wait(2)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Song | BBY GOYARD - GRANT ME ACCESS", "All")
+end,
+})
+-- // S-Singer
 
--- // Lovense \\ -- 
-local Page = Tab:CreateFrame("Lovense")
-local CreateButton = Page:CreateButton("Squirter", "winky face", function(Squirt)
-    getgenv().Squirt = Squirt
-        task.wait() do
-        local Squirt = getgenv().Squirt
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://896501604"
-        sound2.Volume = 10
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ew wtf";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
-        wait(1)
-        Game:Shutdown()
-    end
-end)
-local CreateButton = Page:CreateButton("HorseCock GSpot Toucher Pattern", "oohaimboutacuuuUUUUmm!!!!", function(HorseCock)
-    getgenv().HorseCock = HorseCock
-        task.wait() do
-        local HorseCock = getgenv().HorseCock
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://896501604"
-        sound2.Volume = 10
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ew wtf";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
-        wait(1)
-        Game:Shutdown()
-    end
-end)
-local CreateButton = Page:CreateButton("Vagina tsunami Pattern", "makes the pussy go BRR!", function(VaginaWave)
-    getgenv().VaginaWave = VaginaWave
-        task.wait() do
-        local VaginaWave = getgenv().VaginaWave
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://896501604"
-        sound2.Volume = 10
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ew wtf";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
-        wait(1)
-        Game:Shutdown()
-    end
-end)
-local CreateButton = Page:CreateButton("Nutinizer V3 Pattern", "WOAH!", function(Nutinizer)
-    getgenv().Nutinizer = Nutinizer
-        task.wait() do
-        local Nutinizer = getgenv().Nutinizer
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://896501604"
-        sound2.Volume = 10
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ew wtf";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
-        wait(1)
-        Game:Shutdown()
-    end
-end)
-local CreateButton = Page:CreateButton("Baddragon cumflation spotter Pattern", "u gatta give me dat dragon cum more", function(cumflation)
-    getgenv().cumflation = cumflation
-        task.wait() do
-        local cumflation = getgenv().cumflation
-                local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://896501604"
-        sound2.Volume = 10
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This user has loaded a lovense script, Now banning user.", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "ew wtf";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        game.Players.LocalPlayer:Kick('YOUR NASTY AS SHIT!!!')
-        wait(1)
-        Game:Shutdown()
-    end
-end)
+-- // Antis
+local AF = Antis:CreateButton({
+    Name = "Anti-Fling",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))(); 
+    end,
+})
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Lovense loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+local AAfk = Antis:CreateButton({
+    Name = "Anti-AFK",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();  
+    end,
+})
 
--- // User \\ --
-local Page = Tab:CreateFrame("Local")
-local CreateButton = Page:CreateButton("Reset", "Kills u basically", function(Refresh)
-    getgenv().Refresh = Refresh
-        task.wait() do
-        local SH = getgenv().Refresh
-        local player = game.Players.LocalPlayer.Character
-        game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass('Humanoid').Health = inf
-        player.Humanoid:Remove()
-        Instance.new('Humanoid', player)
-        
-        local sound2 = Instance.new("Sound", Workspace)
+local ABK = Antis:CreateButton({
+    Name = "Anti-Ban/Kick",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/vDA45t0N'),true))();  
+    end,
+})
+-- // Antis
+
+-- // Others
+local Label = Others:CreateLabel("Scriptwise")
+local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
+   Callback = function()
+   
+   Games = {
+   [9498006165] = 'https://pastebin.com/raw/gAiRncBa', -- Tapping Simulator
+   [1554960397] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Car%20Dealership%20Tycoon.lua", -- Car Dealership Tycoon
+   [11547613362] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Anime%20Fly%20Race.lua", -- Anime Fly Race
+   [1899149341] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Vehicle%20Tycoon.lua", -- Vehicle Tycoon
+   [9796685905] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Super%20Hero%20Race%20Clicker.lua", -- Super Hero Race Clicker
+   [5108587039] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Palm%20Ridge.lua", -- Palm Ridge Beta
+   [4566572536] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Vehicle%20Legends.lua", -- Vehicle Legends
+   [8365063484] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Miami%20Drive.lua", -- Miami Drive
+   [9578161065] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Greenwood.lua", -- Greenwood
+   [4637668954] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Rensselaer%20County.lua", -- Rensselaer County Beta
+   [4807086917] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Dealership%20Simulator.lua", -- Dealership Simulator
+   [9100638688] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/DRIVE..lua", -- DRIVE.
+   [8436975214] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Dangerous%20Speeds.lua", -- Dangerous Speeds
+   [7282854346] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/The%20Drive.lua", -- The Drive
+   [7042061306] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Eldersburg%2C%20Maryland.lua", -- Eldersburg, Maryland Beta
+   [3351674303] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Driving%20Empire.lua", -- Driving Empire
+   [6038360624] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Portland.lua", -- Portland
+   [1018293455] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Full%20Throttle.lua", -- Full Throttle
+   [10704789056] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Drive%20World.lua", -- Drive World
+   [2551991523] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Bones%20IV.lua", -- Broken Bones IV
+   [11179373590] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Bones%20V.lua", -- Broken Bones V BETA
+   [4898339524] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Ragdolls.lua", -- Broken Ragdolls
+   [6407649031] = "https://pastebin.com/raw/WZnPL6jK", -- NSA
+   [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
+   [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
+   [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
+   [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
+   [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
+   [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
+   [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
+   [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
+   [4282985734] = "https://projecthook.xyz/scripts/free.lua", -- CW
+   [286090429] = "https://pastebin.com/raw/vTxLJQzu", -- ARSENAL
+   [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
+   [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
+   [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2 
+   }
+   
+    if Games[game.PlaceId] then
+        sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
+        sound2:Play()
+        Rayfield:Notify({ Title = "GameFinder", Content = "Game found, now loading...", Duration = 6.5, Image = 12995567709, Actions = { Ignore = { Name = "Okay!", Callback = function() print("The user tapped Okay!") end }, }, })
+        loadstring(game:HttpGet(Games[game.PlaceId]))()
+        wait(3)
+        sound:Destroy()
+    else
+        sound2 = Instance.new("Sound", Workspace)
+        sound2.Parent = game.Workspace
+        sound2.SoundId = "rbxassetid://998971542"
+        sound2.Volume = 10
         sound2:Play() 
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Brb", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Refreshing...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-    sound2:Destroy()
-    end
-end)
+        Rayfield:Notify({ Title = "GameFinder Error", Content = "Game not found", Duration = 6.5, Image = 12995567709, Actions = { Ignore = { Name = "Okay!", Callback = function() print("The user tapped Okay!") end }, }, }) end
+    end,
+})
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Local loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
--- // SongSinger \\ --
-local Page = Tab:CreateFrame("SongWriter")
-local CreateButton = Page:CreateButton("BBY GOYARD - GRANT ME ACCESS", "Sings the desired song in chat", function(chat)
-    getgenv().chat = send
-        task.wait() do
-        local chat = getgenv().chat
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHESTATION] BBY GOYARD - GRANT ME ACCESS", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Now singing: BBY GOYARD - GRANT ME ACCESS";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
-        wait(2.1)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-        wait(3.3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
-        wait(2.1)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-        wait(17.7)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
-        wait(2.1)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-        wait(3.3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Watch out, all the floors will move underneath you", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Dont look down, don't look down", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Flyest out the face", "All")
-        wait(1.4)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("So hard to find a faith", "All")
-        wait(1.3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Print it on the face, just another corpse laid to waste", "All")
-        wait(4)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Step out of my body and watch myself hit the wake", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Open casket likе the dang dead faces ha", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Thеres so much to hate but I'm glad you came", "All")
-        wait(2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("*but I'm glad you came*", "All")
-        wait(1.3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("BODY DO THE LEAN LIKE THE PISA", "All")
-        wait(3)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("KEEP RUNNIN WITH THEM KNEES UP", "All")
-        wait(1.5)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("SLOW THE BEAT UP", "All")
-        wait(6)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
-        wait(3.8)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
-        wait(3.8)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
-        wait(3.1)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-        wait(4.6)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
-        wait(3.8)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
-        wait(3.8)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
-        wait(3.1)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-        wait(2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Song | BBY GOYARD - GRANT ME ACCESS", "All")
-        sound2:Destroy()
-    end 
-end)
-
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] SongWriter loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
--- // Antis \\ --
-local Page = Tab:CreateFrame("Anti's")
-local CreateButton = Page:CreateButton("Anti Fling", "Stops infyieldadmin users from flinging you", function(AFling)
-    getgenv().AFling = AFling 
-        task.wait() do
-        local AFling = getgenv().AFling
-        loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))();   
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1637297605"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Anti'd annoying flingers";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-    sound2:Destroy()
-    end 
-end)
-local CreateButton = Page:CreateButton("Anti Afk", "Snooze freely", function(Afk)
-    getgenv().Afk = Afk
-        task.wait() do
-        local Afk = getgenv().Afk
-        loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();   
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1637297605"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Anti'd AFKing";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Anti Ban", "Cheatr", function(AB)
-    getgenv().AB = AB
-        task.wait() do
-        local AB = getgenv().AB
-        loadstring(game:HttpGet(('https://pastebin.com/raw/vDA45t0N'),true))();   
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1637297605"
-        sound2.Volume = 1
-        sound2:Play()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Anti'd Bans";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-    sound2:Destroy()
-    end
-end)
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Anti's loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
--- // ETC \\ --
-local Page = Tab:CreateFrame("ETC")
-local CreateButton = Page:CreateButton("Check for Supported Game", "Loads a supported script", function(Support)
-    getgenv().Support = Support
-        task.wait() do
-        local Support = getgenv().Support
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound2:Play() 
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Checking...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/6ph1nx1s4/scythelua/main/SCYTHNENTICGameChecker.lua'),true))();
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Load", "UwUWare", function(ESP)
-    getgenv().ESP = ESP
-        task.wait() do
-        local ESP = getgenv().ESP
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "I love uwuware!.. lets inject it!";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jan5106/uwuware_final/main/main.lua'),true))();
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Load", "Domain-X", function(DomainX)
-    getgenv().DomainX = DomainX
-        task.wait() do
-        local DomainX = getgenv().DomainX
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://1862047553"
-        sound2.Volume = 1
-        sound2:Play()
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "I love Domain-X!.. lets inject it!";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
+local DomainX = Others:CreateButton({
+    Name = "Load Domain-X",
+    Callback = function()
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
-    sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("ServerHop", "Make sure to Reinject", function(SH)
-    getgenv().SH = SH
-        task.wait() do
-        local SH = getgenv().SH
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
-        sound2:Play()
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Im going to a different server lel bye", "All")
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Switching Servers...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
+    end,
+})
+
+local Airhub = Others:CreateButton({
+    Name = "Load Airhub",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'),true))();
+    end,
+})
+
+local Label = Others:CreateLabel("Settings & ETC")
+local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle",  Callback = function(FPSToggle) 
+enabled = FPSToggle
+while enabled and wait(0.5) do
+    setfpscap(9999)
+    print("working 2023")
+end
+end,
+})
+
+local Reinject = Others:CreateButton({ Name = "Reinject",
+   Callback = function()
+   Rayfield:Destroy()
+   loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
+end,
+})
+
+local Rejoin = Others:CreateButton({ Name = "Rejoin",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
+end,
+})
+
+local ServerHop = Others:CreateButton({
+    Name = "Serverhop",
+    Callback = function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
-                sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Rejoin", "Make sure to Reinject", function(RJ)
-    getgenv().RJ = RJ
-        task.wait() do
-        local RJ = getgenv().RJ
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
-        sound2:Play()
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Rejoining...";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-        loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Uncap FPS", "Uncaps to inf (If your on Syn-X dont mind about it)", function(FPS)
-    getgenv().FPS = FPS
-        task.wait() do
-        local FPS = getgenv().FPS
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound2:Play() 
-        setfpscap(9999)
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Uncapped FPS";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(5)
-        sound2:Destroy()
-    end
-end)
-local CreateButton = Page:CreateButton("Close Game", "Exits game from script", function(Exit)
-    getgenv().Exit = Exit
-        task.wait() do
-        local Exit = getgenv().Exit
-        local sound2 = Instance.new("Sound", Workspace)
-        sound2.Parent = game.Workspace
-        sound2.SoundId = "rbxassetid://2122440437"
-        sound2.Volume = 1
-        sound.Pitch = 0.5 -- Speed of the song (Preffer not to change it)
-        sound2:Play()
-        game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHENENTIC] Exiting Game", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Exiting the game, bye guys.", "All")
-        
-        game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC";
-        Text = "Exiting Game... Goodbye..";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
-        wait(3)
-        Game:Shutdown()
-    end
-end)
+    end,
+})
 
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] ETC loaded!", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
+local Uninject = Others:CreateButton({ Name = "Uninject",
+   Callback = function()
+   Rayfield:Destroy()
+end,
+})
+
+local GameEXT = Others:CreateButton({ Name = "Close Game",
+   Callback = function()
+   Game:Shutdown()
+end,
+})
+-- // Others
+
+-- // MainPage \\ --
+local Paragraph = Main:CreateParagraph({Title = "SCYTHNENTIC", Content = version})
+local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
+local Discord = Main:CreateButton({ Name = "Join us",
+   Callback = function()
+    http.request(
+        {
+            Url = "http://127.0.0.1:6463/rpc?v=1",
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json",
+                ["origin"] = "https://discord.com",
+            },
+            Body = game:GetService("HttpService"):JSONEncode(
+                {
+                    ["args"] = {
+                        ["code"] = "XVb8MjGUcp",
+                    },
+                    ["cmd"] = "INVITE_BROWSER",
+                    ["nonce"] = "."
+                })
+        })
+end,
+})
+-- // MainPage
+
 -- // Api End \\ --
-
-game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "[SCYTHNENTIC] Injected", Color = Color3.fromRGB( 255, 3, 125 ), Font = Enum.Font.Arial, FontSize = Enum.FontSize.Size24 } )
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-        Title = "SCYTHNENTIC REWRITE";
-        Text = "Interface Loaded!";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-        Duration = 3;
+Rayfield:Notify({ Title = cheatname, Content = "Content Loaded", Duration = 6.5, Image = 12995567709,
+    Actions = { -- Notification Buttons
+        Ignore = {
+        Name = "Okay!",
+        Callback = function()
+        print("The user tapped Okay!")
+    end
+   },
+},
+})
 wait(5)
 sound:Destroy()
+
+-- // Functionality \\ --
+
+while true do
+    wait(0.2)
+    SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
+    JumpSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.JumpPower)
+    CameraSlider:SetValue(game.Players.LocalPlayer.CameraMaxZoomDistance)
+    OOFArrowsRadius:SetValue(Sense.teamSettings.enemy.offScreenArrowRadius)
+    OOFArrowsSize:SetValue(Sense.teamSettings.enemy.offScreenArrowSize)
+    ESPBoxColor:SetValue(Sense.teamSettings.enemy.boxColor)
+    ESP3DBoxColor:SetValue(Sence.teamSettings.enemy.box3dColor)
+    ESPGTColor:SetValue(Sense.teamSettings.enemy.nameColor)
+    ESPDistColor:SetValue(Sense.teamSettings.enemy.distanceColor)
+    ESPTColor:SetValue(Sense.teamSettings.enemy.tracerColor)
+    OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
+    ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
+    ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
+end
+
+local Noclip = nil
+local Clip = nil
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+-- // Functionality \\ --
