@@ -11,7 +11,7 @@ iRay  | Programming
 
 
 local Release = "Beta 8"
-local NotificationDuration = 6.5
+local NotificationDuration = 2.5
 local RayfieldFolder = "athena.software"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".cfg"
