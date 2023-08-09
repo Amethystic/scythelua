@@ -2235,7 +2235,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Slider.Parent = TabPage
 
 			Slider.BackgroundTransparency = 1
-			Slider.UIStroke.Transparency = 1
+			Slider.UIStroke.Transparency = 0
 			Slider.Title.TextTransparency = 1
 
 			if SelectedTheme ~= RayfieldLibrary.Theme.Default then
