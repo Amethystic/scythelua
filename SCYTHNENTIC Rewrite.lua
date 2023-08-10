@@ -1,13 +1,19 @@
-getgenv().SecureMode = true
-local Namecall
+-- // Script made by @athena.software \\ -- 
 
+-- // Etc Functionality | B4 loading \\ -- 
+local Namecall
+local Clipon = false
+local Players = game:GetService("Players")
+getgenv().SecureMode = true
+-- // ...
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.5 | REBIRTH REWRITE"
-
+local version = "Version 2.6 | REBIRTH REWRITE"
+local Message = "Crazy update today huh?"
+-- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -21,8 +27,8 @@ Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Ima
 })
 
 local sound = Instance.new("Sound", Workspace)
-sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
-sound.SoundId = "rbxassetid://6712558779" -- copy the url and paste it
+sound.Pitch = 1 -- Speed of the song (Prefer not to change it)
+sound.SoundId = "rbxassetid://9109651770" -- copy the url and paste it
 sound.Looped = false -- If you want it to repeat
 sound.Volume = 1
 wait(1)
@@ -36,7 +42,7 @@ KeySystem = false, KeySettings = { Title = "Untitled", Subtitle = "Key System", 
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
-local Exploits = Window:CreateTab("Exploits") -- Title, Image
+local Rage = Window:CreateTab("Rage") -- Title, Image
 local Visuals = Window:CreateTab("Visuals") -- Title, Image
 local Movement = Window:CreateTab("Movement") -- Title, Image
 local LocalPlayer = Window:CreateTab("LocalPlayer") -- Title, Image
@@ -44,74 +50,105 @@ local AntiAim = Window:CreateTab("Anti-Aim") -- Title, Image
 local SS = Window:CreateTab("S-Singer") -- Title, Image
 local Antis = Window:CreateTab("Antis") -- Title, Image
 local Others = Window:CreateTab("Others") -- Title, Image
+-- // ...
 
 -- // Button API \\ --
 
--- // Exploits
-local ChatSpammer = Exploits:CreateToggle({ Name = "Chat Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
-    enabled = ChatSpammerToggle
-
-    while enabled and wait(0.01) do 
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(":3", "All") wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You're a silly boykisser", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    
-    print("Spammed in chat")
+-- // RAAAAAGE!
+local RageLabel1 = Rage:CreateLabel("Sword Related")
+local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
+    enabled = SwordExpanderToggle
+    if enabled == true then
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Character.Sword)
+        while enabled and wait(1) do
+            game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
+            game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
+        end
+    else
+        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+        game.Players.Backpack:ClearAllChildren()
     end
 end,
 })
--- // Exploits
+
+local RageLabel2 = Rage:CreateLabel("Chat Related")
+local NPC = Rage:CreateButton({
+    Name = "Chat - Become an NPC",
+    Callback = function()
+        getgenv().hurtmessages = {
+            "That hurt!",
+            "Watch where you're swinging!",
+            "Ow! That's gonna leave a mark!",
+            "Stop attacking me!",
+            "I'm not feeling so good...",
+            "Is that all you've got?",
+            "Can't catch a break!",
+            "That was a cheap shot!",
+            "You'll regret that!"
+         }
+        local player = game.Players.LocalPlayer
+        if player.Character then
+            local humanoid = player.Character:WaitForChild("Humanoid")
+            local previousHealth = humanoid.Health
+        
+            humanoid.Changed:Connect(function()
+                if humanoid.Health < previousHealth then
+                    local randomIndex = math.random(1, #getgenv().hurtmessages)
+                    local message = getgenv().hurtmessages[randomIndex]
+                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+                end
+                
+                previousHealth = humanoid.Health
+            end)
+        end
+        player.CharacterAdded:Connect(function(char)
+            local humanoid = char:WaitForChild("Humanoid")
+            local previousHealth = humanoid.Health
+        
+            humanoid.Changed:Connect(function()
+                if humanoid.Health < previousHealth then
+                    local randomIndex = math.random(1, #getgenv().hurtmessages)
+                    local message = getgenv().hurtmessages[randomIndex]
+                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+                end
+                
+                previousHealth = humanoid.Health
+            end)
+        end)
+    end,
+})
+
+local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
+    enabled = ChatSpammerToggle
+
+    getgenv().spammess = {
+        ":3",
+        "You're a silly boykisser!",
+        "                              "
+     }
+     while enabled and wait(0.01) do
+        local randomIndex = math.random(1, #getgenv().spammess)
+        local message = getgenv().spammess[randomIndex]
+
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+        print("Spammed in chat")
+    end
+end,
+})
+local RageLabel2 = Rage:CreateLabel("Script Related")
+local EpicHax = Rage:CreateButton({
+    Name = "Load EpicHax (Aimbot SilentAim)",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel.lua'),true))();
+    end,
+})
+local AimbotV2 = Rage:CreateButton({
+    Name = "Load AIMBOT V2 (Basic Aimbot)",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
+    end,
+})
+-- // RAAAAAGE!
 
 -- // Visuals
 local ESPLabel = Visuals:CreateLabel("Main ESP Options")
@@ -120,7 +157,7 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
     if enabled == true then
         Sense.teamSettings.enemy.enabled = true
         Sense.Load()
-    elseif enabled == false then
+    else
         Sense.Unload()
     end
 end,
@@ -131,7 +168,7 @@ local ESPb = Visuals:CreateToggle({ Name = "ESP - Box", CurrentValue = false, Fl
     if enabled == true then
         Sense.teamSettings.enemy.box = true
         Sense.teamSettings.enemy.boxColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.box = false
     end
 end,
@@ -142,7 +179,7 @@ local ESPb3d = Visuals:CreateToggle({ Name = "ESP - 3DBox", CurrentValue = false
     if enabled == true then
         Sense.teamSettings.enemy.box3d  = true
         Sense.teamSettings.enemy.box3dColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.box3d = false
     end
 end,
@@ -153,7 +190,7 @@ local ESPw = Visuals:CreateToggle({ Name = "ESP - Item", CurrentValue = false, F
     if enabled == true then
         Sense.teamSettings.enemy.weapon   = true
         Sense.teamSettings.enemy.weaponColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.weapon = false
     end
 end,
@@ -163,7 +200,7 @@ local ESPb = Visuals:CreateToggle({ Name = "ESP - Gamertag", CurrentValue = fals
     enabled = ESPgtToggle
     if enabled == true then
         Sense.teamSettings.enemy.name = true
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.name = false
     end
 end,
@@ -174,7 +211,7 @@ local ESPhel = Visuals:CreateToggle({ Name = "ESP - Healthbar & HealthTag", Curr
     if enabled == true then
         Sense.teamSettings.enemy.healthBar = true
         Sense.teamSettings.enemy.healthText = true
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.healthBar = false
         Sense.teamSettings.enemy.healthText = false
     end
@@ -186,7 +223,7 @@ local Chams = Visuals:CreateToggle({ Name = "ESP - Chams", CurrentValue = false,
     if enabled == true then
         Sense.teamSettings.enemy.chams = true
         Sense.teamSettings.enemy.chamsOutlineColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.chams = false
     end
 end,
@@ -197,7 +234,7 @@ local ESPd = Visuals:CreateToggle({ Name = "ESP - Distance", CurrentValue = fals
     if enabled == true then
         Sense.teamSettings.enemy.distance = true
         Sense.teamSettings.enemy.distanceColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.distance = false
     end
 end,
@@ -208,7 +245,7 @@ local ESPt = Visuals:CreateToggle({ Name = "ESP - Lines", CurrentValue = false, 
     if enabled == true then
         Sense.teamSettings.enemy.tracer = true
         Sense.teamSettings.enemy.tracerColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.tracer = false
     end
 end,
@@ -219,7 +256,7 @@ local ESPa = Visuals:CreateToggle({ Name = "ESP - OOF Arrows", CurrentValue = fa
     if enabled == true then
         Sense.teamSettings.enemy.offScreenArrow  = true
         Sense.teamSettings.enemy.offScreenArrowColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.offScreenArrow  = false
     end
 end,
@@ -299,7 +336,18 @@ local OOFArrowsSize = Visuals:CreateSlider({
 })
 
 local Label = Visuals:CreateLabel("ETC Visuals")
-local Radar = Visuals:CreateButton({ Name = "Load Radar",
+local FOV = Visuals:CreateSlider({
+    Name = "FOV",
+    Range = {30, 120},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 30,
+    Flag = "OARSlider2",
+    Callback = function(Value)
+        game.Workspace.Camera.FieldOfView = Value
+    end,
+})
+local Radar = Visuals:CreateButton({ Name = "Load - Radar",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
 end,
@@ -309,12 +357,27 @@ local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
    loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
 end,
 })
+local Skybox = Visuals:CreateButton({ Name = "Load - Scythnentic skybox",
+   Callback = function()
+    DecalId = "http://www.roblox.com/asset/?id=70923389"
+    SkyBox = Instance.new("Sky")
+    SkyBox.Name = "S c y t h n e n t i c"
+    SkyBox.Parent = game.Lighting
+    SkyBox.SkyboxBk = DecalId
+    SkyBox.SkyboxDn = DecalId
+    SkyBox.SkyboxFt = DecalId
+    SkyBox.SkyboxRt = DecalId
+    SkyBox.SkyboxLf = DecalId
+    SkyBox.SkyboxUp = DecalId
+    SkyBox.StarCount = 0
+end,
+})
 
 local CameraSlider = Visuals:CreateSlider({
     Name = "Camera Zoomout Farness",
     Range = {0, 5000},
     Increment = 1,
-    Suffix = "Camera Zoom",
+    Suffix = "",
     CurrentValue = 16,
     Flag = "CSlider",
     Callback = function(Value)
@@ -324,14 +387,74 @@ local CameraSlider = Visuals:CreateSlider({
 -- // Visuals
 
 -- // LocalPlayer
-local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
-   Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
+local Nocliptest = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCToggle",  Callback = function(NCToggle) 
+    enabled = NCToggle
+    
+    if enabled == true then
+        Clipon = true
+        Stepped = game:GetService("RunService").Stepped:Connect(function()
+			if not Clipon == false then
+				for a, b in pairs(Workspace:GetChildren()) do
+                if b.Name == Players.LocalPlayer.Name then
+                for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                end end end end
+			else
+				Stepped:Disconnect()
+			end
+		end)
+    else
+        Clipon = false
+    end
 end,
 })
+
 local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
    Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
+    player1=game.Players.LocalPlayer
+    q=Instance.new('HopperBin', player1.Backpack)
+    q.Name = 'Click Teleport'
+    bin = q
+
+    function teleportPlayer(pos)
+        local player = game.Players.LocalPlayer
+        if player == nil or player.Character == nil then return end
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x, pos.y + 7, pos.z))
+    end
+
+    enabled = true
+    function onButton1Down(mouse)
+    if not enabled then
+        return
+    end
+    
+    local player = game.Players.LocalPlayer
+    if player == nil then return end
+    enabled = false
+    local cf = mouse.Hit
+    local v = cf.lookVector
+    teleportPlayer(cf.p)
+    wait()
+    enabled = true
+    end
+
+    function onSelected(mouse)
+        mouse.Icon = "rbxasset://textures\\ArrowCursor.png"
+        mouse.Button1Down:connect(function() onButton1Down(mouse) end)
+    end
+    bin.Selected:connect(onSelected)
+end,
+})
+
+local Reset = LocalPlayer:CreateButton({ Name = "Reset",
+   Callback = function()
+    PreviousPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
+	game.Players.LocalPlayer.CharacterAdded:Wait()
+	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
 -- // LocalPlayer
@@ -339,7 +462,7 @@ end,
 -- // Movement
 local SpeedSlider = Movement:CreateSlider({
     Name = "Walkspeed",
-    Range = {0, 500},
+    Range = {16, 500},
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
@@ -351,7 +474,7 @@ local SpeedSlider = Movement:CreateSlider({
 
 local JumpSlider = Movement:CreateSlider({
     Name = "Jumppower",
-    Range = {0, 500},
+    Range = {50, 500},
     Increment = 1,
     Suffix = "",
     CurrentValue = 50,
@@ -451,10 +574,11 @@ end,
 -- // S-Singer
 
 -- // Antis
+local Label = Antis:CreateLabel("Modder/Admin-wise")
 local AF = Antis:CreateButton({
     Name = "Anti-Fling",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))(); 
+        loadstring(game:HttpGet(('https://pastebin.com/raw/Q0Nh2SYx'),true))(); 
     end,
 })
 
@@ -477,15 +601,14 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentV
     if enabled == true then
     print('[Adonis Autobypass]: this game is running with autobypass!')
         Namecall = hookmetamethod(game, '__namecall', function(self, ...)
-           local Caller = tostring(getcallingscript())
-           local Method = getnamecallmethod()
-           if Caller == 'ClientMover' and Method == 'GetService' then
-              return
-           end
+        local Caller = tostring(getcallingscript())
+        local Method = getnamecallmethod()
+        if Caller == 'ClientMover' and Method == 'GetService' then
+            return
+        end
     return Namecall(self, ...)
-end)
-
-    elseif enabled == false then
+    end)
+    else
         return print("Its still hooked dw you're safe my child")
     end
 end,
@@ -498,42 +621,20 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
    Callback = function()
    
    Games = {
-   [9498006165] = 'https://pastebin.com/raw/gAiRncBa', -- Tapping Simulator
-   [1554960397] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Car%20Dealership%20Tycoon.lua", -- Car Dealership Tycoon
-   [11547613362] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Anime%20Fly%20Race.lua", -- Anime Fly Race
-   [1899149341] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Vehicle%20Tycoon.lua", -- Vehicle Tycoon
-   [9796685905] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Super%20Hero%20Race%20Clicker.lua", -- Super Hero Race Clicker
-   [5108587039] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Palm%20Ridge.lua", -- Palm Ridge Beta
-   [4566572536] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Vehicle%20Legends.lua", -- Vehicle Legends
-   [8365063484] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Miami%20Drive.lua", -- Miami Drive
-   [9578161065] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Greenwood.lua", -- Greenwood
-   [4637668954] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Rensselaer%20County.lua", -- Rensselaer County Beta
-   [4807086917] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Dealership%20Simulator.lua", -- Dealership Simulator
-   [9100638688] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/DRIVE..lua", -- DRIVE.
-   [8436975214] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Dangerous%20Speeds.lua", -- Dangerous Speeds
-   [7282854346] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/The%20Drive.lua", -- The Drive
-   [7042061306] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Eldersburg%2C%20Maryland.lua", -- Eldersburg, Maryland Beta
-   [3351674303] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Driving%20Empire.lua", -- Driving Empire
-   [6038360624] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Portland.lua", -- Portland
-   [1018293455] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Full%20Throttle.lua", -- Full Throttle
-   [10704789056] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Drive%20World.lua", -- Drive World
-   [2551991523] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Bones%20IV.lua", -- Broken Bones IV
-   [11179373590] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Bones%20V.lua", -- Broken Bones V BETA
-   [4898339524] = "https://raw.githubusercontent.com/Golden-Hub-Owner/Golden-Hub/main/Broken%20Ragdolls.lua", -- Broken Ragdolls
-   [6407649031] = "https://pastebin.com/raw/WZnPL6jK", -- NSA
-   [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
-   [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
-   [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
-   [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
-   [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
-   [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
-   [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
-   [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
-   [4282985734] = "https://projecthook.xyz/scripts/free.lua", -- CW
-   [286090429] = "https://pastebin.com/raw/vTxLJQzu", -- ARSENAL
-   [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
-   [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
-   [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2 
+    [6407649031] = "https://pastebin.com/raw/WZnPL6jK", -- NSA
+    [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
+    [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
+    [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
+    [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
+    [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
+    [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
+    [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
+    [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
+    [4282985734] = "https://raw.githubusercontent.com/ditchmethis/Lumware-Combat-Warriors-/main/lumware_updated.lua", -- CW
+    [286090429] = "https://gangofgang.gog-best.repl.co/aimhook/hook.lua", -- ARSENAL
+    [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
+    [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
+    [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2
    }
    
     if Games[game.PlaceId] then
@@ -563,20 +664,15 @@ local DomainX = Others:CreateButton({
     end,
 })
 
-local EpicHax = Others:CreateButton({
-    Name = "Load EpicHax (Aimbot SilentAim)",
-    Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'),true))();
-    end,
-})
-
 local Label = Others:CreateLabel("Settings & ETC")
-local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle",  Callback = function(FPSToggle) 
-enabled = FPSToggle
-while enabled and wait(0.5) do
-    setfpscap(9999)
-    print("working 2023")
-end
+local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle", Callback = function(FPSToggle)
+    enabled = FPSToggle
+
+    if enabled then
+        setfpscap(9999)
+    else
+        setfpscap(60)
+    end
 end,
 })
 
@@ -614,8 +710,9 @@ end,
 -- // Others
 
 -- // MainPage \\ --
-local Paragraph = Main:CreateParagraph({Title = "SCYTHNENTIC", Content = version})
+local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
 local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
+local MSGBoard = Main:CreateParagraph({Title = "- Message Board -", Content = Message})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
     http.request(
@@ -654,7 +751,6 @@ wait(5)
 sound:Destroy()
 
 -- // Functionality \\ --
-
 while true do
     wait(0.2)
     SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
@@ -670,29 +766,6 @@ while true do
     OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
     ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
+    FOV:SetValue(game.Workspace.Camera.FieldOfView)
 end
-
-local Noclip = nil
-local Clip = nil
-function noclip()
-	Clip = false
-	local function Nocl()
-		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-					v.CanCollide = false
-				end
-			end
-		end
-		wait(0.21) -- basic optimization
-	end
-	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
-end
-
-function clip()
-	if Noclip then Noclip:Disconnect() end
-	Clip = true
-end
-
-noclip() -- to toggle noclip() and clip()
 -- // Functionality \\ --
