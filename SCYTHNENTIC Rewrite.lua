@@ -42,7 +42,7 @@ KeySystem = false, KeySettings = { Title = "Untitled", Subtitle = "Key System", 
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
-local Exploits = Window:CreateTab("Exploits") -- Title, Image
+local Rage = Window:CreateTab("Rage") -- Title, Image
 local Visuals = Window:CreateTab("Visuals") -- Title, Image
 local Movement = Window:CreateTab("Movement") -- Title, Image
 local LocalPlayer = Window:CreateTab("LocalPlayer") -- Title, Image
@@ -54,71 +54,89 @@ local Others = Window:CreateTab("Others") -- Title, Image
 
 -- // Button API \\ --
 
--- // Exploits
-local ChatSpammer = Exploits:CreateToggle({ Name = "Chat Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
-    enabled = ChatSpammerToggle
-
-    while enabled and wait(0.01) do 
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(":3", "All") wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You're a silly boykisser", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    wait(0.01)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("                              ", "All")    
-    print("Spammed in chat")
+-- // RAAAAAGE!
+local RageLabel1 = Rage:CreateLabel("Sword Related")
+local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
+    enabled = SwordExpanderToggle
+    if enabled == true then
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Character.Sword)
+        while enabled and wait(1) do
+            game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
+            game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
+        end
+    else
+        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+        game.Players.Backpack:ClearAllChildren()
     end
 end,
 })
--- // Exploits
+
+local RageLabel2 = Rage:CreateLabel("Chat Related")
+local NPC = Rage:CreateButton({
+    Name = "Chat - Become an NPC",
+    Callback = function()
+        getgenv().hurtmessages = {
+            "That hurt!",
+            "Watch where you're swinging!",
+            "Ow! That's gonna leave a mark!",
+            "Stop attacking me!",
+            "I'm not feeling so good...",
+            "Is that all you've got?",
+            "Can't catch a break!",
+            "That was a cheap shot!",
+            "You'll regret that!"
+         }
+        local player = game.Players.LocalPlayer
+        if player.Character then
+            local humanoid = player.Character:WaitForChild("Humanoid")
+            local previousHealth = humanoid.Health
+        
+            humanoid.Changed:Connect(function()
+                if humanoid.Health < previousHealth then
+                    local randomIndex = math.random(1, #getgenv().hurtmessages)
+                    local message = getgenv().hurtmessages[randomIndex]
+                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+                end
+                
+                previousHealth = humanoid.Health
+            end)
+        end
+        player.CharacterAdded:Connect(function(char)
+            local humanoid = char:WaitForChild("Humanoid")
+            local previousHealth = humanoid.Health
+        
+            humanoid.Changed:Connect(function()
+                if humanoid.Health < previousHealth then
+                    local randomIndex = math.random(1, #getgenv().hurtmessages)
+                    local message = getgenv().hurtmessages[randomIndex]
+        
+                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+                end
+                
+                previousHealth = humanoid.Health
+            end)
+        end)
+    end,
+})
+
+local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
+    enabled = ChatSpammerToggle
+
+    getgenv().spammess = {
+        ":3",
+        "You're a silly boykisser!",
+        "                              "
+     }
+     while enabled and wait(0.01) do
+        local randomIndex = math.random(1, #getgenv().spammess)
+        local message = getgenv().spammess[randomIndex]
+
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+        print("Spammed in chat")
+    end
+end,
+})
+-- // RAAAAAGE!
 
 -- // Visuals
 local ESPLabel = Visuals:CreateLabel("Main ESP Options")
