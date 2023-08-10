@@ -135,6 +135,19 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
     end
 end,
 })
+local RageLabel2 = Rage:CreateLabel("Script Related")
+local EpicHax = Rage:CreateButton({
+    Name = "Load EpicHax (Aimbot SilentAim)",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel.lua'),true))();
+    end,
+})
+local AimbotV2 = Rage:CreateButton({
+    Name = "Load AIMBOT V2 (Basic Aimbot)",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
+    end,
+})
 -- // RAAAAAGE!
 
 -- // Visuals
@@ -648,20 +661,6 @@ local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
-    end,
-})
-
-local EpicHax = Others:CreateButton({
-    Name = "Load EpicHax (Aimbot SilentAim)",
-    Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel.lua'),true))();
-    end,
-})
-
-local AimbotV2 = Others:CreateButton({
-    Name = "Load AIMBOT V2 (Basic Aimbot)",
-    Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
     end,
 })
 
