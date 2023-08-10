@@ -357,19 +357,32 @@ local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
    loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
 end,
 })
-local Skybox = Visuals:CreateButton({ Name = "Load - Scythnentic skybox",
-   Callback = function()
-    DecalId = "http://www.roblox.com/asset/?id=70923389"
-    SkyBox = Instance.new("Sky")
-    SkyBox.Name = "S c y t h n e n t i c"
-    SkyBox.Parent = game.Lighting
-    SkyBox.SkyboxBk = DecalId
-    SkyBox.SkyboxDn = DecalId
-    SkyBox.SkyboxFt = DecalId
-    SkyBox.SkyboxRt = DecalId
-    SkyBox.SkyboxLf = DecalId
-    SkyBox.SkyboxUp = DecalId
-    SkyBox.StarCount = 0
+
+local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox (Test)", CurrentValue = false, Flag = "Sky",  Callback = function(SkyboxToggle) 
+    enabled = SkyboxToggle
+    if enabled == true then
+        SkyBox = Instance.new("Sky")
+        SkyBox.Name = "S c y t h n e n t i c"
+        SkyBox.Parent = game.Lighting
+        SkyBox.SkyboxBk = "http://www.roblox.com/asset/?id=271042516"
+        SkyBox.SkyboxDn = "http://www.roblox.com/asset/?id=271077243"
+        SkyBox.SkyboxFt = "http://www.roblox.com/asset/?id=271042556"
+        SkyBox.SkyboxRt = "http://www.roblox.com/asset/?id=271042467"
+        SkyBox.SkyboxLf = "http://www.roblox.com/asset/?id=271042310"
+        SkyBox.SkyboxUp = "http://www.roblox.com/asset/?id=271077958"
+        SkyBox.StarCount = 0
+    else
+        SkyBox = Instance.new("Sky")
+        SkyBox.Name = "S c y t h n e n t i c"
+        SkyBox.Parent = game.Lighting
+        SkyBox.SkyboxBk = "rbxassetid://14133939547"
+        SkyBox.SkyboxDn = "rbxassetid://14133938465"
+        SkyBox.SkyboxFt = "rbxassetid://14133939547"
+        SkyBox.SkyboxRt = "rbxassetid://14133939547"
+        SkyBox.SkyboxLf = "rbxassetid://14133939547"
+        SkyBox.SkyboxUp = "rbxassetid://14133942685"
+        SkyBox.StarCount = 0
+    end
 end,
 })
 
