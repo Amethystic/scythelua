@@ -20,7 +20,7 @@ Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Ima
 
 local sound = Instance.new("Sound", Workspace)
 sound.Pitch = 1 -- Speed of the song (Prefer not to change it)
-sound.SoundId = "rbxassetid://6712558779" -- copy the url and paste it
+sound.SoundId = "rbxassetid://9109651770" -- copy the url and paste it
 sound.Looped = false -- If you want it to repeat
 sound.Volume = 1
 wait(1)
@@ -297,6 +297,17 @@ local OOFArrowsSize = Visuals:CreateSlider({
 })
 
 local Label = Visuals:CreateLabel("ETC Visuals")
+local FOV = Visuals:CreateSlider({
+    Name = "FOV",
+    Range = {30, 120},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 30,
+    Flag = "OARSlider2",
+    Callback = function(Value)
+        game.Workspace.Camera.FieldOfView = Value
+    end,
+})
 local Radar = Visuals:CreateButton({ Name = "Load - Radar",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
@@ -305,6 +316,21 @@ end,
 local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
+end,
+})
+local Skybox = Visuals:CreateButton({ Name = "Load - Scythnentic skybox",
+   Callback = function()
+    DecalId = "http://www.roblox.com/asset/?id=70923389"
+    SkyBox = Instance.new("Sky")
+    SkyBox.Name = "S c y t h n e n t i c"
+    SkyBox.Parent = game.Lighting
+    SkyBox.SkyboxBk = DecalId
+    SkyBox.SkyboxDn = DecalId
+    SkyBox.SkyboxFt = DecalId
+    SkyBox.SkyboxRt = DecalId
+    SkyBox.SkyboxLf = DecalId
+    SkyBox.SkyboxUp = DecalId
+    SkyBox.StarCount = 0
 end,
 })
 
@@ -324,12 +350,53 @@ local CameraSlider = Visuals:CreateSlider({
 -- // LocalPlayer
 local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
    Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/wNAe2uYM'),true))();
+    player1=game.Players.LocalPlayer
+    q=Instance.new('HopperBin', player1.Backpack)
+    q.Name = 'Click Teleport'
+    bin = q
+
+    function teleportPlayer(pos)
+    local player = game.Players.LocalPlayer
+    if player == nil or player.Character == nil then return end
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x, pos.y + 7, pos.z))
+    end
+
+    enabled = true
+    function onButton1Down(mouse)
+    if not enabled then
+        return
+    end
+    
+    local player = game.Players.LocalPlayer
+    if player == nil then return end
+    enabled = false
+    local cf = mouse.Hit
+    local v = cf.lookVector
+    teleportPlayer(cf.p)
+    wait()
+    enabled = true
+    end
+
+    function onSelected(mouse)
+        mouse.Icon = "rbxasset://textures\\ArrowCursor.png"
+        mouse.Button1Down:connect(function() onButton1Down(mouse) end)
+    end
+    bin.Selected:connect(onSelected)
 end,
 })
 local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
+end,
+})
+local Reset = LocalPlayer:CreateButton({ Name = "Reset",
+   Callback = function()
+    PreviousPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
+	game.Players.LocalPlayer.CharacterAdded:Wait()
+	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
 -- // LocalPlayer
@@ -597,8 +664,9 @@ end,
 -- // Others
 
 -- // MainPage \\ --
-local Paragraph = Main:CreateParagraph({Title = "SCYTHNENTIC", Content = version})
+local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
 local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
+local MSGBoard = Main:CreateParagraph({Title = "- Message Board -", Content = ""})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
     http.request(
@@ -637,7 +705,6 @@ wait(5)
 sound:Destroy()
 
 -- // Functionality \\ --
-
 while true do
     wait(0.2)
     SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
@@ -653,6 +720,7 @@ while true do
     OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
     ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
+    FOV:SetValue(game.Workspace.Camera.FieldOfView)
 end
 
 local Noclip = nil
@@ -677,5 +745,5 @@ function clip()
 	Clip = true
 end
 
-noclip() -- to toggle noclip() and clip()
+noclip()
 -- // Functionality \\ --
