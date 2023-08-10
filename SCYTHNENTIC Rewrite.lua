@@ -11,8 +11,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.7 | REBIRTH REWRITE"
-local Message = "- Skybox Toggle"
+local version = "Version 2.6 | REBIRTH REWRITE"
+local Message = "Crazy update today huh?"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
@@ -358,7 +358,7 @@ local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
 end,
 })
 
-local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox (Test)", CurrentValue = false, Flag = "Sky",  Callback = function(SkyboxToggle) 
+local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue = false, Flag = "Sky",  Callback = function(SkyboxToggle) 
     enabled = SkyboxToggle
     if enabled == true then
         SkyBox = Instance.new("Sky")
