@@ -4,7 +4,7 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.3 | REBIRTH REWRITE"
+local version = "Version 2.4 | REBIRTH REWRITE"
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -536,10 +536,10 @@ local DomainX = Others:CreateButton({
     end,
 })
 
-local Airhub = Others:CreateButton({
-    Name = "Load Airhub",
+local EpicHax = Others:CreateButton({
+    Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua'),true))();
+        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'),true))();
     end,
 })
 
