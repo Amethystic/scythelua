@@ -1,10 +1,13 @@
 getgenv().SecureMode = true
+local Namecall
+
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.4 | REBIRTH REWRITE"
+local version = "Version 2.5 | REBIRTH REWRITE"
+
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -301,6 +304,11 @@ local Radar = Visuals:CreateButton({ Name = "Load Radar",
    loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
 end,
 })
+local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
+end,
+})
 
 local CameraSlider = Visuals:CreateSlider({
     Name = "Camera Zoomout Farness",
@@ -457,11 +465,30 @@ local AAfk = Antis:CreateButton({
     end,
 })
 
-local ABK = Antis:CreateButton({
-    Name = "Anti-Ban/Kick",
+local Label = Antis:CreateLabel("AC-wise")
+local ACB = Antis:CreateButton({
+    Name = "Anti-Cheat Bypasser - Universial",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/vDA45t0N'),true))();  
+        loadstring(game:HttpGet("https://irisapp.ca/TheGoodSucc/iAntiCheat.lua"))();  
     end,
+})
+local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
+    enabled = Bypasstoggle
+    if enabled == true then
+    print('[Adonis Autobypass]: this game is running with autobypass!')
+        Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+           local Caller = tostring(getcallingscript())
+           local Method = getnamecallmethod()
+           if Caller == 'ClientMover' and Method == 'GetService' then
+              return
+           end
+    return Namecall(self, ...)
+end)
+
+    elseif enabled == false then
+        return print("Its still hooked dw you're safe my child")
+    end
+end,
 })
 -- // Antis
 
@@ -537,9 +564,9 @@ local DomainX = Others:CreateButton({
 })
 
 local EpicHax = Others:CreateButton({
-    Name = "Load EpicHax",
+    Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel'), true))();
+        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'),true))();
     end,
 })
 
