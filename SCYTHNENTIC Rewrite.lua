@@ -1,9 +1,10 @@
-getgenv().SecureMode = true
-local Namecall
+-- // Script made by @athena.software \\ -- 
 
 -- // Etc Functionality | B4 loading \\ -- 
+local Namecall
 local Clipon = false
 local Players = game:GetService("Players")
+getgenv().SecureMode = true
 -- // ...
 
 -- // Init Requirement \\ --
@@ -12,6 +13,7 @@ local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.6 | REBIRTH REWRITE"
 local Message = "Nigga penis....."
+-- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -48,6 +50,7 @@ local AntiAim = Window:CreateTab("Anti-Aim") -- Title, Image
 local SS = Window:CreateTab("S-Singer") -- Title, Image
 local Antis = Window:CreateTab("Antis") -- Title, Image
 local Others = Window:CreateTab("Others") -- Title, Image
+-- // ...
 
 -- // Button API \\ --
 
