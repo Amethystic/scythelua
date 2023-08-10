@@ -12,7 +12,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.7 | REBIRTH REWRITE"
-local Message = "- Skybox Toggle"
+local Message = "- Skybox Toggle | - Changed Message Box to Update Log"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
@@ -725,7 +725,7 @@ end,
 -- // MainPage \\ --
 local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
 local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
-local MSGBoard = Main:CreateParagraph({Title = "- Message Board -", Content = Message})
+local MSGBoard = Main:CreateParagraph({Title = "- Update Log -", Content = Message})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
     http.request(
