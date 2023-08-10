@@ -1,13 +1,11 @@
 getgenv().SecureMode = true
 local Namecall
 
-
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.5 | REBIRTH REWRITE"
-
+local version = "Version 2.6 | REBIRTH REWRITE"
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -21,7 +19,7 @@ Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Ima
 })
 
 local sound = Instance.new("Sound", Workspace)
-sound.Pitch = 1 -- Speed of the song (Preffer not to change it)
+sound.Pitch = 1 -- Speed of the song (Prefer not to change it)
 sound.SoundId = "rbxassetid://6712558779" -- copy the url and paste it
 sound.Looped = false -- If you want it to repeat
 sound.Volume = 1
@@ -299,7 +297,7 @@ local OOFArrowsSize = Visuals:CreateSlider({
 })
 
 local Label = Visuals:CreateLabel("ETC Visuals")
-local Radar = Visuals:CreateButton({ Name = "Load Radar",
+local Radar = Visuals:CreateButton({ Name = "Load - Radar",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
 end,
@@ -451,10 +449,11 @@ end,
 -- // S-Singer
 
 -- // Antis
+local Label = Antis:CreateLabel("Modder/Admin-wise")
 local AF = Antis:CreateButton({
     Name = "Anti-Fling",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/VjjWMC7a'),true))(); 
+        loadstring(game:HttpGet(('https://pastebin.com/raw/Q0Nh2SYx'),true))(); 
     end,
 })
 
@@ -477,14 +476,13 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentV
     if enabled == true then
     print('[Adonis Autobypass]: this game is running with autobypass!')
         Namecall = hookmetamethod(game, '__namecall', function(self, ...)
-           local Caller = tostring(getcallingscript())
-           local Method = getnamecallmethod()
-           if Caller == 'ClientMover' and Method == 'GetService' then
-              return
-           end
+        local Caller = tostring(getcallingscript())
+        local Method = getnamecallmethod()
+        if Caller == 'ClientMover' and Method == 'GetService' then
+            return
+        end
     return Namecall(self, ...)
-end)
-
+    end)
     elseif enabled == false then
         return print("Its still hooked dw you're safe my child")
     end
@@ -566,7 +564,14 @@ local DomainX = Others:CreateButton({
 local EpicHax = Others:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'),true))();
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel.lua'),true))();
+    end,
+})
+
+local AimbotV2 = Others:CreateButton({
+    Name = "Load AIMBOT V2 (Basic Aimbot)",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
     end,
 })
 
