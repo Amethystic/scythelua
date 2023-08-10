@@ -676,7 +676,7 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = fa
 end,
 })
 
-local Reinject = Others:CreateButton({ Name = "Reinject",
+local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
    Callback = function()
    Rayfield:Destroy()
    loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
