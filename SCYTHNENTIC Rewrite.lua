@@ -1,11 +1,17 @@
 getgenv().SecureMode = true
 local Namecall
 
+-- // Etc Functionality | B4 loading \\ -- 
+local Clipon = false
+local Players = game:GetService("Players")
+-- // ...
+
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.6 | REBIRTH REWRITE"
+local Message = "Nigga penis....."
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -118,7 +124,7 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
     if enabled == true then
         Sense.teamSettings.enemy.enabled = true
         Sense.Load()
-    elseif enabled == false then
+    else
         Sense.Unload()
     end
 end,
@@ -129,7 +135,7 @@ local ESPb = Visuals:CreateToggle({ Name = "ESP - Box", CurrentValue = false, Fl
     if enabled == true then
         Sense.teamSettings.enemy.box = true
         Sense.teamSettings.enemy.boxColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.box = false
     end
 end,
@@ -140,7 +146,7 @@ local ESPb3d = Visuals:CreateToggle({ Name = "ESP - 3DBox", CurrentValue = false
     if enabled == true then
         Sense.teamSettings.enemy.box3d  = true
         Sense.teamSettings.enemy.box3dColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.box3d = false
     end
 end,
@@ -151,7 +157,7 @@ local ESPw = Visuals:CreateToggle({ Name = "ESP - Item", CurrentValue = false, F
     if enabled == true then
         Sense.teamSettings.enemy.weapon   = true
         Sense.teamSettings.enemy.weaponColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.weapon = false
     end
 end,
@@ -161,7 +167,7 @@ local ESPb = Visuals:CreateToggle({ Name = "ESP - Gamertag", CurrentValue = fals
     enabled = ESPgtToggle
     if enabled == true then
         Sense.teamSettings.enemy.name = true
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.name = false
     end
 end,
@@ -172,7 +178,7 @@ local ESPhel = Visuals:CreateToggle({ Name = "ESP - Healthbar & HealthTag", Curr
     if enabled == true then
         Sense.teamSettings.enemy.healthBar = true
         Sense.teamSettings.enemy.healthText = true
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.healthBar = false
         Sense.teamSettings.enemy.healthText = false
     end
@@ -184,7 +190,7 @@ local Chams = Visuals:CreateToggle({ Name = "ESP - Chams", CurrentValue = false,
     if enabled == true then
         Sense.teamSettings.enemy.chams = true
         Sense.teamSettings.enemy.chamsOutlineColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.chams = false
     end
 end,
@@ -195,7 +201,7 @@ local ESPd = Visuals:CreateToggle({ Name = "ESP - Distance", CurrentValue = fals
     if enabled == true then
         Sense.teamSettings.enemy.distance = true
         Sense.teamSettings.enemy.distanceColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.distance = false
     end
 end,
@@ -206,7 +212,7 @@ local ESPt = Visuals:CreateToggle({ Name = "ESP - Lines", CurrentValue = false, 
     if enabled == true then
         Sense.teamSettings.enemy.tracer = true
         Sense.teamSettings.enemy.tracerColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.tracer = false
     end
 end,
@@ -217,7 +223,7 @@ local ESPa = Visuals:CreateToggle({ Name = "ESP - OOF Arrows", CurrentValue = fa
     if enabled == true then
         Sense.teamSettings.enemy.offScreenArrow  = true
         Sense.teamSettings.enemy.offScreenArrowColor[1] = Color3.new(1, 1, 1)
-    elseif enabled == false then
+    else
         Sense.teamSettings.enemy.offScreenArrow  = false
     end
 end,
@@ -348,7 +354,30 @@ local CameraSlider = Visuals:CreateSlider({
 -- // Visuals
 
 -- // LocalPlayer
-local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
+local Nocliptest = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCToggle",  Callback = function(NCToggle) 
+    enabled = NCToggle
+    
+    if enabled == true then
+        Clipon = true
+        Stepped = game:GetService("RunService").Stepped:Connect(function()
+			if not Clipon == false then
+				for a, b in pairs(Workspace:GetChildren()) do
+                if b.Name == Players.LocalPlayer.Name then
+                for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                end end end end
+			else
+				Stepped:Disconnect()
+			end
+		end)
+    else
+        Clipon = false
+    end
+end,
+})
+
+local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
    Callback = function()
     player1=game.Players.LocalPlayer
     q=Instance.new('HopperBin', player1.Backpack)
@@ -356,8 +385,8 @@ local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
     bin = q
 
     function teleportPlayer(pos)
-    local player = game.Players.LocalPlayer
-    if player == nil or player.Character == nil then return end
+        local player = game.Players.LocalPlayer
+        if player == nil or player.Character == nil then return end
         player.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x, pos.y + 7, pos.z))
     end
 
@@ -384,11 +413,7 @@ local Noclip = LocalPlayer:CreateButton({ Name = "Grant Noclip",
     bin.Selected:connect(onSelected)
 end,
 })
-local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
-   Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/vWBAYBZy'),true))();
-end,
-})
+
 local Reset = LocalPlayer:CreateButton({ Name = "Reset",
    Callback = function()
     PreviousPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -550,7 +575,7 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentV
         end
     return Namecall(self, ...)
     end)
-    elseif enabled == false then
+    else
         return print("Its still hooked dw you're safe my child")
     end
 end,
@@ -621,12 +646,14 @@ local AimbotV2 = Others:CreateButton({
 })
 
 local Label = Others:CreateLabel("Settings & ETC")
-local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle",  Callback = function(FPSToggle) 
-enabled = FPSToggle
-while enabled and wait(0.5) do
-    setfpscap(9999)
-    print("working 2023")
-end
+local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle", Callback = function(FPSToggle)
+    enabled = FPSToggle
+
+    if enabled then
+        setfpscap(9999)
+    else
+        setfpscap(60)
+    end
 end,
 })
 
@@ -666,7 +693,7 @@ end,
 -- // MainPage \\ --
 local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
 local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
-local MSGBoard = Main:CreateParagraph({Title = "- Message Board -", Content = ""})
+local MSGBoard = Main:CreateParagraph({Title = "- Message Board -", Content = Message})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
     http.request(
@@ -722,28 +749,4 @@ while true do
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
     FOV:SetValue(game.Workspace.Camera.FieldOfView)
 end
-
-local Noclip = nil
-local Clip = nil
-function noclip()
-	Clip = false
-	local function Nocl()
-		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-					v.CanCollide = false
-				end
-			end
-		end
-		wait(0.21) -- basic optimization
-	end
-	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
-end
-
-function clip()
-	if Noclip then Noclip:Disconnect() end
-	Clip = true
-end
-
-noclip()
 -- // Functionality \\ --
