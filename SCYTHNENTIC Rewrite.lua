@@ -337,7 +337,7 @@ end,
 -- // Movement
 local SpeedSlider = Movement:CreateSlider({
     Name = "Walkspeed",
-    Range = {0, 500},
+    Range = {16, 500},
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
@@ -349,7 +349,7 @@ local SpeedSlider = Movement:CreateSlider({
 
 local JumpSlider = Movement:CreateSlider({
     Name = "Jumppower",
-    Range = {0, 500},
+    Range = {50, 500},
     Increment = 1,
     Suffix = "",
     CurrentValue = 50,
@@ -373,6 +373,35 @@ local Jitter = AntiAim:CreateButton({
     Callback = function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/N6YqG3HA'),true))();
     end,
+})
+
+local Spinn = AntiAim:CreateToggle({ Name = "Spin", CurrentValue = false, Flag = "Spinbot",  Callback = function(SpinbotToggle) 
+    enabled = SpinbotToggle
+    if enabled == true then
+        power = 500 -- change this to make it more or less powerful
+        if game.Players.LocalPlayer.Characther.UpperTorso then
+            game:GetService('RunService').Stepped:connect(function()
+                game.Players.LocalPlayer.Character.Head.CanCollide = false
+                game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+                game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+                game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+            end)
+            wait(.1)
+            local bambam = Instance.new("BodyThrust")
+            bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+            bambam.Force = Vector3.new(power,0,power)
+            bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        end
+    elseif enabled == false then
+        game:GetService('RunService').Stepped:connect(function()
+            game.Players.LocalPlayer.Character.Head.CanCollide = false
+            game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+            game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+        end)
+    end
+end,
 })
 -- // AntiAim
 
