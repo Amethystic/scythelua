@@ -109,7 +109,6 @@ local NPC = Rage:CreateButton({
                 if humanoid.Health < previousHealth then
                     local randomIndex = math.random(1, #getgenv().hurtmessages)
                     local message = getgenv().hurtmessages[randomIndex]
-        
                     game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
                 end
                 
