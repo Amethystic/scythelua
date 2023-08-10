@@ -32,7 +32,7 @@ local RequiredDistance, Typing, Running, Animation, ServiceConnections = 2000, f
 --// Script Settings
 
 Environment.Settings = {
-	Enabled = true,
+	Enabled = false,
 	TeamCheck = false,
 	AliveCheck = true,
 	WallCheck = false, -- Laggy
@@ -45,7 +45,7 @@ Environment.Settings = {
 }
 
 Environment.FOVSettings = {
-	Enabled = true,
+	Enabled = false,
 	Visible = true,
 	Amount = 90,
 	Color = Color3.fromRGB(255, 255, 255),
