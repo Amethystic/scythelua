@@ -539,7 +539,7 @@ local DomainX = Others:CreateButton({
 local EpicHax = Others:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'),true))();
+        loadstring(game:HttpGet(('https://pastebin.com/raw/iLjru3TA'), true))();
     end,
 })
 
