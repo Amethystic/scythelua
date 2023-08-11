@@ -1,5 +1,5 @@
 Games = {
-    [6407649031] = "https://pastebin.com/raw/WZnPL6jK", -- NSA
+    [6407649031] = "https://pastebin.com/raw/WZnPL6jK",  [5081773298] = "https://raw.githubusercontent.com/WetCheezit/Releases/main/No-Scope-Arcade/Silent%20aim.lua" -- NSS/A *they're both the same game so whogaf
     [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
     [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
     [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
