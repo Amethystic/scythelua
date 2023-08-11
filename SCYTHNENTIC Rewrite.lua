@@ -634,7 +634,7 @@ end,
 local Label = Others:CreateLabel("Scriptwise")
 local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/Dev/Gamefinder.lua'),true))();
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/Gamefinder.lua'),true))();
     end,
 })
 
