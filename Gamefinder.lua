@@ -1,6 +1,6 @@
 Games = {
     [6407649031] = "https://pastebin.com/raw/WZnPL6jK", 
-    [5081773298] = "https://raw.githubusercontent.com/WetCheezit/Releases/main/No-Scope-Arcade/Silent%20aim.lua", -- NSS/A *they're both the same game so whogaf
+    [5081773298] = "https://pastebin.com/raw/WZnPL6jK", -- NSS/A *they're both the same game so whogaf
     [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
     [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
     [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
@@ -16,7 +16,7 @@ Games = {
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2
 }
 
-    if Games[game.PlaceId] then
+if Games[game.PlaceId] then
         sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://998971542"
@@ -25,12 +25,10 @@ Games = {
         loadstring(game:HttpGet(Games[game.PlaceId]))()
         wait(3)
         sound:Destroy()
-        print("injected script")
     else
         sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://263105619"
         sound2.Volume = 10
         sound2:Play() 
-        print("Nopity nope nope")
    end
