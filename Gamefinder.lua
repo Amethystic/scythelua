@@ -21,7 +21,6 @@ Games = {
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play()
-        Rayfield:Notify({ Title = "GameFinder", Content = "Game found, now loading...", Duration = 6.5, Image = 12995567709, Actions = { Ignore = { Name = "Okay!", Callback = function() print("The user tapped Okay!") end }, }, })
         loadstring(game:HttpGet(Games[game.PlaceId]))()
         wait(3)
         sound:Destroy()
@@ -31,5 +30,4 @@ Games = {
         sound2.SoundId = "rbxassetid://998971542"
         sound2.Volume = 10
         sound2:Play() 
-        Rayfield:Notify({ Title = "GameFinder Error", Content = "Game not found", Duration = 6.5, Image = 12995567709, Actions = { Ignore = { Name = "Okay!", Callback = function() print("The user tapped Okay!") end }, }, }) 
    end
