@@ -1,2 +1,2 @@
-# Scythnentic Roblox Lua | MainBuild (USE WITH CAUTION)
+# Scythnentic Roblox Lua | MainBuild
 a canary version of Scythnentic roblox lua
