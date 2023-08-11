@@ -24,10 +24,12 @@ Games = {
         loadstring(game:HttpGet(Games[game.PlaceId]))()
         wait(3)
         sound:Destroy()
+        print("injected script")
     else
         sound2 = Instance.new("Sound", Workspace)
         sound2.Parent = game.Workspace
         sound2.SoundId = "rbxassetid://263105619"
         sound2.Volume = 10
         sound2:Play() 
+        print("Nopity nope nope")
    end
