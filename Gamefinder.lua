@@ -14,8 +14,6 @@ Games = {
     [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2
 }
-   
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 
     if Games[game.PlaceId] then
         sound2 = Instance.new("Sound", Workspace)
