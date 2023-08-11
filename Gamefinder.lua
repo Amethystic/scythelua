@@ -10,7 +10,7 @@ Games = {
     [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
     [4282985734] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- CW
     [286090429] = "https://gangofgang.gog-best.repl.co/aimhook/hook.lua", -- ARSENAL
-    [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua", -- AIMBLOX
+    [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
     [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2
 }
