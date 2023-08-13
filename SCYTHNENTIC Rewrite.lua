@@ -13,6 +13,7 @@ local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.8 | REBIRTH REWRITE"
 local Message = "- Added Custom Team ESP options"
+local ESPMasterCheck = false
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
@@ -156,8 +157,10 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
     enabled = ESPToggle
     if enabled == true then
         Sense.Load()
+        ESPMasterCheck = true
     else
         Sense.Unload()
+        ESPMasterCheck = false
     end
 end,
 })
@@ -832,14 +835,18 @@ local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
    Callback = function()
    Rayfield:Destroy()
    loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
-   Sense.Unload()
+   if ESPMasterCheck == true then
+    Sense.Unload()
+   end
 end,
 })
 
 local Rejoin = Others:CreateButton({ Name = "Rejoin",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
-   Sense.Unload()
+   if ESPMasterCheck == true then
+    Sense.Unload()
+   end
 end,
 })
 
@@ -847,7 +854,9 @@ local ServerHop = Others:CreateButton({
     Name = "Serverhop",
     Callback = function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
-        Sense.Unload()
+        if ESPMasterCheck == true then
+            Sense.Unload()
+        end
     end,
 })
 
