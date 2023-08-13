@@ -13,7 +13,8 @@ Games = {
     [286090429] = "https://gangofgang.gog-best.repl.co/aimhook/hook.lua", -- ARSENAL
     [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
     [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
-    [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader" -- MM2
+    [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
+    [9559194006] = "https://pastebin.com/raw/5LtLLSFE" -- SE
 }
 
 if Games[game.PlaceId] then
