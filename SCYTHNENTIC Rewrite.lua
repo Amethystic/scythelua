@@ -177,7 +177,6 @@ local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Box", CurrentValue =
     enabled = ESPbToggle
     if enabled == true then
         Sense.teamSettings.enemy.box = true
-        Sense.teamSettings.enemy.boxColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.box = false
     end
@@ -188,7 +187,6 @@ local ESPb3d = Visuals:CreateToggle({ Name = "EnemyTeam ESP - 3DBox", CurrentVal
     enabled = ESPb3dToggle
     if enabled == true then
         Sense.teamSettings.enemy.box3d  = true
-        Sense.teamSettings.enemy.box3dColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.box3d = false
     end
@@ -232,7 +230,6 @@ local Chams = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Chams", CurrentValu
     enabled = ChamsToggle
     if enabled == true then
         Sense.teamSettings.enemy.chams = true
-        Sense.teamSettings.enemy.chamsOutlineColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.chams = false
     end
@@ -243,7 +240,6 @@ local ESPd = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Distance", CurrentVa
     enabled = ESPdToggle
     if enabled == true then
         Sense.teamSettings.enemy.distance = true
-        Sense.teamSettings.enemy.distanceColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.distance = false
     end
@@ -254,7 +250,6 @@ local ESPt = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Lines", CurrentValue
     enabled = ESPtToggle
     if enabled == true then
         Sense.teamSettings.enemy.tracer = true
-        Sense.teamSettings.enemy.tracerColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.tracer = false
     end
@@ -359,7 +354,6 @@ local ESPb2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Box", CurrentVal
     enabled = ESPbToggle2
     if enabled == true then
         Sense.teamSettings.friendly.box = true
-        Sense.teamSettings.friendly.boxColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.box = false
     end
@@ -370,7 +364,6 @@ local ESPb3d2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - 3DBox", Curren
     enabled = ESPb3dToggle2
     if enabled == true then
         Sense.teamSettings.friendly.box3d  = true
-        Sense.teamSettings.friendly.box3dColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.box3d = false
     end
@@ -379,8 +372,7 @@ end,
 local ESPw2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Item", CurrentValue = false, Flag = "ESPItemBox2",  Callback = function(ESPbwToggle2) 
     enabled = ESPbwToggle2
     if enabled == true then
-        Sense.teamSettings.friendly.weapon   = true
-        Sense.teamSettings.friendly.weaponColor[1] = Color3.new(1, 1, 1)
+        Sense.teamSettings.friendly.weapon = true
     else
         Sense.teamSettings.friendly.weapon = false
     end
@@ -410,7 +402,6 @@ local Chams2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Chams", Current
     enabled = ChamsToggle2
     if enabled == true then
         Sense.teamSettings.friendly.chams = true
-        Sense.teamSettings.friendly.chamsOutlineColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.chams = false
     end
@@ -420,7 +411,6 @@ local ESPd2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Distance", Curre
     enabled = ESPdToggle2
     if enabled == true then
         Sense.teamSettings.friendly.distance = true
-        Sense.teamSettings.friendly.distanceColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.distance = false
     end
@@ -430,7 +420,6 @@ local ESPt2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Lines", CurrentV
     enabled = ESPtToggle2
     if enabled == true then
         Sense.teamSettings.friendly.tracer = true
-        Sense.teamSettings.friendly.tracerColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.tracer = false
     end
@@ -440,7 +429,6 @@ local ESPa2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - OOF Arrows", Cur
     enabled = ESPaToggle2
     if enabled == true then
         Sense.teamSettings.friendly.offScreenArrow  = true
-        Sense.teamSettings.friendly.offScreenArrowColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.friendly.offScreenArrow  = false
     end
