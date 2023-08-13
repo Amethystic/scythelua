@@ -14,7 +14,7 @@ Games = {
     [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
     [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
-    [9559194006] = "https://pastebin.com/raw/5LtLLSFE" -- SE
+    [9559194006] = "https://raw.githubusercontent.com/alvindimas05/roblox-script/main/socialexperimentbot.lua" -- SE
 }
 
 if Games[game.PlaceId] then
