@@ -535,9 +535,7 @@ local FOV = Visuals:CreateSlider({
     CurrentValue = 70,
     Flag = "OARSlider2",
     Callback = function(Value)
-        while wait(0) do
-            game.Workspace.Camera.FieldOfView = Value
-        end
+        game.Workspace.Camera.FieldOfView = Value
     end,
 })
 local Radar = Visuals:CreateButton({ Name = "Load - Radar",
@@ -915,8 +913,7 @@ wait(5)
 sound:Destroy()
 
 -- // Functionality \\ --
-while true do
-    wait(0.2)
+while true and wait(0.1) do
     SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
     JumpSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.JumpPower)
     CameraSlider:SetValue(game.Players.LocalPlayer.CameraMaxZoomDistance)
