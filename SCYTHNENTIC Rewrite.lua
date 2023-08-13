@@ -12,10 +12,10 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.8 | REBIRTH REWRITE"
-local Message = "- Added Custom Team ESP options"
+local Message = "- Added Custom Team ESP options\n- Fixed ESP Issue"
 -- // ...
 
-Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
+Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
         Ignore = {
         Name = "Okay!",
@@ -891,16 +891,6 @@ end,
 -- // MainPage
 
 -- // Api End \\ --
-Rayfield:Notify({ Title = cheatname, Content = "Content Loaded", Duration = 6.5, Image = 12995567709,
-    Actions = { -- Notification Buttons
-        Ignore = {
-        Name = "Okay!",
-        Callback = function()
-        print("The user tapped Okay!")
-    end
-   },
-},
-})
 wait(5)
 sound:Destroy()
 
