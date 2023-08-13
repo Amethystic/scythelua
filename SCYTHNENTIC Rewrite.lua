@@ -831,30 +831,30 @@ end,
 local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
    Callback = function()
    Rayfield:Destroy()
-   Sense.Unload()
    loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
+   Sense.Unload()
 end,
 })
 
 local Rejoin = Others:CreateButton({ Name = "Rejoin",
    Callback = function()
-   Sense.Unload()
    loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
+   Sense.Unload()
 end,
 })
 
 local ServerHop = Others:CreateButton({
     Name = "Serverhop",
     Callback = function()
-        Sense.Unload()
         loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
+        Sense.Unload()
     end,
 })
 
 local Uninject = Others:CreateButton({ Name = "Uninject",
    Callback = function()
-   Sense.Unload()
    Rayfield:Destroy()
+   Sense.Unload()
 end,
 })
 
@@ -934,5 +934,30 @@ while true do
     ChamsColor:SetValue(Sense.teamSettings.friendly.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.friendly.chamsFillColor)
     FOV:SetValue(game.Workspace.Camera.FieldOfView)
+end
+
+function EspInterface.getWeapon(player)
+    return "Unknown";
+end
+
+function EspInterface.isFriendly(player)
+    return player.Team and player.Team == localPlayer.Team;
+end
+
+function EspInterface.getTeamColor(player)
+    return player.Team and player.Team.TeamColor and player.Team.TeamColor.Color;
+end
+
+function EspInterface.getCharacter(player)
+    return player.Character;
+end
+
+function EspInterface.getHealth(player)
+    local character = player and EspInterface.getCharacter(player);
+    local humanoid = character and findFirstChildOfClass(character, "Humanoid");
+    if humanoid then
+        return humanoid.Health, humanoid.MaxHealth;
+    end
+    return 100, 100;
 end
 -- // Functionality \\ --
