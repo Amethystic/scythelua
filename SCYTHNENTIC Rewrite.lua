@@ -260,7 +260,6 @@ local ESPa = Visuals:CreateToggle({ Name = "EnemyTeam ESP - OOF Arrows", Current
     enabled = ESPaToggle
     if enabled == true then
         Sense.teamSettings.enemy.offScreenArrow  = true
-        Sense.teamSettings.enemy.offScreenArrowColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.offScreenArrow  = false
     end
@@ -466,7 +465,7 @@ local ESPTColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Line C
         Sense.teamSettings.friendly.tracerColor[1] = Value
     end
 })
-local OOFArrowsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
+local OOFArrowsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(0,87,255),
     Flag = "C72", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.friendly.offScreenArrowColor[1] = Value
