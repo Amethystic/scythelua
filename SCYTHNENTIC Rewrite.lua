@@ -11,11 +11,11 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.7 | REBIRTH REWRITE"
-local Message = "- Skybox Toggle | - Changed Message Box to Update Log"
+local version = "Version 2.8 | REBIRTH REWRITE"
+local Message = "- Added Custom Team ESP options\n- Fixed ESP Issue\n- Improved Chat Spammer"
 -- // ...
 
-Rayfield:Notify({ Title = cheatname, Content = "Loading...", Duration = 6.5, Image = 12995567709,
+Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
         Ignore = {
         Name = "Okay!",
@@ -124,7 +124,27 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
     getgenv().spammess = {
         ":3",
         "You're a silly boykisser!",
-        "                              "
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
+        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
+        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n"
      }
      while enabled and wait(0.01) do
         local randomIndex = math.random(1, #getgenv().spammess)
@@ -155,7 +175,6 @@ local ESPLabel = Visuals:CreateLabel("Main ESP Options")
 local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = false, Flag = "ESPMaster",  Callback = function(ESPToggle) 
     enabled = ESPToggle
     if enabled == true then
-        Sense.teamSettings.enemy.enabled = true
         Sense.Load()
     else
         Sense.Unload()
@@ -163,29 +182,38 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
 end,
 })
 
-local ESPb = Visuals:CreateToggle({ Name = "ESP - Box", CurrentValue = false, Flag = "ESPBox",  Callback = function(ESPbToggle) 
+local ESPLabel = Visuals:CreateLabel("Main - EnemyTeam ESP Options")
+local ESP2 = Visuals:CreateToggle({ Name = "Master Switch - EnemyTeam", CurrentValue = false, Flag = "ESPMasterEn",  Callback = function(ESPToggleEN) 
+    enabled = ESPToggleEN
+    if enabled == true then
+        Sense.teamSettings.enemy.enabled = true
+    else
+        Sense.teamSettings.enemy.enabled = false
+    end
+end,
+})
+
+local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Box", CurrentValue = false, Flag = "ESPBox",  Callback = function(ESPbToggle) 
     enabled = ESPbToggle
     if enabled == true then
         Sense.teamSettings.enemy.box = true
-        Sense.teamSettings.enemy.boxColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.box = false
     end
 end,
 })
 
-local ESPb3d = Visuals:CreateToggle({ Name = "ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox",  Callback = function(ESPb3dToggle) 
+local ESPb3d = Visuals:CreateToggle({ Name = "EnemyTeam ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox",  Callback = function(ESPb3dToggle) 
     enabled = ESPb3dToggle
     if enabled == true then
         Sense.teamSettings.enemy.box3d  = true
-        Sense.teamSettings.enemy.box3dColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.box3d = false
     end
 end,
 })
 
-local ESPw = Visuals:CreateToggle({ Name = "ESP - Item", CurrentValue = false, Flag = "ESPItemBox",  Callback = function(ESPbwToggle) 
+local ESPw = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Item", CurrentValue = false, Flag = "ESPItemBox",  Callback = function(ESPbwToggle) 
     enabled = ESPbwToggle
     if enabled == true then
         Sense.teamSettings.enemy.weapon   = true
@@ -196,7 +224,7 @@ local ESPw = Visuals:CreateToggle({ Name = "ESP - Item", CurrentValue = false, F
 end,
 })
 
-local ESPb = Visuals:CreateToggle({ Name = "ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag",  Callback = function(ESPgtToggle) 
+local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag",  Callback = function(ESPgtToggle) 
     enabled = ESPgtToggle
     if enabled == true then
         Sense.teamSettings.enemy.name = true
@@ -206,7 +234,7 @@ local ESPb = Visuals:CreateToggle({ Name = "ESP - Gamertag", CurrentValue = fals
 end,
 })
 
-local ESPhel = Visuals:CreateToggle({ Name = "ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel",  Callback = function(HealthbarToggle) 
+local ESPhel = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel",  Callback = function(HealthbarToggle) 
     enabled = HealthbarToggle
     if enabled == true then
         Sense.teamSettings.enemy.healthBar = true
@@ -218,102 +246,96 @@ local ESPhel = Visuals:CreateToggle({ Name = "ESP - Healthbar & HealthTag", Curr
 end,
 })
 
-local Chams = Visuals:CreateToggle({ Name = "ESP - Chams", CurrentValue = false, Flag = "ESPChams",  Callback = function(ChamsToggle) 
+local Chams = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Chams", CurrentValue = false, Flag = "ESPChams",  Callback = function(ChamsToggle) 
     enabled = ChamsToggle
     if enabled == true then
         Sense.teamSettings.enemy.chams = true
-        Sense.teamSettings.enemy.chamsOutlineColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.chams = false
     end
 end,
 })
 
-local ESPd = Visuals:CreateToggle({ Name = "ESP - Distance", CurrentValue = false, Flag = "ESPDistance",  Callback = function(ESPdToggle) 
+local ESPd = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Distance", CurrentValue = false, Flag = "ESPDistance",  Callback = function(ESPdToggle) 
     enabled = ESPdToggle
     if enabled == true then
         Sense.teamSettings.enemy.distance = true
-        Sense.teamSettings.enemy.distanceColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.distance = false
     end
 end,
 })
 
-local ESPt = Visuals:CreateToggle({ Name = "ESP - Lines", CurrentValue = false, Flag = "ESPtracer",  Callback = function(ESPtToggle) 
+local ESPt = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Lines", CurrentValue = false, Flag = "ESPtracer",  Callback = function(ESPtToggle) 
     enabled = ESPtToggle
     if enabled == true then
         Sense.teamSettings.enemy.tracer = true
-        Sense.teamSettings.enemy.tracerColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.tracer = false
     end
 end,
 })
 
-local ESPa = Visuals:CreateToggle({ Name = "ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow",  Callback = function(ESPaToggle) 
+local ESPa = Visuals:CreateToggle({ Name = "EnemyTeam ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow",  Callback = function(ESPaToggle) 
     enabled = ESPaToggle
     if enabled == true then
         Sense.teamSettings.enemy.offScreenArrow  = true
-        Sense.teamSettings.enemy.offScreenArrowColor[1] = Color3.new(1, 1, 1)
     else
         Sense.teamSettings.enemy.offScreenArrow  = false
     end
 end,
 })
-
-local ESPLabel = Visuals:CreateLabel("Customizable ESP Options")
-local ESPBoxColor = Visuals:CreateColorPicker({ Name = "ESP - Box Color", Color = Color3.fromRGB(255,255,255),
+local ESPLabel = Visuals:CreateLabel("Customizable Enemy ESP Options")
+local ESPBoxColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Box Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.boxColor[1] = Value
     end
 })
-local ESP3DBoxColor = Visuals:CreateColorPicker({ Name = "ESP - Box3D Color", Color = Color3.fromRGB(255,255,255),
+local ESP3DBoxColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Box3D Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.box3dColor[1] = Value
     end
 })
-local ESPGTColor = Visuals:CreateColorPicker({ Name = "ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
+local ESPGTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.nameColor[1] = Value
     end
 })
-local ESPDistColor = Visuals:CreateColorPicker({ Name = "ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
+local ESPDistColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.distanceColor[1] = Value
     end
 })
-local ESPTColor = Visuals:CreateColorPicker({ Name = "ESP - Line Color", Color = Color3.fromRGB(255,255,255),
+local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.tracerColor[1] = Value
     end
 })
-local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
+local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.offScreenArrowColor[1] = Value
     end
 })
-local ChamsColor = Visuals:CreateColorPicker({ Name = "ESP - Chams Color", Color = Color3.fromRGB(255,255,255),
+local ChamsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Chams Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.chamsOutlineColor[1] = Value
     end
 })
-local ChamsFillColor = Visuals:CreateColorPicker({ Name = "ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
+local ChamsFillColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.chamsFillColor[1] = Value
     end
 })
-
 local OOFArrowsRadius = Visuals:CreateSlider({
-    Name = "ESP - OOF Arrows | Radius",
+    Name = "EnemyTeam ESP - OOF Arrows | Radius",
     Range = {50, 500},
     Increment = 1,
     Suffix = "",
@@ -324,7 +346,7 @@ local OOFArrowsRadius = Visuals:CreateSlider({
     end,
 })
 local OOFArrowsSize = Visuals:CreateSlider({
-    Name = "ESP - OOF Arrows | Size",
+    Name = "EnemyTeam ESP - OOF Arrows | Size",
     Range = {5, 80},
     Increment = 1,
     Suffix = "",
@@ -332,6 +354,175 @@ local OOFArrowsSize = Visuals:CreateSlider({
     Flag = "OARSlider2",
     Callback = function(Value)
         Sense.teamSettings.enemy.offScreenArrowSize = Value
+    end,
+})
+
+
+local ESPLabel = Visuals:CreateLabel("Main - FriendlyTeam ESP Options")
+local ESP32 = Visuals:CreateToggle({ Name = "Master Switch - FriendlyTeam", CurrentValue = false, Flag = "ESPMasterFn",  Callback = function(ESPToggleF) 
+    enabled = ESPToggleFN
+    if enabled == true then
+        Sense.teamSettings.friendly.enabled = true
+    else
+        Sense.teamSettings.friendly.enabled = false
+    end
+end,
+})
+
+local ESPb2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Box", CurrentValue = false, Flag = "ESPBox2",  Callback = function(ESPbToggle2) 
+    enabled = ESPbToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.box = true
+    else
+        Sense.teamSettings.friendly.box = false
+    end
+end,
+})
+
+local ESPb3d2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox2",  Callback = function(ESPb3dToggle2) 
+    enabled = ESPb3dToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.box3d  = true
+    else
+        Sense.teamSettings.friendly.box3d = false
+    end
+end,
+})
+local ESPw2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Item", CurrentValue = false, Flag = "ESPItemBox2",  Callback = function(ESPbwToggle2) 
+    enabled = ESPbwToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.weapon = true
+    else
+        Sense.teamSettings.friendly.weapon = false
+    end
+end,
+})
+local ESPb2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag2",  Callback = function(ESPgtToggle2) 
+    enabled = ESPgtToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.name = true
+    else
+        Sense.teamSettings.friendly.name = false
+    end
+end,
+})
+local ESPhel2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel2",  Callback = function(HealthbarToggle2) 
+    enabled = HealthbarToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.healthBar = true
+        Sense.teamSettings.friendly.healthText = true
+    else
+        Sense.teamSettings.friendly.healthBar = false
+        Sense.teamSettings.friendly.healthText = false
+    end
+end,
+})
+local Chams2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Chams", CurrentValue = false, Flag = "ESPChams2",  Callback = function(ChamsToggle2) 
+    enabled = ChamsToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.chams = true
+    else
+        Sense.teamSettings.friendly.chams = false
+    end
+end,
+})
+local ESPd2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Distance", CurrentValue = false, Flag = "ESPDistance2",  Callback = function(ESPdToggle2) 
+    enabled = ESPdToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.distance = true
+    else
+        Sense.teamSettings.friendly.distance = false
+    end
+end,
+})
+local ESPt2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Lines", CurrentValue = false, Flag = "ESPtracer2",  Callback = function(ESPtToggle2) 
+    enabled = ESPtToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.tracer = true
+    else
+        Sense.teamSettings.friendly.tracer = false
+    end
+end,
+})
+local ESPa2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow2",  Callback = function(ESPaToggle2) 
+    enabled = ESPaToggle2
+    if enabled == true then
+        Sense.teamSettings.friendly.offScreenArrow  = true
+    else
+        Sense.teamSettings.friendly.offScreenArrow  = false
+    end
+end,
+})
+
+local ESPLabel = Visuals:CreateLabel("Customizable Friendly ESP Options")
+local ESPBoxColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Box Color", Color = Color3.fromRGB(0,87,255),
+    Flag = "C12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.boxColor[1] = Value
+    end
+})
+local ESP3DBoxColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Box3D Color", Color = Color3.fromRGB(0,87,255),
+    Flag = "C22", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.box3dColor[1] = Value
+    end
+})
+local ESPGTColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C42", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.nameColor[1] = Value
+    end
+})
+local ESPDistColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C52", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.distanceColor[1] = Value
+    end
+})
+local ESPTColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Line Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C62", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.tracerColor[1] = Value
+    end
+})
+local OOFArrowsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(0,87,255),
+    Flag = "C72", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.offScreenArrowColor[1] = Value
+    end
+})
+local ChamsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Chams Color", Color = Color3.fromRGB(0,87,255),
+    Flag = "C82", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.chamsOutlineColor[1] = Value
+    end
+})
+local ChamsFillColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C82", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Sense.teamSettings.friendly.chamsFillColor[1] = Value
+    end
+})
+local OOFArrowsRadius2 = Visuals:CreateSlider({
+    Name = "FriendlyTeam ESP - OOF Arrows | Radius",
+    Range = {50, 500},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 50,
+    Flag = "OARSlider22",
+    Callback = function(Value2)
+        Sense.teamSettings.friendly.offScreenArrowRadius = Value2
+    end,
+})
+local OOFArrowsSize2 = Visuals:CreateSlider({
+    Name = "FriendlyTeam ESP - OOF Arrows | Size",
+    Range = {5, 80},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 5,
+    Flag = "OARSlider222",
+    Callback = function(Value2)
+        Sense.teamSettings.friendly.offScreenArrowSize = Value2
     end,
 })
 
@@ -660,6 +851,7 @@ end,
 local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
    Callback = function()
    Rayfield:Destroy()
+   Sense.Unload()
    loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
 end,
 })
@@ -680,6 +872,7 @@ local ServerHop = Others:CreateButton({
 local Uninject = Others:CreateButton({ Name = "Uninject",
    Callback = function()
    Rayfield:Destroy()
+   Sense.Unload()
 end,
 })
 
@@ -718,16 +911,6 @@ end,
 -- // MainPage
 
 -- // Api End \\ --
-Rayfield:Notify({ Title = cheatname, Content = "Content Loaded", Duration = 6.5, Image = 12995567709,
-    Actions = { -- Notification Buttons
-        Ignore = {
-        Name = "Okay!",
-        Callback = function()
-        print("The user tapped Okay!")
-    end
-   },
-},
-})
 wait(5)
 sound:Destroy()
 
@@ -747,6 +930,17 @@ while true do
     OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
     ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
+
+    OOFArrowsRadius:SetValue(Sense.teamSettings.friendly.offScreenArrowRadius)
+    OOFArrowsSize:SetValue(Sense.teamSettings.friendly.offScreenArrowSize)
+    ESPBoxColor:SetValue(Sense.teamSettings.friendly.boxColor)
+    ESP3DBoxColor:SetValue(Sence.teamSettings.friendly.box3dColor)
+    ESPGTColor:SetValue(Sense.teamSettings.friendly.nameColor)
+    ESPDistColor:SetValue(Sense.teamSettings.friendly.distanceColor)
+    ESPTColor:SetValue(Sense.teamSettings.friendly.tracerColor)
+    OOFArrowsColor:SetValue(Sense.teamSettings.friendly.offScreenArrowColor)
+    ChamsColor:SetValue(Sense.teamSettings.friendly.chamsOutlineColor)
+    ChamsFillColor:SetValue(Sense.teamSettings.friendly.chamsFillColor)
     FOV:SetValue(game.Workspace.Camera.FieldOfView)
 end
 -- // Functionality \\ --
