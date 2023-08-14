@@ -2,8 +2,15 @@
 
 -- // Etc Functionality | B4 loading \\ -- 
 local Namecall
+local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 local Clipon = false
 local Players = game:GetService("Players")
+local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
+local ToEnable = { FullBright = false }
+local Stuff = {}
+local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+local char = game:GetService('Players').LocalPlayer.Character or nil
 getgenv().SecureMode = true
 -- // ...
 
@@ -11,8 +18,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 2.8 | REBIRTH REWRITE"
-local Message = "- Added Custom Team ESP options\n- Fixed ESP Issue\n- Improved Chat Spammer"
+local version = "Version 2.9 | REBIRTH REWRITE"
+local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -124,6 +131,82 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
     getgenv().spammess = {
         ":3",
         "You're a silly boykisser!",
+        "TEH EPIK DUCK IS COMING!!!",
+        "<(0_0<) <(0_0)> (>0_0)> KIRBY DANCE",
+        "GET OFF MAH LAWN",
+        "all your base are belong to me!",
+        "ROFL",
+        "1337",
+        "Muahahahaha!",
+        "z0mg h4x!",
+        "ub3rR0xXorzage!",
+        "w00t!",
+        "i r teh pwnz0r!",
+        "Use the Chat menu to talk to me.",
+        "I can only see menu chats",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI love u\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou're a silly boykisser!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\nScythnentic's Rebirth is happening!\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -145,17 +228,86 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n"
-     }
-     while enabled and wait(0.01) do
+    }
+
+    while enabled and wait() do
         local randomIndex = math.random(1, #getgenv().spammess)
         local message = getgenv().spammess[randomIndex]
-
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
         print("Spammed in chat")
     end
 end,
 })
 local RageLabel2 = Rage:CreateLabel("Script Related")
+local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentValue = false, Flag = "x",  Callback = function(Lagger) 
+    enabled = Lagger
+    if enabled == true then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("5", "All")
+        wait(1.2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("4", "All")
+        wait(1.2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("3", "All")
+        wait(1.2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("2", "All")
+        wait(1.2)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("1", "All")
+        wait(1.2)
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("PING CHECK ! ! !", "All")
+        wait(0.7)
+        print("on")
+
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+            wait(0.5)
+            char.HumanoidRootPart.Anchored = true
+        end
+        while wait(1.5) do --// don't change it's the best
+            game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+            local function getmaxvalue(val)
+               local mainvalueifonetable = 499999
+               if type(val) ~= "number" then return nil end
+               local calculateperfectval = (mainvalueifonetable/(val+2))
+               return calculateperfectval
+            end
+             
+            local function bomb(tableincrease, tries)
+            local maintable = {}
+            local spammedtable = {}
+             
+            table.insert(spammedtable, {})
+            z = spammedtable[1]
+             
+            for i = 1, tableincrease do
+                local tableins = {}
+                table.insert(z, tableins)
+                z = tableins
+            end
+             
+            local calculatemax = getmaxvalue(tableincrease)
+            local maximum
+             
+            if calculatemax then
+                maximum = calculatemax
+            else
+                maximum = 999999
+            end
+             
+            for i = 1, maximum do
+                table.insert(maintable, spammedtable)
+            end
+             
+            for i = 1, tries do
+                game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+            end
+        end
+        bomb(289, 55) --// change values if client crashes
+    end
+    else
+        wait(4.5)
+        ts:Teleport(game.PlaceId, p)
+    end
+end,
+})
 local EpicHax = Rage:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
@@ -603,11 +755,14 @@ local Nocliptest = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValu
                 for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do
                 if v:IsA("BasePart") then
                 v.CanCollide = false
-                end end end end
-			else
-				Stepped:Disconnect()
-			end
-		end)
+            end 
+        end 
+    end 
+end
+	else
+		Stepped:Disconnect()
+	end
+end)
     else
         Clipon = false
     end
@@ -817,10 +972,76 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentV
     end
 end,
 })
+
+local Label = Antis:CreateLabel("Client-wise")
+local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag = "Antilag",  Callback = function(Antilag) 
+    enabled = Antilag
+    if enabled == true then
+        for _, v in next, game:GetDescendants() do
+            if ToDisable.Parts then
+                if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
+                    v.Material = Enum.Material.SmoothPlastic
+                    table.insert(Stuff, 1, v)
+                end
+            end
+            
+            if ToDisable.Particles then
+                if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
+                    v.Enabled = false
+                    table.insert(Stuff, 1, v)
+                end
+            end
+            
+            if ToDisable.VisualEffects then
+                if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
+                    v.Enabled = false
+                    table.insert(Stuff, 1, v)
+                end
+            end
+            
+            if ToDisable.Textures then
+                if v:IsA("Decal") or v:IsA("Texture") then
+                    v.Texture = ""
+                    table.insert(Stuff, 1, v)
+                end
+            end
+            
+            if ToDisable.Sky then
+                if v:IsA("Sky") then
+                    v.Parent = nil
+                    table.insert(Stuff, 1, v)
+                end
+            end
+        end
+        
+        game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")
+        
+        for i, v in next, ToDisable do
+            print(tostring(i)..": "..tostring(v))
+        end
+        
+        if ToEnable.FullBright then
+            local Lighting = game:GetService("Lighting")
+            
+            Lighting.FogColor = Color3.fromRGB(255, 255, 255)
+            Lighting.FogEnd = math.huge
+            Lighting.FogStart = math.huge
+            Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+            Lighting.Brightness = 5
+            Lighting.ColorShift_Bottom = Color3.fromRGB(255, 255, 255)
+            Lighting.ColorShift_Top = Color3.fromRGB(255, 255, 255)
+            Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+            Lighting.Outlines = true
+        end
+    else
+        loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
+    end
+end,
+})
 -- // Antis
 
 -- // Others
-local Label = Others:CreateLabel("Scriptwise")
+local Label = Others:CreateLabel("Script-wise")
 local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
     Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/Gamefinder.lua'),true))();
@@ -856,15 +1077,15 @@ end,
 
 local Rejoin = Others:CreateButton({ Name = "Rejoin",
    Callback = function()
-   loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
+   ts:Teleport(game.PlaceId, p)
 end,
 })
 
 local ServerHop = Others:CreateButton({
     Name = "Serverhop",
     Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/w3368SXW'),true))();
-    end,
+    sh:Teleport(game.PlaceId)
+end,
 })
 
 local Uninject = Others:CreateButton({ Name = "Uninject",
@@ -913,7 +1134,7 @@ wait(5)
 sound:Destroy()
 
 -- // Functionality \\ --
-while true and wait(0.1) do
+while true and wait() do
     SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
     JumpSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.JumpPower)
     CameraSlider:SetValue(game.Players.LocalPlayer.CameraMaxZoomDistance)
@@ -927,7 +1148,6 @@ while true and wait(0.1) do
     OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
     ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
-
     OOFArrowsRadius:SetValue(Sense.teamSettings.friendly.offScreenArrowRadius)
     OOFArrowsSize:SetValue(Sense.teamSettings.friendly.offScreenArrowSize)
     ESPBoxColor:SetValue(Sense.teamSettings.friendly.boxColor)
