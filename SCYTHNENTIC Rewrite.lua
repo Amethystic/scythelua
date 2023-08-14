@@ -21,7 +21,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.9 | REBIRTH REWRITE"
-local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer\n- Added Dex V5 (Ig idek what ver it is)\n- Added Use any emote"
+local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer\n- Added Dex V5 (Ig idek what ver it is)\n- Added Use any emote\n- Notifs on buttons and a few toggles"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -70,12 +70,48 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
     if enabled == true then
         game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Character.Sword)
         while enabled and wait(1) do
+            for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+                if tool:IsA("Tool") then
+                    tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
+                end
+            end
+
             game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
             game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
         end
+
+        Rayfield:Notify({
+            Title = "Sword Hitbox",
+            Content = "Expanded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     else
         game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
         game.Players.Backpack:ClearAllChildren()
+
+        Rayfield:Notify({
+            Title = "Sword Hitbox",
+            Content = "Desized",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end
 end,
 })
@@ -124,6 +160,21 @@ local NPC = Rage:CreateButton({
                 previousHealth = humanoid.Health
             end)
         end)
+
+        Rayfield:Notify({
+            Title = "NPC",
+            Content = "._.",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end,
 })
 
@@ -244,6 +295,21 @@ local RageLabel2 = Rage:CreateLabel("Script Related")
 local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentValue = false, Flag = "x",  Callback = function(Lagger) 
     enabled = Lagger
     if enabled == true then
+        Rayfield:Notify({
+            Title = "Lagger",
+            Content = "Enabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("5", "All")
         wait(1.2)
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("4", "All")
@@ -314,12 +380,42 @@ local EpicHax = Rage:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/SilentAim%20by%20Aethiel.lua'),true))();
+
+        Rayfield:Notify({
+            Title = "EpicHax",
+            Content = "Loaded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end,
 })
 local AimbotV2 = Rage:CreateButton({
     Name = "Load AIMBOT V2 (Basic Aimbot)",
     Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
+
+        Rayfield:Notify({
+            Title = "Aimbot V2",
+            Content = "Loaded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end,
 })
 -- // RAAAAAGE!
@@ -330,8 +426,38 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
     enabled = ESPToggle
     if enabled == true then
         Sense.Load()
+
+        Rayfield:Notify({
+            Title = "ESP",
+            Content = "Ready for use",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     else
         Sense.Unload()
+
+        Rayfield:Notify({
+            Title = "ESP",
+            Content = "fully disabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end
 end,
 })
@@ -695,11 +821,41 @@ local FOV = Visuals:CreateSlider({
 local Radar = Visuals:CreateButton({ Name = "Load - Radar",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/JD0jxp9Z'),true))();
+
+   Rayfield:Notify({
+    Title = "Radar",
+    Content = "Loaded",
+    Duration = 6.5,
+    Image = 12995567709,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
 end,
 })
 local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
+
+   Rayfield:Notify({
+    Title = "Cursor",
+    Content = "Loaded",
+    Duration = 6.5,
+    Image = 12995567709,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
 end,
 })
 
@@ -716,6 +872,21 @@ local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue 
         SkyBox.SkyboxLf = "http://www.roblox.com/asset/?id=271042310"
         SkyBox.SkyboxUp = "http://www.roblox.com/asset/?id=271077958"
         SkyBox.StarCount = 0
+
+        Rayfield:Notify({
+            Title = "SB",
+            Content = "Enabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     else
         SkyBox = Instance.new("Sky")
         SkyBox.Name = "S c y t h n e n t i c"
@@ -727,6 +898,21 @@ local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue 
         SkyBox.SkyboxLf = "rbxassetid://14133939547"
         SkyBox.SkyboxUp = "rbxassetid://14133942685"
         SkyBox.StarCount = 0
+
+        Rayfield:Notify({
+            Title = "SB",
+            Content = "Resetted",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end
 end,
 })
@@ -745,11 +931,26 @@ local CameraSlider = Visuals:CreateSlider({
 -- // Visuals
 
 -- // LocalPlayer
-local Nocliptest = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCToggle",  Callback = function(NCToggle) 
+local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCToggle",  Callback = function(NCToggle) 
     enabled = NCToggle
     
     if enabled == true then
         Clipon = true
+
+        Rayfield:Notify({
+            Title = "NC",
+            Content = "Enabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
         Stepped = game:GetService("RunService").Stepped:Connect(function()
 			if not Clipon == false then
 				for a, b in pairs(Workspace:GetChildren()) do
@@ -758,14 +959,13 @@ local Nocliptest = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValu
                 if v:IsA("BasePart") then
                 v.CanCollide = false
             end 
-        end 
+        end
     end 
 end
-	else
-		Stepped:Disconnect()
-	end
+else end
 end)
     else
+        Stepped:Disconnect()
         Clipon = false
     end
 end,
@@ -805,11 +1005,41 @@ local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
         mouse.Button1Down:connect(function() onButton1Down(mouse) end)
     end
     bin.Selected:connect(onSelected)
+
+    Rayfield:Notify({
+        Title = "ClickTP",
+        Content = "Loaded",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
 end,
 })
 
 local Reset = LocalPlayer:CreateButton({ Name = "Reset",
    Callback = function()
+    Rayfield:Notify({
+        Title = "Characther",
+        Content = "Resetting...",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+
     PreviousPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
@@ -819,8 +1049,22 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
 end,
 })
 
-local Emotes = Others:CreateButton({ Name = "Unlock all emotes",
+local Emotes = LocalPlayer:CreateButton({ Name = "Unlock all emotes",
    Callback = function()
+    Rayfield:Notify({
+        Title = "Emotes",
+        Content = "Enjoy",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FEmotesGui/main/FEmotesGui.lua", true))()
 end,
 })
@@ -854,6 +1098,21 @@ local JumpSlider = Movement:CreateSlider({
 local Fly = Movement:CreateButton({
     Name = "Load Fly",
     Callback = function()
+        Rayfield:Notify({
+            Title = "Fly",
+            Content = "Loaded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
         loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
     end,
 })
@@ -863,6 +1122,21 @@ local Fly = Movement:CreateButton({
 local Jitter = AntiAim:CreateButton({
     Name = "Load Jitter",
     Callback = function()
+        Rayfield:Notify({
+            Title = "AA - Jitter",
+            Content = "Enabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
         loadstring(game:HttpGet(('https://pastebin.com/raw/N6YqG3HA'),true))();
     end,
 })
@@ -871,6 +1145,21 @@ local Jitter = AntiAim:CreateButton({
 -- // S-Singer
 local BBYGOYARD = SS:CreateButton({ Name = "BBY GOYARD - GRANT ME ACCESS",
    Callback = function()
+    Rayfield:Notify({
+        Title = "BBY GOYARD - GRANT ME ACCESS",
+        Content = "Now singing.",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru, Hulu flavo", "All")
     wait(3)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bby bottle full of the roku color", "All")
@@ -942,27 +1231,29 @@ end,
 
 -- // Antis
 local Label = Antis:CreateLabel("Modder/Admin-wise")
-local AF = Antis:CreateButton({
-    Name = "Anti-Fling",
-    Callback = function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/Q0Nh2SYx'),true))(); 
-    end,
-})
-
 local AAfk = Antis:CreateButton({
     Name = "Anti-AFK",
     Callback = function()
+        Rayfield:Notify({
+            Title = "AAFK",
+            Content = "Enabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
         loadstring(game:HttpGet(('https://pastebin.com/raw/3fNMNZiF'),true))();  
     end,
 })
 
 local Label = Antis:CreateLabel("AC-wise")
-local ACB = Antis:CreateButton({
-    Name = "Anti-Cheat Bypasser - Universial",
-    Callback = function()
-        loadstring(game:HttpGet("https://irisapp.ca/TheGoodSucc/iAntiCheat.lua"))();  
-    end,
-})
 local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
     enabled = Bypasstoggle
     if enabled == true then
@@ -975,6 +1266,21 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentV
         end
     return Namecall(self, ...)
     end)
+
+    Rayfield:Notify({
+        Title = "Bypass Shit A-C",
+        Content = "Enabled",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
     else
         return print("Its still hooked dw you're safe my child")
     end
@@ -1022,7 +1328,20 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag =
             end
         end
         
-        game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")
+        Rayfield:Notify({
+            Title = "Effects Disabler",
+            Content = "Successfully disabled "..#Stuff.." assets / effects. Settings :",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
         
         for i, v in next, ToDisable do
             print(tostring(i)..": "..tostring(v))
@@ -1059,6 +1378,20 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
 local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
+        Rayfield:Notify({
+            Title = "D-X",
+            Content = "Loaded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
     end,
 })
@@ -1066,6 +1399,21 @@ local DomainX = Others:CreateButton({
 local Dex = Others:CreateButton({
     Name = "Load Dex",
     Callback = function()
+        Rayfield:Notify({
+            Title = "Dexv5",
+            Content = "Loaded",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/dex.lua'),true))();
     end,
 })
@@ -1076,8 +1424,38 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = fa
 
     if enabled then
         setfpscap(9999)
+
+        Rayfield:Notify({
+            Title = "FPS",
+            Content = "Unlocked",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     else
         setfpscap(60)
+
+        Rayfield:Notify({
+            Title = "FPS",
+            Content = "Locked",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end
 end,
 })
@@ -1087,6 +1465,28 @@ local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
    Rayfield:Destroy()
    Sense.Unload()
    loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
+end,
+})
+
+local GameID = Others:CreateButton({
+    Name = "GameID Finder",
+    Callback = function()
+    print(game.PlaceId)
+
+    Rayfield:Notify({
+        Title = "GameID",
+        Content = game.PlaceId,
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Thanks!",
+              Callback = function()
+              print("The user tapped Thanks!")
+           end
+        },
+     },
+     })
 end,
 })
 
