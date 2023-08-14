@@ -16,7 +16,7 @@ Games = {
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
     [9559194006] = "https://pastebin.com/raw/5LtLLSFE", -- SE
     [6872265039] = "https://pastebin.com/raw/wSWEMgRW", -- BW
-    [8951451142] = "https://pastebin.com/raw/k9nQPXP7" -- SW
+    [8951451142] = "https://paste.ee/r/r9gnA" -- SW
 }
 
 if Games[game.PlaceId] then
