@@ -2,12 +2,12 @@
 
 -- // Etc Functionality | B4 loading \\ -- 
 local HttpService = game:GetService("HttpService")
-local webhook = "https://ptb.discord.com/api/webhooks/1140557436877549588/BAise0hEJrHnVttRXmC1_LwHnfAqOo3NZKnr-stAfuVnyAcSp4XK9elsEoArySfa56tB"
 local Namecall
 local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 local Clipon = false
 local Players = game:GetService("Players")
 local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
+local Username = Game:GetService("Players").LocalPlayer.DisplayName
 local ToEnable = { FullBright = false }
 local Stuff = {}
 local ts = game:GetService("TeleportService")
@@ -21,7 +21,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.9 | REBIRTH REWRITE"
-local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer\n- Added Dex V5 (Ig idek what ver it is)\n- Added Use any emote\n- Notifs on buttons and a few toggles"
+local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer\n- Added Dex V5\n- Added Use any emote\n- Notifs on buttons and a few toggles\n- Removed a Anti's feature due to noclip addition"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -35,6 +35,22 @@ Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.
 },
 })
 
+wait(0.5)
+Rayfield:Notify({
+    Title = "User Found!",
+    Content = "Logged in as - ".. Username,
+    Duration = 6.5,
+    Image = 12995567709,
+    Actions = { -- Notification Buttons
+    Ignore = {
+        Name = "Okay!",
+        Callback = function()
+        print("The user tapped Okay!")
+    end
+    },
+ },
+ })
+
 local sound = Instance.new("Sound", Workspace)
 sound.Pitch = 1 -- Speed of the song (Prefer not to change it)
 sound.SoundId = "rbxassetid://9109651770" -- copy the url and paste it
@@ -47,7 +63,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = false, KeySettings = { Title = "Untitled", Subtitle = "Key System", Note = "No method of obtaining the key is provided", FileName = "Key", SaveKey = true, GrabKeyFromSite = false, Key = {"Hello"} }
+KeySystem = false, KeySettings = { Title = "Scythentic", Subtitle = "Key-Sys", Note = "No method of obtaining the key is provided", FileName = "Key", SaveKey = true, GrabKeyFromSite = false, Key = {"Hello"} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
@@ -75,7 +91,6 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
                     tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
                 end
             end
-
             game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
             game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
         end
@@ -1023,6 +1038,26 @@ local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
 end,
 })
 
+local Emotes = LocalPlayer:CreateButton({ Name = "Unlock all emotes",
+   Callback = function()
+    Rayfield:Notify({
+        Title = "Emotes",
+        Content = "Enjoy",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FEmotesGui/main/FEmotesGui.lua", true))()
+end,
+})
+
 local Reset = LocalPlayer:CreateButton({ Name = "Reset",
    Callback = function()
     Rayfield:Notify({
@@ -1046,26 +1081,6 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
 	game.Players.LocalPlayer.CharacterAdded:Wait()
 	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PreviousPosition
-end,
-})
-
-local Emotes = LocalPlayer:CreateButton({ Name = "Unlock all emotes",
-   Callback = function()
-    Rayfield:Notify({
-        Title = "Emotes",
-        Content = "Enjoy",
-        Duration = 6.5,
-        Image = 12995567709,
-        Actions = { -- Notification Buttons
-           Ignore = {
-              Name = "Okay!",
-              Callback = function()
-              print("The user tapped Okay!")
-           end
-        },
-     },
-     })
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FEmotesGui/main/FEmotesGui.lua", true))()
 end,
 })
 -- // LocalPlayer
@@ -1223,8 +1238,6 @@ local BBYGOYARD = SS:CreateButton({ Name = "BBY GOYARD - GRANT ME ACCESS",
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hunnid for the walk thru", "All")
     wait(3.1)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I need roses when I walk in, never too soon", "All")
-    wait(2)
-    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Song | BBY GOYARD - GRANT ME ACCESS", "All")
 end,
 })
 -- // S-Singer
@@ -1330,7 +1343,7 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag =
         
         Rayfield:Notify({
             Title = "Effects Disabler",
-            Content = "Successfully disabled "..#Stuff.." assets / effects. Settings :",
+            Content = "Successfully disabled "..#Stuff.." assets / effects!",
             Duration = 6.5,
             Image = 12995567709,
             Actions = { -- Notification Buttons
@@ -1378,20 +1391,6 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
 local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
-        Rayfield:Notify({
-            Title = "D-X",
-            Content = "Loaded",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
     end,
 })
@@ -1399,6 +1398,8 @@ local DomainX = Others:CreateButton({
 local Dex = Others:CreateButton({
     Name = "Load Dex",
     Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/dex.lua'),true))();
+
         Rayfield:Notify({
             Title = "Dexv5",
             Content = "Loaded",
@@ -1413,8 +1414,6 @@ local Dex = Others:CreateButton({
             },
          },
          })
-
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/dex.lua'),true))();
     end,
 })
 
@@ -1519,7 +1518,7 @@ end,
 
 -- // MainPage \\ --
 local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
-local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Game:GetService("Players").LocalPlayer.DisplayName})
+local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Username})
 local MSGBoard = Main:CreateParagraph({Title = "- Update Log -", Content = Message})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
@@ -1545,7 +1544,7 @@ end,
 -- // MainPage
 
 -- // Api End \\ --
-wait(5)
+wait(3.5)
 sound:Destroy()
 
 -- // Functionality \\ --
