@@ -15,7 +15,8 @@ Games = {
     [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
     [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
     [9559194006] = "https://pastebin.com/raw/5LtLLSFE", -- SE
-    [6872265039] = "https://pastebin.com/raw/wSWEMgRW" -- BW (Test)
+    [6872265039] = "https://pastebin.com/raw/wSWEMgRW", -- BW
+    [8951451142] = "https://pastebin.com/raw/zNtWwkcu" -- SW
 }
 
 if Games[game.PlaceId] then
