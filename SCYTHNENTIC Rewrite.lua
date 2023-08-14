@@ -1131,7 +1131,7 @@ local Discord = Main:CreateButton({ Name = "Join us",
                 ["Content-Type"] = "application/json",
                 ["origin"] = "https://discord.com",
             },
-            Body = game:GetService("HttpService"):JSONEncode(
+            Body = HttpService:JSONEncode(
                 {
                     ["args"] = {
                         ["code"] = "XVb8MjGUcp",
