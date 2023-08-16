@@ -13,16 +13,13 @@ local ToEnable = { FullBright = false }
 local Stuff = {}
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
-getgenv().SecureMode = true
--- List of possible name components
-local Sec = {"A^G&WGFbw7au", "RT^@#BGer32", "A&GWH*Diuy", "@E^TG&u2f3ew", "FSEC^T&*t43v", "C^@&TNrgvrt43", "A%BRF^W&c6r"}
 
--- Function to get a random element from a table
+local Sec = {"A^G&WGFbw7au", "RT^@#BGer32", "A&GWH*Diuy", "@E^TG&u2f3ew", "FSEC^T&*t43v", "C^@&TNrgvrt43", "A%BRF^W&c6r"}
 local function getRandomElement(list)
     return list[math.random(1, #list)]
 end
-
 local randomizedName = getRandomElement(Sec)
+getgenv().SecureMode = true
 -- // ...
 
 -- // Init Requirement \\ --
