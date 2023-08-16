@@ -14,6 +14,15 @@ local Stuff = {}
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
 getgenv().SecureMode = true
+-- List of possible name components
+local Sec = {"A^G&WGFbw7au", "RT^@#BGer32", "A&GWH*Diuy", "@E^TG&u2f3ew", "FSEC^T&*t43v", "C^@&TNrgvrt43", "A%BRF^W&c6r"}
+
+-- Function to get a random element from a table
+local function getRandomElement(list)
+    return list[math.random(1, #list)]
+end
+
+local randomizedName = getRandomElement(Sec)
 -- // ...
 
 -- // Init Requirement \\ --
@@ -63,7 +72,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = "Key", SaveKey = true, GrabKeyFromSite = false, Key = {"#XsT965CDQ*34b+B_k8-Dev", Username} }
+KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = randomizedName, SaveKey = true, GrabKeyFromSite = false, Key = {"#XsT965CDQ*34b+B_k8-Dev", Username} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
@@ -611,7 +620,7 @@ local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color
         Sense.teamSettings.enemy.tracerColor[1] = Value
     end
 })
-local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,60,60),
+local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.offScreenArrowColor[1] = Value
