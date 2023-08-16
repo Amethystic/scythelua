@@ -14,17 +14,6 @@ local Stuff = {}
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
 
-local function generateRandomString(length)
-    local characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
-    local result = ""
-    for _ = 1, length do
-        local randomIndex = math.random(1, #characters)
-        result = result .. string.sub(characters, randomIndex, randomIndex)
-    end
-    return result
-end
-local rand = generateRandomString(15) -- You can adjust the length as needed
-
 getgenv().SecureMode = true
 -- // ...
 
@@ -75,7 +64,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = rand, SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
+KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = "User", SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
