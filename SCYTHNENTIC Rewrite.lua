@@ -14,11 +14,17 @@ local Stuff = {}
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
 
-local Sec = {"A^G&WGFbw7au", "RT^@#BGer32", "A&GWH*Diuy", "@E^TG&u2f3ew", "FSEC^T&*t43v", "C^@&TNrgvrt43", "A%BRF^W&c6r"}
-local function getRandomElement(list)
-    return list[math.random(1, #list)]
+local function generateRandomString(length)
+    local characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
+    local result = ""
+    for _ = 1, length do
+        local randomIndex = math.random(1, #characters)
+        result = result .. string.sub(characters, randomIndex, randomIndex)
+    end
+    return result
 end
-local randomizedName = getRandomElement(Sec)
+local rand = generateRandomString(15) -- You can adjust the length as needed
+
 getgenv().SecureMode = true
 -- // ...
 
@@ -69,7 +75,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = randomizedName, SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
+KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = rand, SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
