@@ -6,13 +6,13 @@ local Namecall
 local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 local Clipon = false
 local Players = game:GetService("Players")
+local p = game:GetService("Players").LocalPlayer
 local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
-local Username = Game:GetService("Players").LocalPlayer.DisplayName
+local Username = Players.p.DisplayName
 local ToEnable = { FullBright = false }
 local Stuff = {}
 local ts = game:GetService("TeleportService")
-local p = game:GetService("Players").LocalPlayer
-local char = game:GetService('Players').LocalPlayer.Character or nil
+local char = Players.p.Character or nil
 getgenv().SecureMode = true
 -- // ...
 
@@ -1074,7 +1074,7 @@ local Emotes = LocalPlayer:CreateButton({ Name = "Godmode",
         },
      },
      })
-    loadstring(game:HttpGet("https://pastebin.com/raw/bbyuynM1", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main", true))()
 end,
 })
 
