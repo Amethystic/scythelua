@@ -13,6 +13,7 @@ local ToEnable = { FullBright = false }
 local Stuff = {}
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
+
 getgenv().SecureMode = true
 -- // ...
 
@@ -20,8 +21,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3.1 | REBIRTH REWRITE"
-local Message = "+ Added Sirius (Dont rape me shlex)\n+ Added RainbowChar\n+ Moved GameFinder Script to main Script\n- Un-needed feature removed\n- Removed TeamColorESP features due to it just not detected TeamPlayers"
+local version = "Version 3.2 | REBIRTH REWRITE"
+local Message = "+ Added Shitty Authsystem"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -63,7 +64,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = false, KeySettings = { Title = "Scythentic", Subtitle = "Key-Sys", Note = "No method of obtaining the key is provided", FileName = "Key", SaveKey = true, GrabKeyFromSite = false, Key = {"Hello"} }
+KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = Username, SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
@@ -611,7 +612,7 @@ local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color
         Sense.teamSettings.enemy.tracerColor[1] = Value
     end
 })
-local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,60,60),
+local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.offScreenArrowColor[1] = Value
