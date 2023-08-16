@@ -21,7 +21,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 3.1 | REBIRTH REWRITE"
-local Message = "+ Fixed fucked reinject"
+local Message = "+ Fixed fucked reinject\n- Un-needed feature removed"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -1327,21 +1327,6 @@ local ABK = Antis:CreateButton({
             end
         end
         
-        Rayfield:Notify({
-            Title = "Effects Disabler",
-            Content = "Successfully disabled "..#Stuff.." assets / effects!",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-        
         for i, v in next, ToDisable do
             print(tostring(i)..": "..tostring(v))
         end
@@ -1358,6 +1343,21 @@ local ABK = Antis:CreateButton({
             Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
             Lighting.Outlines = true
         end
+
+        Rayfield:Notify({
+            Title = "Effects Disabler",
+            Content = "Successfully disabled "..#Stuff.." assets / effects!",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end,
 })
 
@@ -1507,14 +1507,6 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = fa
          },
          })
     end
-end,
-})
-
-local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
-   Callback = function()
-   Rayfield:Destroy()
-   Sense.Unload()
-   loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
 end,
 })
 
