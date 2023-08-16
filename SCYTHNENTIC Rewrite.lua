@@ -8,11 +8,11 @@ local Clipon = false
 local Players = game:GetService("Players")
 local p = game:GetService("Players").LocalPlayer
 local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
-local Username = Players.p.DisplayName
+local Username = game:GetService("Players").LocalPlayer.DisplayName
 local ToEnable = { FullBright = false }
 local Stuff = {}
 local ts = game:GetService("TeleportService")
-local char = Players.p.Character or nil
+local char = game:GetService("Players").LocalPlayer.Character or nil
 getgenv().SecureMode = true
 -- // ...
 
