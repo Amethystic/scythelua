@@ -20,8 +20,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3 | REBIRTH REWRITE"
-local Message = "+ Added Godmode\n~ Improved ChatSpammer\n~ Prepare for a key-sys :D"
+local version = "Version 3.1 | REBIRTH REWRITE"
+local Message = "+ Added Sirius (Dont rape me shlex)\n+ Added RainbowChar\n+ Moved GameFinder Script to main Script\n- Un-needed feature removed\n- Removed TeamColorESP features due to it just not detected TeamPlayers"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -605,7 +605,7 @@ local ESPDistColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Distanc
         Sense.teamSettings.enemy.distanceColor[1] = Value
     end
 })
-local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color", Color = Color3.fromRGB(255,255,255),
+local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         Sense.teamSettings.enemy.tracerColor[1] = Value
@@ -649,175 +649,6 @@ local OOFArrowsSize = Visuals:CreateSlider({
     Flag = "OARSlider2",
     Callback = function(Value)
         Sense.teamSettings.enemy.offScreenArrowSize = Value
-    end,
-})
-
-
-local ESPLabel = Visuals:CreateLabel("Main - FriendlyTeam ESP Options")
-local ESP32 = Visuals:CreateToggle({ Name = "Master Switch - FriendlyTeam", CurrentValue = false, Flag = "ESPMasterFn",  Callback = function(ESPToggleF) 
-    enabled = ESPToggleFN
-    if enabled == true then
-        Sense.teamSettings.friendly.enabled = true
-    else
-        Sense.teamSettings.friendly.enabled = false
-    end
-end,
-})
-
-local ESPb2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Box", CurrentValue = false, Flag = "ESPBox2",  Callback = function(ESPbToggle2) 
-    enabled = ESPbToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.box = true
-    else
-        Sense.teamSettings.friendly.box = false
-    end
-end,
-})
-
-local ESPb3d2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox2",  Callback = function(ESPb3dToggle2) 
-    enabled = ESPb3dToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.box3d  = true
-    else
-        Sense.teamSettings.friendly.box3d = false
-    end
-end,
-})
-local ESPw2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Item", CurrentValue = false, Flag = "ESPItemBox2",  Callback = function(ESPbwToggle2) 
-    enabled = ESPbwToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.weapon = true
-    else
-        Sense.teamSettings.friendly.weapon = false
-    end
-end,
-})
-local ESPb2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag2",  Callback = function(ESPgtToggle2) 
-    enabled = ESPgtToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.name = true
-    else
-        Sense.teamSettings.friendly.name = false
-    end
-end,
-})
-local ESPhel2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel2",  Callback = function(HealthbarToggle2) 
-    enabled = HealthbarToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.healthBar = true
-        Sense.teamSettings.friendly.healthText = true
-    else
-        Sense.teamSettings.friendly.healthBar = false
-        Sense.teamSettings.friendly.healthText = false
-    end
-end,
-})
-local Chams2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Chams", CurrentValue = false, Flag = "ESPChams2",  Callback = function(ChamsToggle2) 
-    enabled = ChamsToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.chams = true
-    else
-        Sense.teamSettings.friendly.chams = false
-    end
-end,
-})
-local ESPd2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Distance", CurrentValue = false, Flag = "ESPDistance2",  Callback = function(ESPdToggle2) 
-    enabled = ESPdToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.distance = true
-    else
-        Sense.teamSettings.friendly.distance = false
-    end
-end,
-})
-local ESPt2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - Lines", CurrentValue = false, Flag = "ESPtracer2",  Callback = function(ESPtToggle2) 
-    enabled = ESPtToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.tracer = true
-    else
-        Sense.teamSettings.friendly.tracer = false
-    end
-end,
-})
-local ESPa2 = Visuals:CreateToggle({ Name = "FriendlyTeam ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow2",  Callback = function(ESPaToggle2) 
-    enabled = ESPaToggle2
-    if enabled == true then
-        Sense.teamSettings.friendly.offScreenArrow  = true
-    else
-        Sense.teamSettings.friendly.offScreenArrow  = false
-    end
-end,
-})
-
-local ESPLabel = Visuals:CreateLabel("Customizable Friendly ESP Options")
-local ESPBoxColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Box Color", Color = Color3.fromRGB(0,87,255),
-    Flag = "C12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.boxColor[1] = Value
-    end
-})
-local ESP3DBoxColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Box3D Color", Color = Color3.fromRGB(0,87,255),
-    Flag = "C22", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.box3dColor[1] = Value
-    end
-})
-local ESPGTColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C42", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.nameColor[1] = Value
-    end
-})
-local ESPDistColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C52", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.distanceColor[1] = Value
-    end
-})
-local ESPTColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Line Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C62", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.tracerColor[1] = Value
-    end
-})
-local OOFArrowsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(0,87,255),
-    Flag = "C72", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.offScreenArrowColor[1] = Value
-    end
-})
-local ChamsColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Chams Color", Color = Color3.fromRGB(0,87,255),
-    Flag = "C82", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.chamsOutlineColor[1] = Value
-    end
-})
-local ChamsFillColor2 = Visuals:CreateColorPicker({ Name = "FriendlyTeam ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C82", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.friendly.chamsFillColor[1] = Value
-    end
-})
-local OOFArrowsRadius2 = Visuals:CreateSlider({
-    Name = "FriendlyTeam ESP - OOF Arrows | Radius",
-    Range = {50, 500},
-    Increment = 1,
-    Suffix = "",
-    CurrentValue = 50,
-    Flag = "OARSlider22",
-    Callback = function(Value2)
-        Sense.teamSettings.friendly.offScreenArrowRadius = Value2
-    end,
-})
-local OOFArrowsSize2 = Visuals:CreateSlider({
-    Name = "FriendlyTeam ESP - OOF Arrows | Size",
-    Range = {5, 80},
-    Increment = 1,
-    Suffix = "",
-    CurrentValue = 5,
-    Flag = "OARSlider222",
-    Callback = function(Value2)
-        Sense.teamSettings.friendly.offScreenArrowSize = Value2
     end,
 })
 
@@ -873,7 +704,40 @@ local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
  })
 end,
 })
+local NLHaxStylezz = Visuals:CreateButton({ Name = "Rainbow Characther",
+   Callback = function()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("MeshPart") then
+            v.Material = "ForceField"
+            spawn(function()
+                while wait() do
+                    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                        if v:IsA("MeshPart") then
+                            v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                            wait()
+                        end
+                    end 
+                end
+            end)
+        end
+    end
 
+    Rayfield:Notify({
+        Title = "Rainbow Char",
+        Content = "Enabled",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+end,
+})
 local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue = false, Flag = "Sky",  Callback = function(SkyboxToggle) 
     enabled = SkyboxToggle
     if enabled == true then
@@ -1286,40 +1150,6 @@ local AAfk = Antis:CreateButton({
     end,
 })
 
-local Label = Antis:CreateLabel("AC-wise")
-local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
-    enabled = Bypasstoggle
-    if enabled == true then
-    print('[Adonis Autobypass]: this game is running with autobypass!')
-        Namecall = hookmetamethod(game, '__namecall', function(self, ...)
-        local Caller = tostring(getcallingscript())
-        local Method = getnamecallmethod()
-        if Caller == 'ClientMover' and Method == 'GetService' then
-            return
-        end
-    return Namecall(self, ...)
-    end)
-
-    Rayfield:Notify({
-        Title = "Bypass Shit A-C",
-        Content = "Enabled",
-        Duration = 6.5,
-        Image = 12995567709,
-        Actions = { -- Notification Buttons
-           Ignore = {
-              Name = "Okay!",
-              Callback = function()
-              print("The user tapped Okay!")
-           end
-        },
-     },
-     })
-    else
-        return print("Its still hooked dw you're safe my child")
-    end
-end,
-})
-
 local Label = Antis:CreateLabel("Client-wise")
 local ABK = Antis:CreateButton({
     Name = "Anti-Lag",
@@ -1361,21 +1191,6 @@ local ABK = Antis:CreateButton({
             end
         end
         
-        Rayfield:Notify({
-            Title = "Effects Disabler",
-            Content = "Successfully disabled "..#Stuff.." assets / effects!",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-        
         for i, v in next, ToDisable do
             print(tostring(i)..": "..tostring(v))
         end
@@ -1392,7 +1207,56 @@ local ABK = Antis:CreateButton({
             Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
             Lighting.Outlines = true
         end
+
+        Rayfield:Notify({
+            Title = "Effects Disabler",
+            Content = "Successfully disabled "..#Stuff.." assets / effects!",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
     end,
+})
+
+local Label = Antis:CreateLabel("AC-wise")
+local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
+    enabled = Bypasstoggle
+    if enabled == true then
+    print('[Adonis Autobypass]: this game is running with autobypass!')
+        Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+        local Caller = tostring(getcallingscript())
+        local Method = getnamecallmethod()
+        if Caller == 'ClientMover' and Method == 'GetService' then
+            return
+        end
+    return Namecall(self, ...)
+    end)
+
+    Rayfield:Notify({
+        Title = "Bypass Shit A-C",
+        Content = "Enabled",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+    else
+        return print("Its still hooked dw you're safe my child")
+    end
+end,
 })
 -- // Antis
 
@@ -1400,7 +1264,44 @@ local ABK = Antis:CreateButton({
 local Label = Others:CreateLabel("Script-wise")
 local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/Gamefinder.lua'),true))();
+        Games = {
+            [6407649031] = "https://pastebin.com/raw/WZnPL6jK", 
+            [5081773298] = "https://pastebin.com/raw/WZnPL6jK", -- NSS/A *they're both the same game so whogaf
+            [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
+            [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
+            [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
+            [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
+            [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
+            [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
+            [2788229376] = "https://raw.githubusercontent.com/PolarWasHere/Arctic/main/Arctic", -- DAHOOD
+            [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
+            [4282985734] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- CW
+            [286090429] = "https://raw.githubusercontent.com/AndrewDarkyy/ThunderClient/main/main.lua", -- ARSENAL
+            [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
+            [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
+            [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
+            [9559194006] = "https://pastebin.com/raw/5LtLLSFE", -- SE
+            [6872265039] = "https://pastebin.com/raw/VGdXw3dQ", -- BW
+            [8560631822] = "https://pastebin.com/raw/VGdXw3dQ", -- BW2
+            [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
+            [12355337193] = "https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain" -- SVSM D
+        }
+        if Games[game.PlaceId] then
+            sound2 = Instance.new("Sound", Workspace)
+            sound2.Parent = game.Workspace
+            sound2.SoundId = "rbxassetid://998971542"
+            sound2.Volume = 10
+            sound2:Play()
+            loadstring(game:HttpGet(Games[game.PlaceId]))()
+            wait(3)
+            sound:Destroy()
+        else
+            sound2 = Instance.new("Sound", Workspace)
+            sound2.Parent = game.Workspace
+            sound2.SoundId = "rbxassetid://263105619"
+            sound2.Volume = 10
+            sound2:Play() 
+        end
     end,
 })
 
@@ -1408,6 +1309,13 @@ local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
         loadstring(game:HttpGet(('https://sirius.menu/domainx'),true))();
+    end,
+})
+
+local Sirius = Others:CreateButton({
+    Name = "Load Sirius",
+    Callback = function()
+        loadstring(game:HttpGet(('https://sirius.menu/script'),true))();
     end,
 })
 
@@ -1472,14 +1380,6 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = fa
          },
          })
     end
-end,
-})
-
-local Reinject = Others:CreateButton({ Name = "Update SCYTHNENTIC",
-   Callback = function()
-   Rayfield:Destroy()
-   Sense.Unload()
-   loadstring(game:HttpGet("https://scythe.clan.su/SCYTHNENTIC.lua"))()
 end,
 })
 
@@ -1578,16 +1478,6 @@ while true and wait() do
     OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
     ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
     ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
-    OOFArrowsRadius:SetValue(Sense.teamSettings.friendly.offScreenArrowRadius)
-    OOFArrowsSize:SetValue(Sense.teamSettings.friendly.offScreenArrowSize)
-    ESPBoxColor:SetValue(Sense.teamSettings.friendly.boxColor)
-    ESP3DBoxColor:SetValue(Sence.teamSettings.friendly.box3dColor)
-    ESPGTColor:SetValue(Sense.teamSettings.friendly.nameColor)
-    ESPDistColor:SetValue(Sense.teamSettings.friendly.distanceColor)
-    ESPTColor:SetValue(Sense.teamSettings.friendly.tracerColor)
-    OOFArrowsColor:SetValue(Sense.teamSettings.friendly.offScreenArrowColor)
-    ChamsColor:SetValue(Sense.teamSettings.friendly.chamsOutlineColor)
-    ChamsFillColor:SetValue(Sense.teamSettings.friendly.chamsFillColor)
     FOV:SetValue(game.Workspace.Camera.FieldOfView)
 end
 -- // Functionality \\ --
