@@ -1321,7 +1321,7 @@ end,
 })
 
 local Label = Antis:CreateLabel("Client-wise")
-local ABK = AntiAim:CreateButton({
+local ABK = Antis:CreateButton({
     Name = "Anti-Lag",
     Callback = function()
         for _, v in next, game:GetDescendants() do
