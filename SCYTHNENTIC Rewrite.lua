@@ -21,7 +21,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 3.1 | REBIRTH REWRITE"
-local Message = "+ Added Sirius (Dont rape me shlex)\n+ Added RainbowChar\n- Un-needed feature removed\n- Removed TeamColorESP features due to it just not detected TeamPlayers"
+local Message = "+ Added Sirius (Dont rape me shlex)\n+ Added RainbowChar\n+ Moved GameFinder Script to main Script\n- Un-needed feature removed\n- Removed TeamColorESP features due to it just not detected TeamPlayers"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
