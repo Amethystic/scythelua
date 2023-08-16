@@ -20,8 +20,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3 | REBIRTH REWRITE"
-local Message = "+ Added Godmode\n~ Improved ChatSpammer\n~ Prepare for a key-sys :D"
+local version = "Version 3.1 | REBIRTH REWRITE"
+local Message = "+ Fixed fucked reinject"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -1286,40 +1286,6 @@ local AAfk = Antis:CreateButton({
     end,
 })
 
-local Label = Antis:CreateLabel("AC-wise")
-local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
-    enabled = Bypasstoggle
-    if enabled == true then
-    print('[Adonis Autobypass]: this game is running with autobypass!')
-        Namecall = hookmetamethod(game, '__namecall', function(self, ...)
-        local Caller = tostring(getcallingscript())
-        local Method = getnamecallmethod()
-        if Caller == 'ClientMover' and Method == 'GetService' then
-            return
-        end
-    return Namecall(self, ...)
-    end)
-
-    Rayfield:Notify({
-        Title = "Bypass Shit A-C",
-        Content = "Enabled",
-        Duration = 6.5,
-        Image = 12995567709,
-        Actions = { -- Notification Buttons
-           Ignore = {
-              Name = "Okay!",
-              Callback = function()
-              print("The user tapped Okay!")
-           end
-        },
-     },
-     })
-    else
-        return print("Its still hooked dw you're safe my child")
-    end
-end,
-})
-
 local Label = Antis:CreateLabel("Client-wise")
 local ABK = Antis:CreateButton({
     Name = "Anti-Lag",
@@ -1394,13 +1360,82 @@ local ABK = Antis:CreateButton({
         end
     end,
 })
+
+local Label = Antis:CreateLabel("AC-wise")
+local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
+    enabled = Bypasstoggle
+    if enabled == true then
+    print('[Adonis Autobypass]: this game is running with autobypass!')
+        Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+        local Caller = tostring(getcallingscript())
+        local Method = getnamecallmethod()
+        if Caller == 'ClientMover' and Method == 'GetService' then
+            return
+        end
+    return Namecall(self, ...)
+    end)
+
+    Rayfield:Notify({
+        Title = "Bypass Shit A-C",
+        Content = "Enabled",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
+    else
+        return print("Its still hooked dw you're safe my child")
+    end
+end,
+})
 -- // Antis
 
 -- // Others
 local Label = Others:CreateLabel("Script-wise")
 local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Amethystic/scythelua/main/Gamefinder.lua'),true))();
+        Games = {
+            [6407649031] = "https://pastebin.com/raw/WZnPL6jK", 
+            [5081773298] = "https://pastebin.com/raw/WZnPL6jK", -- NSS/A *they're both the same game so whogaf
+            [3527629287] = "https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source", -- BIG PAINTBALL
+            [1224212277] = "https://raw.githubusercontent.com/Deni210/madcity/main/Ruby%20Hub%20v1.3", -- MAD CITY
+            [2377868063] = "https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua", -- STRUCID
+            [10243982775] = "https://notfinobe.com/geraldballers/script.lua", -- REDBOX
+            [9578901194] = "https://pastebin.com/raw/t2nhTt8Z", -- Since u guys r using this script lol...
+            [189707] = "https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main", -- og ass game ;D...
+            [2788229376] = "https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", -- DAHOOD
+            [2753915549] = "https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script", -- BLOX FRUITS
+            [4282985734] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- CW
+            [286090429] = "https://gangofgang.gog-best.repl.co/aimhook/hook.lua", -- ARSENAL
+            [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
+            [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
+            [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
+            [9559194006] = "https://pastebin.com/raw/5LtLLSFE", -- SE
+            [6872265039] = "https://pastebin.com/raw/VGdXw3dQ", -- BW
+            [8560631822] = "https://pastebin.com/raw/VGdXw3dQ" -- BW2
+        }
+        if Games[game.PlaceId] then
+            sound2 = Instance.new("Sound", Workspace)
+            sound2.Parent = game.Workspace
+            sound2.SoundId = "rbxassetid://998971542"
+            sound2.Volume = 10
+            sound2:Play()
+            loadstring(game:HttpGet(Games[game.PlaceId]))()
+            wait(3)
+            sound:Destroy()
+        else
+            sound2 = Instance.new("Sound", Workspace)
+            sound2.Parent = game.Workspace
+            sound2.SoundId = "rbxassetid://263105619"
+            sound2.Volume = 10
+            sound2:Play() 
+        end
     end,
 })
 
