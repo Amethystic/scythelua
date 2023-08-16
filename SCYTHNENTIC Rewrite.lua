@@ -1321,9 +1321,9 @@ end,
 })
 
 local Label = Antis:CreateLabel("Client-wise")
-local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag = "Antilag",  Callback = function(Antilag) 
-    enabled = Antilag
-    if enabled == true then
+local ABK = AntiAim:CreateButton({
+    Name = "Anti-Lag",
+    Callback = function()
         for _, v in next, game:GetDescendants() do
             if ToDisable.Parts then
                 if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
@@ -1382,7 +1382,6 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag =
         
         if ToEnable.FullBright then
             local Lighting = game:GetService("Lighting")
-            
             Lighting.FogColor = Color3.fromRGB(255, 255, 255)
             Lighting.FogEnd = math.huge
             Lighting.FogStart = math.huge
@@ -1393,10 +1392,7 @@ local ABK = Antis:CreateToggle({ Name = "Anti-Lag", CurrentValue = false, Flag =
             Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
             Lighting.Outlines = true
         end
-    else
-        loadstring(game:HttpGet(('https://pastebin.com/raw/UsPYnnhS'),true))();
-    end
-end,
+    end,
 })
 -- // Antis
 
