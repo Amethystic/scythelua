@@ -69,7 +69,7 @@ sound:Play() -- Play the sound
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
 ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
-KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = randomizedName, SaveKey = true, GrabKeyFromSite = false, Key = {"#XsT965CDQ*34b+B_k8-Dev", Username} }
+KeySystem = true, KeySettings = { Title = "Scythentic", Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = randomizedName, SaveKey = true, GrabKeyFromSite = false, Key = {Username} }
 })
 
 local Main = Window:CreateTab("User", 12995567709) -- Title, Image
