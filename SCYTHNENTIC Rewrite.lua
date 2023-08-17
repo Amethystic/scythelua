@@ -21,8 +21,8 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3.2 | REBIRTH REWRITE"
-local Message = "+ Added Shitty Authsystem"
+local version = "Version 3.3 | REBIRTH REWRITE"
+local Message = "~ Optimized Code"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -707,21 +707,21 @@ end,
 })
 local NLHaxStylezz = Visuals:CreateButton({ Name = "Rainbow Characther",
    Callback = function()
-    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-        if v:IsA("MeshPart") then
-            v.Material = "ForceField"
-            spawn(function()
-                while wait() do
-                    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-                        if v:IsA("MeshPart") then
-                            v.Color = Color3.fromHSV(tick()%5/5,1,1)
-                            wait()
-                        end
-                    end 
+    for _, v in pairs(char:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        coroutine.wrap(function()
+            while wait() do
+                for _, meshPart in pairs(char:GetChildren()) do
+                    if meshPart:IsA("MeshPart") then
+                        meshPart.Color = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+                        wait()
+                    end
                 end
-            end)
-        end
+            end 
+        end)()
     end
+end
 
     Rayfield:Notify({
         Title = "Rainbow Char",
