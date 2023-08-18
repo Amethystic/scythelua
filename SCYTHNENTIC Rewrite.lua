@@ -11,18 +11,30 @@ local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particl
 local Username = game:GetService("Players").LocalPlayer.DisplayName
 local ToEnable = { FullBright = false }
 local Stuff = {}
+local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
+local humanoid = char.Humanoid
 
+getgenv().spinSpeed = 20
 getgenv().SecureMode = true
+
+function spin()
+	local Spin = Instance.new("BodyAngularVelocity")
+	Spin.Name = "Spinning"
+	Spin.Parent = char.HumanoidRootPart
+	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
+	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
+end
 -- // ...
+
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3.2 | REBIRTH REWRITE"
-local Message = "+ Added Shitty Authsystem"
+local version = "Version 3.3 | REBIRTH REWRITE"
+local Message = "+ Added Rainbow Chat\n+ New Antiaim Features\n~ Optimized a bit\n~ Fixed Sword related issue"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -85,8 +97,7 @@ local RageLabel1 = Rage:CreateLabel("Sword Related")
 local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
     enabled = SwordExpanderToggle
     if enabled == true then
-        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Character.Sword)
-        while enabled and wait(1) do
+        while enabled == true and wait() do
             for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
                 if tool:IsA("Tool") then
                     tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
@@ -95,39 +106,16 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
             game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
             game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
         end
-
-        Rayfield:Notify({
-            Title = "Sword Hitbox",
-            Content = "Expanded",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
     else
-        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-        game.Players.Backpack:ClearAllChildren()
+        game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(1, 0.800000011920929, 4)
+        game.Players.LocalPlayer.Character.Sword.Handle.Massless = false
 
-        Rayfield:Notify({
-            Title = "Sword Hitbox",
-            Content = "Desized",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if v:IsA'Tool' then
+                 v.Parent = game.Players.LocalPlayer.Backpack;
+            end
+        end
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end
 end,
 })
@@ -335,8 +323,6 @@ local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentVa
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("2", "All")
         wait(1.2)
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("1", "All")
-        wait(1.2)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("PING CHECK ! ! !", "All")
         wait(0.7)
         print("on")
 
@@ -685,6 +671,26 @@ local Radar = Visuals:CreateButton({ Name = "Load - Radar",
  })
 end,
 })
+local RBW = Visuals:CreateButton({ Name = "Load - Rainbow Chat",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/b3YS61yV'),true))();
+
+   Rayfield:Notify({
+    Title = "Rainbow Chat",
+    Content = "Gayness!",
+    Duration = 6.5,
+    Image = 12995567709,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Gayness!",
+          Callback = function()
+          print("THIS USER IS GAYYYYYY!!!!!!!!")
+       end
+    },
+ },
+ })
+end,
+})
 local Roblozz = Visuals:CreateButton({ Name = "Load - Roblox 2007 Mouse Cursor",
    Callback = function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/6uDb3He5'),true))();
@@ -707,21 +713,21 @@ end,
 })
 local NLHaxStylezz = Visuals:CreateButton({ Name = "Rainbow Characther",
    Callback = function()
-    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-        if v:IsA("MeshPart") then
-            v.Material = "ForceField"
-            spawn(function()
-                while wait() do
-                    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-                        if v:IsA("MeshPart") then
-                            v.Color = Color3.fromHSV(tick()%5/5,1,1)
-                            wait()
-                        end
-                    end 
+    for _, v in pairs(char:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        coroutine.wrap(function()
+            while wait() do
+                for _, meshPart in pairs(char:GetChildren()) do
+                    if meshPart:IsA("MeshPart") then
+                        meshPart.Color = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+                        wait()
+                    end
                 end
-            end)
-        end
+            end 
+        end)()
     end
+end
 
     Rayfield:Notify({
         Title = "Rainbow Char",
@@ -1019,6 +1025,29 @@ local Fly = Movement:CreateButton({
 -- // Movement
 
 -- // AntiAim
+local AATog = AntiAim:CreateToggle({
+	Name = "Spin-bot",
+	CurrentValue = false,
+	Flag = "Spinbot",
+	Callback = function(Value)
+		if Value then
+			spin()
+		else
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Spinning:Destroy()
+		end
+	end,
+})
+local AASlider = AntiAim:CreateSlider({
+	Name = "Spin-Bot Speed",
+	Range = {0, 500},
+	Increment = 10,
+	Suffix = "Speed",
+	CurrentValue = 1,
+	Flag = "Spin-Bot S",
+	Callback = function(Value)
+		spinSpeed = Value
+	end,
+})
 local Jitter = AntiAim:CreateButton({
     Name = "Load Jitter",
     Callback = function()
