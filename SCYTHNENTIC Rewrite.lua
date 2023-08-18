@@ -11,18 +11,30 @@ local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particl
 local Username = game:GetService("Players").LocalPlayer.DisplayName
 local ToEnable = { FullBright = false }
 local Stuff = {}
+local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
 local char = game:GetService("Players").LocalPlayer.Character or nil
+local humanoid = char.Humanoid
 
+getgenv().spinSpeed = 20
 getgenv().SecureMode = true
+
+function spin()
+	local Spin = Instance.new("BodyAngularVelocity")
+	Spin.Name = "Spinning"
+	Spin.Parent = char.HumanoidRootPart
+	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
+	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
+end
 -- // ...
+
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 3.3 | REBIRTH REWRITE"
-local Message = "+ Added Rainbow Chat\n~ Optimized a bit"
+local Message = "+ Added Rainbow Chat\n+ New Antiaim Features\n~ Optimized a bit"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -1037,6 +1049,29 @@ local Fly = Movement:CreateButton({
 -- // Movement
 
 -- // AntiAim
+local AATog = AntiAim:CreateToggle({
+	Name = "Spin-bot",
+	CurrentValue = false,
+	Flag = "Spinbot",
+	Callback = function(Value)
+		if Value then
+			spin()
+		else
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Spinning:Destroy()
+		end
+	end,
+})
+local AASlider = AntiAim:CreateSlider({
+	Name = "Spin-Bot Speed",
+	Range = {0, 500},
+	Increment = 10,
+	Suffix = "Speed",
+	CurrentValue = 1,
+	Flag = "Spin-Bot S",
+	Callback = function(Value)
+		spinSpeed = Value
+	end,
+})
 local Jitter = AntiAim:CreateButton({
     Name = "Load Jitter",
     Callback = function()
