@@ -22,7 +22,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 3.3 | REBIRTH REWRITE"
-local Message = "~ Optimized Code"
+local Message = "+ Added Rainbow Chat\n~ Optimized a bit"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -335,8 +335,6 @@ local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentVa
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("2", "All")
         wait(1.2)
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("1", "All")
-        wait(1.2)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("PING CHECK ! ! !", "All")
         wait(0.7)
         print("on")
 
@@ -679,6 +677,26 @@ local Radar = Visuals:CreateButton({ Name = "Load - Radar",
           Name = "Okay!",
           Callback = function()
           print("The user tapped Okay!")
+       end
+    },
+ },
+ })
+end,
+})
+local RBW = Visuals:CreateButton({ Name = "Load - Rainbow Chat",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/b3YS61yV'),true))();
+
+   Rayfield:Notify({
+    Title = "Rainbow Chat",
+    Content = "Gayness!",
+    Duration = 6.5,
+    Image = 12995567709,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Gayness!",
+          Callback = function()
+          print("THIS USER IS GAYYYYYY!!!!!!!!")
        end
     },
  },
