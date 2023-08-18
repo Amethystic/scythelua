@@ -97,7 +97,6 @@ local RageLabel1 = Rage:CreateLabel("Sword Related")
 local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
     enabled = SwordExpanderToggle
     if enabled == true then
-        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Character.Sword)
         while enabled and wait(1) do
             for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
                 if tool:IsA("Tool") then
@@ -124,7 +123,6 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
          })
     else
         game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-        game.Players.Backpack:ClearAllChildren()
 
         Rayfield:Notify({
             Title = "Sword Hitbox",
