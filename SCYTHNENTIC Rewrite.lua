@@ -122,9 +122,9 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
          },
          })
     else
-        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
         game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(1, 0.800000011920929, 4)
         game.Players.LocalPlayer.Character.Sword.Handle.Massless = false
+        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
 
         Rayfield:Notify({
             Title = "Sword Hitbox",
