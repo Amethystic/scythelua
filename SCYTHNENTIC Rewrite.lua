@@ -34,7 +34,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
 local version = "Version 3.3 | REBIRTH REWRITE"
-local Message = "+ Added Rainbow Chat\n+ New Antiaim Features\n~ Optimized a bit"
+local Message = "+ Added Rainbow Chat\n+ New Antiaim Features\n~ Optimized a bit\n~ Fixed Sword related issue"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
