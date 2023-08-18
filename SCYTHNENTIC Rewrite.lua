@@ -97,7 +97,7 @@ local RageLabel1 = Rage:CreateLabel("Sword Related")
 local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
     enabled = SwordExpanderToggle
     if enabled == true then
-        while enabled and wait(1) do
+        while enabled == true and wait() do
             for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
                 if tool:IsA("Tool") then
                     tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
@@ -106,40 +106,16 @@ local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentV
             game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
             game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
         end
-
-        Rayfield:Notify({
-            Title = "Sword Hitbox",
-            Content = "Expanded",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
     else
         game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(1, 0.800000011920929, 4)
         game.Players.LocalPlayer.Character.Sword.Handle.Massless = false
-        game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
 
-        Rayfield:Notify({
-            Title = "Sword Hitbox",
-            Content = "Desized",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if v:IsA'Tool' then
+                 v.Parent = game.Players.LocalPlayer.Backpack;
+            end
+        end
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end
 end,
 })
