@@ -33,8 +33,8 @@ end
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3.3 | REBIRTH REWRITE"
-local Message = "+ Added Rainbow Chat\n+ New Antiaim Features\n~ Optimized a bit\n~ Fixed Sword related issue"
+local version = "Version 3.4 | REBIRTH REWRITE"
+local Message = "~ Fixed WalkSpeed/JumpPower"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -979,7 +979,7 @@ end,
 -- // Movement
 local SpeedSlider = Movement:CreateSlider({
     Name = "Walkspeed",
-    Range = {16, 500},
+    Range = {16, 300},
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
@@ -991,7 +991,7 @@ local SpeedSlider = Movement:CreateSlider({
 
 local JumpSlider = Movement:CreateSlider({
     Name = "Jumppower",
-    Range = {50, 500},
+    Range = {50, 120},
     Increment = 1,
     Suffix = "",
     CurrentValue = 50,
