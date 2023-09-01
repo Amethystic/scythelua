@@ -33,8 +33,8 @@ end
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local cheatname = "Scythnentic"
-local version = "Version 3.4 | REBIRTH REWRITE"
-local Message = "~ Fixed WalkSpeed/JumpPower"
+local version = "Version 3.5 | REBIRTH REWRITE"
+local Message = "+ Added a game"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -1314,7 +1314,8 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [6872265039] = "https://pastebin.com/raw/VGdXw3dQ", -- BW
             [8560631822] = "https://pastebin.com/raw/VGdXw3dQ", -- BW2
             [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
-            [12355337193] = "https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain" -- SVSM D
+            [12355337193] = "https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain", -- SVSM D
+            [9848789324] = "https://raw.githubusercontent.com/martinelcrac/cryptonichub/main/Ragdollengine.lua" -- RaGDoLlEnGine
         }
         if Games[game.PlaceId] then
             sound2 = Instance.new("Sound", Workspace)
