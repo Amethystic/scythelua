@@ -1,40 +1,65 @@
 -- // Script made by @athena.software \\ -- 
+-- // Etc Functionality | B4 loading \\ --
 
--- // Etc Functionality | B4 loading \\ -- 
+-- Checking...
+if identifyexecutor() == "Valyse" then
+    print("Valyse detected")
+else
+   print(getexecutorname().. " detected")
+end
+
+if IsValyse then
+    print('VAYLSE USER????????? My pussy is throb.................')
+else
+    print('your not vaylse......... yorr on '.. getexecutorname().. ', no crazy hack for you.........................')
+end
+-- ... and so on
+
 local HttpService = game:GetService("HttpService")
+local UIS = game:GetService("UserInputService")
 local Namecall
 local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
-local Clipon = false
 local Players = game:GetService("Players")
 local p = game:GetService("Players").LocalPlayer
-local ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
 local Username = game:GetService("Players").LocalPlayer.DisplayName
-local ToEnable = { FullBright = false }
-local Stuff = {}
 local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
+local Click = tick()
 local char = game:GetService("Players").LocalPlayer.Character or nil
 local humanoid = char.Humanoid
+local HumanoidRoot = char.Humanoid
+local Action = false
+local ExecName = getexecutorname()
+local SaveLoadName = "Config"
+local AimbotToggleCheck = false
+local ESPToggleCheck = false
 
+getgenv().IsValyse = function() return true end
+getgenv().Clipon = false
+getgenv().ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
+getgenv().ToEnable = { FullBright = false }
+getgenv().Stuff = {}
 getgenv().spinSpeed = 20
 getgenv().SecureMode = true
+-- // ...
 
+-- // Prior Functionality \\ --
 function spin()
 	local Spin = Instance.new("BodyAngularVelocity")
 	Spin.Name = "Spinning"
-	Spin.Parent = char.HumanoidRootPart
+	Spin.Parent = HumanoidRoot
 	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
 	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
 end
--- // ...
-
+-- // Prior Functionality \\ --
 
 -- // Init Requirement \\ --
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
 local version = "Version 3.5 | REBIRTH REWRITE"
-local Message = "+ Added a game"
+local Message = "+ Added a game\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania"
 -- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
@@ -74,7 +99,7 @@ sound:Play() -- Play the sound
 
 -- // Init Window \\ --
 local Window = Rayfield:CreateWindow({ Name = cheatname, LoadingTitle = cheatname, LoadingSubtitle = "@athena.software", Image = 12995567709,
-ConfigurationSaving = { Enabled = false, FolderName = "athena.software", FileName = "main" },
+ConfigurationSaving = { Enabled = false, FolderName = "athena.software/Configurations", FileName = "Default" },
 Discord = { Enabled = true, Invite = "XVb8MjGUcp",  RememberJoins = true },
 KeySystem = true, KeySettings = { Title = cheatname, Subtitle = "Auth-Sys", Note = "Just type in your DisplayName", FileName = Username, SaveKey = true, GrabKeyFromSite = false, Key = { Username } }
 })
@@ -88,38 +113,12 @@ local AntiAim = Window:CreateTab("Anti-Aim") -- Title, Image
 local SS = Window:CreateTab("S-Singer") -- Title, Image
 local Antis = Window:CreateTab("Antis") -- Title, Image
 local Others = Window:CreateTab("Others") -- Title, Image
+local Config = Window:CreateTab("Config") -- Title, Image
 -- // ...
 
 -- // Button API \\ --
 
 -- // RAAAAAGE!
-local RageLabel1 = Rage:CreateLabel("Sword Related")
-local SwordRAGE = Rage:CreateToggle({ Name = "Sword - Hitbox Expander", CurrentValue = false, Flag = "ESPMaster",  Callback = function(SwordExpanderToggle) 
-    enabled = SwordExpanderToggle
-    if enabled == true then
-        while enabled == true and wait() do
-            for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-                if tool:IsA("Tool") then
-                    tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
-                end
-            end
-            game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(99999999,99999999,99999999)
-            game.Players.LocalPlayer.Character.Sword.Handle.Massless = true
-        end
-    else
-        game.Players.LocalPlayer.Character.Sword.Handle.Size = Vector3.new(1, 0.800000011920929, 4)
-        game.Players.LocalPlayer.Character.Sword.Handle.Massless = false
-
-        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-            if v:IsA'Tool' then
-                 v.Parent = game.Players.LocalPlayer.Backpack;
-            end
-        end
-        game.Players.LocalPlayer.Character.Humanoid.Health = 0
-    end
-end,
-})
-
 local RageLabel2 = Rage:CreateLabel("Chat Related")
 local NPC = Rage:CreateButton({
     Name = "Chat - Become an NPC",
@@ -182,8 +181,8 @@ local NPC = Rage:CreateButton({
     end,
 })
 
-local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = false, Flag = "ChatSpammerToggle",  Callback = function(ChatSpammerToggle) 
-    enabled = ChatSpammerToggle
+local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = false, Flag = "CS",  Callback = function(ChatSpammerToggle) 
+    CurrentValue = ChatSpammerToggle
 
     getgenv().spammess = {
         ":3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -287,7 +286,7 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n"
     }
 
-    while enabled and wait() do
+    while CurrentValue and wait() do
         local randomIndex = math.random(1, #getgenv().spammess)
         local message = getgenv().spammess[randomIndex]
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
@@ -297,8 +296,8 @@ end,
 })
 local RageLabel2 = Rage:CreateLabel("Script Related")
 local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentValue = false, Flag = "x",  Callback = function(Lagger) 
-    enabled = Lagger
-    if enabled == true then
+    CurrentValue = Lagger
+    if CurrentValue == true then
         Rayfield:Notify({
             Title = "Lagger",
             Content = "Enabled",
@@ -329,7 +328,7 @@ local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentVa
         if char then
             char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
             wait(0.5)
-            char.HumanoidRootPart.Anchored = true
+            char.HumanoidRootPart.Anchored = CurrentValue
         end
         while wait(1.5) do --// don't change it's the best
             game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
@@ -378,6 +377,207 @@ local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentVa
     end
 end,
 })
+local RageLabel21 = Rage:CreateLabel("Aim Related")
+local AimbotV3 = Rage:CreateToggle({ Name = "Master Switch - Exunybot", CurrentValue = false, Flag = "aimbetter",  Callback = function(AB) 
+    CurrentValue = AB
+    if CurrentValue == true then
+        AimbotToggleCheck = true
+        Aimbot.Load()
+        FOVCircle = Drawingnew("Circle")
+        FOVCircleOutline = Drawingnew("Circle")
+        Rayfield:Notify({
+            Title = "Aimbot",
+            Content = "Ready for use",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+    else
+        Rayfield:Notify({
+            Title = "Aimbot",
+            Content = "fully disabled",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+
+         Aimbot.Exit()
+         AimbotToggleCheck = false
+    end
+end,
+})
+local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = true, Flag = "Aimbot324",  Callback = function(Aimboit) 
+    CurrentValue = Aimboit
+    if CurrentValue == true then
+        Aimbot.Settings.Enabled = CurrentValue
+        Aimbot.Settings.LockMode = 1
+        Aimbot.Settings.LockPart = HumanoidRoot
+        Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
+        Aimbot.Settings.Sensitivity2 = 3
+        Aimbot.FOVSettings.OutlineColor = Color3fromRGB(0, 0, 0)
+    else
+        Aimbot.Settings.Enabled = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "AimToggle", CurrentValue = false, Flag = "AimToggle",  Callback = function(AimToggle) 
+    CurrentValue = AimToggle
+    if CurrentValue == true then
+        Aimbot.Settings.Toggle = CurrentValue
+    else
+        Aimbot.Settings.Toggle = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "TeamCheck", CurrentValue = false, Flag = "TeamCheck",  Callback = function(TeamCheck) 
+    CurrentValue = TeamCheck
+    if CurrentValue == true then
+        Aimbot.Settings.TeamCheck = CurrentValue
+    else
+        Aimbot.Settings.TeamCheck = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "AliveCheck", CurrentValue = true, Flag = "AliveCheck",  Callback = function(AliveCheck) 
+    CurrentValue = AliveCheck
+    if CurrentValue == true then
+        Aimbot.Settings.AliveCheck = CurrentValue
+    else
+        Aimbot.Settings.AliveCheck = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "WallCheck", CurrentValue = false, Flag = "WallCheck",  Callback = function(WallCheck) 
+    CurrentValue = WallCheck
+    if CurrentValue == true then
+        Aimbot.Settings.WallCheck = CurrentValue
+    else
+        Aimbot.Settings.WallCheck = CurrentValue
+    end
+end,
+})
+local Sens1 = Rage:CreateSlider({
+    Name = "Smoothing",
+    Range = {0, 100},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 0,
+    Flag = "5435",
+    Callback = function(CurrentValue)
+        while wait() do
+            Aimbot.Settings.Sensitivity = CurrentValue
+        end
+    end,
+})
+
+local Label = Rage:CreateLabel("Exunybot FOV Customization")
+local Aimbot432 = Rage:CreateToggle({ Name = "Toggled", CurrentValue = true, Flag = "FOVSettingsE",  Callback = function(WalABFOVlCheck) 
+    CurrentValue = WalABFOVlCheck
+    if CurrentValue == true then
+        Aimbot.FOVSettings.Enabled = CurrentValue
+    else
+        Aimbot.FOVSettings.Enabled = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "Visible", CurrentValue = true, Flag = "Visible",  Callback = function(Visible) 
+    CurrentValue = Visible
+    if CurrentValue == true then
+        Aimbot.FOVSettings.Visible = CurrentValue
+    else
+        Aimbot.FOVSettings.Visible = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "Filled", CurrentValue = false, Flag = "Filled",  Callback = function(Filled) 
+    CurrentValue = Filled
+    if CurrentValue == true then
+        Aimbot.FOVSettings.Filled = CurrentValue
+    else
+        Aimbot.FOVSettings.Filled = CurrentValue
+    end
+end,
+})
+local Aimbot432 = Rage:CreateToggle({ Name = "Gayness", CurrentValue = false, Flag = "Gayness",  Callback = function(Gayness) 
+    CurrentValue = Gayness
+    if CurrentValue == true then
+        Aimbot.FOVSettings.RainbowColor = Gayness
+    else
+        Aimbot.FOVSettings.RainbowColor = Gayness
+    end
+end,
+})
+local FOVRadius = Rage:CreateSlider({
+    Name = "Radius",
+    Range = {0, 100},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 90,
+    Flag = "43256",
+    Callback = function(CurrentValue)
+        Aimbot.FOVSettings.Radius = CurrentValue
+    end,
+})
+local FOVSides = Rage:CreateSlider({
+    Name = "Sides",
+    Range = {3, 30},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 10,
+    Flag = "43257",
+    Callback = function(CurrentValue)
+        Aimbot.FOVSettings.NumSides = CurrentValue
+    end,
+})
+local FOVNess = Rage:CreateSlider({
+    Name = "Thickness",
+    Range = {0, 100},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 1,
+    Flag = "43257",
+    Callback = function(CurrentValue)
+        Aimbot.FOVSettings.Thickness = CurrentValue
+    end,
+})
+local FOVTranny = Rage:CreateSlider({
+    Name = "Transparency",
+    Range = {0, 1},
+    Increment = 1,
+    Suffix = "",
+    CurrentValue = 1,
+    Flag = "43258",
+    Callback = function(CurrentValue)
+        Aimbot.FOVSettings.Transparency = CurrentValue
+    end,
+})
+local FOVCust = Rage:CreateColorPicker({ Name = "Main Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C327", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Color)
+        Aimbot.FOVSettings.Color = Color
+    end
+})
+local FOVCust2 = Rage:CreateColorPicker({ Name = "Locked Color", Color = Color3.fromRGB(255,255,255),
+    Flag = "C328", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Color)
+        Aimbot.FOVSettings.LockedColor = Color
+    end
+})
+local Label = Rage:CreateLabel("ETC")
 local EpicHax = Rage:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
     Callback = function()
@@ -399,36 +599,15 @@ local EpicHax = Rage:CreateButton({
          })
     end,
 })
-local AimbotV2 = Rage:CreateButton({
-    Name = "Load AIMBOT V2 (Basic Aimbot)",
-    Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua'),true))();
-
-        Rayfield:Notify({
-            Title = "Aimbot V2",
-            Content = "Loaded",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-    end,
-})
 -- // RAAAAAGE!
 
 -- // Visuals
 local ESPLabel = Visuals:CreateLabel("Main ESP Options")
-local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = false, Flag = "ESPMaster",  Callback = function(ESPToggle) 
-    enabled = ESPToggle
-    if enabled == true then
+local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = false, Flag = "ESPM2",  Callback = function(ESPToggle) 
+    CurrentValue = ESPToggle
+    if CurrentValue == true then
         Sense.Load()
-
+        ESPToggleCheck = true
         Rayfield:Notify({
             Title = "ESP",
             Content = "Ready for use",
@@ -445,7 +624,7 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
          })
     else
         Sense.Unload()
-
+        ESPToggleCheck = false
         Rayfield:Notify({
             Title = "ESP",
             Content = "fully disabled",
@@ -465,9 +644,9 @@ end,
 })
 
 local ESPLabel = Visuals:CreateLabel("Main - EnemyTeam ESP Options")
-local ESP2 = Visuals:CreateToggle({ Name = "Master Switch - EnemyTeam", CurrentValue = false, Flag = "ESPMasterEn",  Callback = function(ESPToggleEN) 
-    enabled = ESPToggleEN
-    if enabled == true then
+local ESP2 = Visuals:CreateToggle({ Name = "Master Switch - EnemyTeam", CurrentValue = false, Flag = "ESPM3",  Callback = function(ESPToggleEN) 
+    CurrentValue = ESPToggleEN
+    if CurrentValue == true then
         Sense.teamSettings.enemy.enabled = true
     else
         Sense.teamSettings.enemy.enabled = false
@@ -475,9 +654,9 @@ local ESP2 = Visuals:CreateToggle({ Name = "Master Switch - EnemyTeam", CurrentV
 end,
 })
 
-local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Box", CurrentValue = false, Flag = "ESPBox",  Callback = function(ESPbToggle) 
-    enabled = ESPbToggle
-    if enabled == true then
+local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Box", CurrentValue = false, Flag = "ESPB",  Callback = function(ESPbToggle) 
+    CurrentValue = ESPbToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.box = true
     else
         Sense.teamSettings.enemy.box = false
@@ -485,9 +664,9 @@ local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Box", CurrentValue =
 end,
 })
 
-local ESPb3d = Visuals:CreateToggle({ Name = "EnemyTeam ESP - 3DBox", CurrentValue = false, Flag = "ESP3DBox",  Callback = function(ESPb3dToggle) 
-    enabled = ESPb3dToggle
-    if enabled == true then
+local ESPb3d = Visuals:CreateToggle({ Name = "EnemyTeam ESP - 3DBox", CurrentValue = false, Flag = "ESP3DB",  Callback = function(ESPb3dToggle) 
+    CurrentValue = ESPb3dToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.box3d  = true
     else
         Sense.teamSettings.enemy.box3d = false
@@ -495,9 +674,9 @@ local ESPb3d = Visuals:CreateToggle({ Name = "EnemyTeam ESP - 3DBox", CurrentVal
 end,
 })
 
-local ESPw = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Item", CurrentValue = false, Flag = "ESPItemBox",  Callback = function(ESPbwToggle) 
-    enabled = ESPbwToggle
-    if enabled == true then
+local ESPw = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Item", CurrentValue = false, Flag = "ESPIB",  Callback = function(ESPbwToggle) 
+    CurrentValue = ESPbwToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.weapon   = true
         Sense.teamSettings.enemy.weaponColor[1] = Color3.new(1, 1, 1)
     else
@@ -506,9 +685,9 @@ local ESPw = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Item", CurrentValue 
 end,
 })
 
-local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Gamertag", CurrentValue = false, Flag = "ESPGamertag",  Callback = function(ESPgtToggle) 
-    enabled = ESPgtToggle
-    if enabled == true then
+local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Gamertag", CurrentValue = false, Flag = "ESPG",  Callback = function(ESPgtToggle) 
+    CurrentValue = ESPgtToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.name = true
     else
         Sense.teamSettings.enemy.name = false
@@ -516,9 +695,9 @@ local ESPb = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Gamertag", CurrentVa
 end,
 })
 
-local ESPhel = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPhel",  Callback = function(HealthbarToggle) 
-    enabled = HealthbarToggle
-    if enabled == true then
+local ESPhel = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Healthbar & HealthTag", CurrentValue = false, Flag = "ESPh",  Callback = function(HealthbarToggle) 
+    CurrentValue = HealthbarToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.healthBar = true
         Sense.teamSettings.enemy.healthText = true
     else
@@ -528,9 +707,9 @@ local ESPhel = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Healthbar & Health
 end,
 })
 
-local Chams = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Chams", CurrentValue = false, Flag = "ESPChams",  Callback = function(ChamsToggle) 
-    enabled = ChamsToggle
-    if enabled == true then
+local Chams = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Chams", CurrentValue = false, Flag = "ESPC",  Callback = function(ChamsToggle) 
+    CurrentValue = ChamsToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.chams = true
     else
         Sense.teamSettings.enemy.chams = false
@@ -538,9 +717,9 @@ local Chams = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Chams", CurrentValu
 end,
 })
 
-local ESPd = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Distance", CurrentValue = false, Flag = "ESPDistance",  Callback = function(ESPdToggle) 
-    enabled = ESPdToggle
-    if enabled == true then
+local ESPd = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Distance", CurrentValue = false, Flag = "ESPD",  Callback = function(ESPdToggle) 
+    CurrentValue = ESPdToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.distance = true
     else
         Sense.teamSettings.enemy.distance = false
@@ -548,9 +727,9 @@ local ESPd = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Distance", CurrentVa
 end,
 })
 
-local ESPt = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Lines", CurrentValue = false, Flag = "ESPtracer",  Callback = function(ESPtToggle) 
-    enabled = ESPtToggle
-    if enabled == true then
+local ESPt = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Lines", CurrentValue = false, Flag = "ESPt",  Callback = function(ESPtToggle) 
+    CurrentValue = ESPtToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.tracer = true
     else
         Sense.teamSettings.enemy.tracer = false
@@ -558,9 +737,9 @@ local ESPt = Visuals:CreateToggle({ Name = "EnemyTeam ESP - Lines", CurrentValue
 end,
 })
 
-local ESPa = Visuals:CreateToggle({ Name = "EnemyTeam ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoofarrow",  Callback = function(ESPaToggle) 
-    enabled = ESPaToggle
-    if enabled == true then
+local ESPa = Visuals:CreateToggle({ Name = "EnemyTeam ESP - OOF Arrows", CurrentValue = false, Flag = "ESPoof",  Callback = function(ESPaToggle) 
+    CurrentValue = ESPaToggle
+    if CurrentValue == true then
         Sense.teamSettings.enemy.offScreenArrow  = true
     else
         Sense.teamSettings.enemy.offScreenArrow  = false
@@ -570,50 +749,50 @@ end,
 local ESPLabel = Visuals:CreateLabel("Customizable Enemy ESP Options")
 local ESPBoxColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Box Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.boxColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.boxColor[1] =CurrentValue
     end
 })
 local ESP3DBoxColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Box3D Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.box3dColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.box3dColor[1] =CurrentValue
     end
 })
 local ESPGTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Gamertag Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.nameColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.nameColor[1] =CurrentValue
     end
 })
 local ESPDistColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Distance Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.distanceColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.distanceColor[1] =CurrentValue
     end
 })
 local ESPTColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Line Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C6", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.tracerColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.tracerColor[1] =CurrentValue
     end
 })
 local OOFArrowsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - OOF Arrows Color", Color = Color3.fromRGB(255,255,255),
     Flag = "C7", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.offScreenArrowColor[1] = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.offScreenArrowColor[1] =CurrentValue
     end
 })
 local ChamsColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Chams Color", Color = Color3.fromRGB(255,60,60),
     Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.chamsOutlineColor[1] = Value
+    Callback = function(Color)
+        Sense.teamSettings.enemy.chamsOutlineColor[1] = Color
     end
 })
-local ChamsFillColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Chams Fill Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        Sense.teamSettings.enemy.chamsFillColor[1] = Value
+local ChamsFillColor = Visuals:CreateColorPicker({ Name = "EnemyTeam ESP - Chams Fill Color", Color = Color3.fromRGB(0,0,0),
+    Flag = "C9", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Color)
+        Sense.teamSettings.enemy.chamsFillColor[1] = Color
     end
 })
 local OOFArrowsRadius = Visuals:CreateSlider({
@@ -623,8 +802,8 @@ local OOFArrowsRadius = Visuals:CreateSlider({
     Suffix = "",
     CurrentValue = 50,
     Flag = "OARSlider",
-    Callback = function(Value)
-        Sense.teamSettings.enemy.offScreenArrowRadius = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.offScreenArrowRadius =CurrentValue
     end,
 })
 local OOFArrowsSize = Visuals:CreateSlider({
@@ -634,8 +813,8 @@ local OOFArrowsSize = Visuals:CreateSlider({
     Suffix = "",
     CurrentValue = 5,
     Flag = "OARSlider2",
-    Callback = function(Value)
-        Sense.teamSettings.enemy.offScreenArrowSize = Value
+    Callback = function(CurrentValue)
+        Sense.teamSettings.enemy.offScreenArrowSize =CurrentValue
     end,
 })
 
@@ -646,9 +825,9 @@ local FOV = Visuals:CreateSlider({
     Increment = 1,
     Suffix = "",
     CurrentValue = 70,
-    Flag = "OARSlider2",
-    Callback = function(Value)
-        game.Workspace.Camera.FieldOfView = Value
+    Flag = "OARSlider3",
+    Callback = function(CurrentValue)
+        game.Workspace.Camera.FieldOfView = CurrentValue
     end,
 })
 local Radar = Visuals:CreateButton({ Name = "Load - Radar",
@@ -745,7 +924,7 @@ end
      })
 end,
 })
-local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue = false, Flag = "Sky",  Callback = function(SkyboxToggle) 
+local Skybox = Visuals:CreateToggle({ Name = "Scythnentic Skybox", CurrentValue = false, Flag = "Skyb",  Callback = function(SkyboxToggle) 
     enabled = SkyboxToggle
     if enabled == true then
         SkyBox = Instance.new("Sky")
@@ -809,18 +988,18 @@ local CameraSlider = Visuals:CreateSlider({
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
-    Flag = "CSlider",
-    Callback = function(Value)
-        game.Players.LocalPlayer.CameraMaxZoomDistance = Value
+    Flag = "CSlider34",
+    Callback = function(CurrentValue)
+        game.Players.LocalPlayer.CameraMaxZoomDistance = CurrentValue
     end,
 })
 -- // Visuals
 
 -- // LocalPlayer
-local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCToggle",  Callback = function(NCToggle) 
-    enabled = NCToggle
+local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCT",  Callback = function(NCToggle) 
+    CurrentValue = NCToggle
     
-    if enabled == true then
+    if CurrentValue == true then
         Clipon = true
 
         Rayfield:Notify({
@@ -983,9 +1162,9 @@ local SpeedSlider = Movement:CreateSlider({
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
-    Flag = "WSlider",
-    Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    Flag = "SPEEDl",
+    Callback = function(CurrentValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = CurrentValue
     end,
 })
 
@@ -995,9 +1174,9 @@ local JumpSlider = Movement:CreateSlider({
     Increment = 1,
     Suffix = "",
     CurrentValue = 50,
-    Flag = "JPSlider",
-    Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    Flag = "JPS",
+    Callback = function(CurrentValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = CurrentValue
     end,
 })
 
@@ -1028,9 +1207,9 @@ local Fly = Movement:CreateButton({
 local AATog = AntiAim:CreateToggle({
 	Name = "Spin-bot",
 	CurrentValue = false,
-	Flag = "Spinbot",
-	Callback = function(Value)
-		if Value then
+	Flag = "Sbt",
+	Callback = function(CurrentValue)
+		if CurrentValue then
 			spin()
 		else
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Spinning:Destroy()
@@ -1039,13 +1218,13 @@ local AATog = AntiAim:CreateToggle({
 })
 local AASlider = AntiAim:CreateSlider({
 	Name = "Spin-Bot Speed",
-	Range = {0, 500},
-	Increment = 10,
+	Range = {0, 130},
+	Increment = 5,
 	Suffix = "Speed",
-	CurrentValue = 1,
-	Flag = "Spin-Bot S",
-	Callback = function(Value)
-		spinSpeed = Value
+	CurrentValue = 20,
+	Flag = "SBS",
+	Callback = function(CurrentValue)
+		spinSpeed =CurrentValue
 	end,
 })
 local Jitter = AntiAim:CreateButton({
@@ -1256,9 +1435,9 @@ local ABK = Antis:CreateButton({
 })
 
 local Label = Antis:CreateLabel("AC-wise")
-local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Bypass",  Callback = function(Bypasstoggle) 
-    enabled = Bypasstoggle
-    if enabled == true then
+local ABK = Antis:CreateToggle({ Name = "Anti-Cheat Bypasser - Adonis", CurrentValue = false, Flag = "Byp",  Callback = function(Bypasstoggle) 
+    CurrentValue = Bypasstoggle
+    if CurrentValue == true then
     print('[Adonis Autobypass]: this game is running with autobypass!')
         Namecall = hookmetamethod(game, '__namecall', function(self, ...)
         local Caller = tostring(getcallingscript())
@@ -1314,7 +1493,7 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [6872265039] = "https://pastebin.com/raw/VGdXw3dQ", -- BW
             [8560631822] = "https://pastebin.com/raw/VGdXw3dQ", -- BW2
             [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
-            [12355337193] = "https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain", -- SVSM D
+            [47324] = "https://pastebin.com/raw/WWGqP02A", -- SVSM D
             [9848789324] = "https://raw.githubusercontent.com/martinelcrac/cryptonichub/main/Ragdollengine.lua" -- RaGDoLlEnGine
         }
         if Games[game.PlaceId] then
@@ -1373,12 +1552,14 @@ local Dex = Others:CreateButton({
 })
 
 local Label = Others:CreateLabel("Settings & ETC")
-local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPSToggle", Callback = function(FPSToggle)
-    enabled = FPSToggle
+local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = false, Flag = "FPST", Callback = function(FPSToggle)
+    CurrentValue = FPSToggle
 
-    if enabled then
+    if CurrentValue then
         setfpscap(9999)
-
+        if IsValyse then
+            setfpsmax(9999)
+        end
         Rayfield:Notify({
             Title = "FPS",
             Content = "Unlocked",
@@ -1395,7 +1576,9 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = fa
          })
     else
         setfpscap(60)
-
+        if IsValyse then
+            setfpsmax(60)
+        end
         Rayfield:Notify({
             Title = "FPS",
             Content = "Locked",
@@ -1418,6 +1601,7 @@ local GameID = Others:CreateButton({
     Name = "GameID Finder",
     Callback = function()
     print(game.PlaceId)
+    setclipboard(tostring(game.PlaceId))
 
     Rayfield:Notify({
         Title = "GameID",
@@ -1426,9 +1610,9 @@ local GameID = Others:CreateButton({
         Image = 12995567709,
         Actions = { -- Notification Buttons
            Ignore = {
-              Name = "Thanks!",
+              Name = "Ok",
               Callback = function()
-              print("The user tapped Thanks!")
+              print("Ok pressed")
            end
         },
      },
@@ -1450,9 +1634,14 @@ end,
 })
 
 local Uninject = Others:CreateButton({ Name = "Uninject",
-   Callback = function()
-   Rayfield:Destroy()
-   Sense.Unload()
+    Callback = function()
+    Rayfield:Destroy()
+    if ESPToggleCheck == true then
+        Sense.Unload()
+    end
+    if AimbotToggleCheck == true then
+        Aimbot.Exit()
+    end
 end,
 })
 
@@ -1463,29 +1652,52 @@ end,
 })
 -- // Others
 
+-- Figgy
+-- local Input = Config:CreateInput({
+--     Name = "Config Name",
+--     PlaceholderText = "",
+--     RemoveTextAfterFocusLost = false,
+--     Callback = function(Text)
+--         Text = SceneLoadName
+--         print(Text)
+--     end,
+-- })
+--  local Button = Config:CreateButton({
+--     Name = "Save",
+--     Callback = function()
+--         Rayfield:SaveConfigurationName(SaveLoadName)
+--     end,
+-- })
+--  local Button = Config:CreateButton({
+--     Name = "Load",
+--     Callback = function()
+--        Rayfield:LoadConfigurationPath(SaveLoadName)
+--     end,
+-- })
+ local Button = Config:CreateButton({
+    Name = "Save Default",
+    Callback = function()
+        Rayfield:SaveConfiguration()
+    end,
+})
+ local Button = Config:CreateButton({
+    Name = "Load Default",
+    Callback = function()
+       Rayfield:LoadConfiguration()
+    end,
+})
+ -- End of ButtonApi 
+
 -- // MainPage \\ --
 local Paragraph = Main:CreateParagraph({Title = "- SCYTHNENTIC -", Content = version})
 local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content = Username})
 local MSGBoard = Main:CreateParagraph({Title = "- Update Log -", Content = Message})
+local ExecutorMsg = Main:CreateParagraph({Title = "Executed on: ", Content = ExecName})
 local Discord = Main:CreateButton({ Name = "Join us",
    Callback = function()
-    http.request(
-        {
-            Url = "http://127.0.0.1:6463/rpc?v=1",
-            Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json",
-                ["origin"] = "https://discord.com",
-            },
-            Body = HttpService:JSONEncode(
-                {
-                    ["args"] = {
-                        ["code"] = "XVb8MjGUcp",
-                    },
-                    ["cmd"] = "INVITE_BROWSER",
-                    ["nonce"] = "."
-                })
-        })
+    http.request({ Url = "http://127.0.0.1:6463/rpc?v=1", Method = "POST", Headers = {["Content-Type"] = "application/json", ["origin"] = "https://discord.com", },
+        Body = HttpService:JSONEncode({ ["args"] = { ["code"] = "XVb8MjGUcp", }, ["cmd"] = "INVITE_BROWSER", ["nonce"] = "." })
+    })
 end,
 })
 -- // MainPage
@@ -1495,20 +1707,29 @@ wait(3.5)
 sound:Destroy()
 
 -- // Functionality \\ --
-while true and wait() do
-    SpeedSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
-    JumpSlider:SetValue(game.Players.LocalPlayer.Character.Humanoid.JumpPower)
-    CameraSlider:SetValue(game.Players.LocalPlayer.CameraMaxZoomDistance)
-    OOFArrowsRadius:SetValue(Sense.teamSettings.enemy.offScreenArrowRadius)
-    OOFArrowsSize:SetValue(Sense.teamSettings.enemy.offScreenArrowSize)
-    ESPBoxColor:SetValue(Sense.teamSettings.enemy.boxColor)
-    ESP3DBoxColor:SetValue(Sence.teamSettings.enemy.box3dColor)
-    ESPGTColor:SetValue(Sense.teamSettings.enemy.nameColor)
-    ESPDistColor:SetValue(Sense.teamSettings.enemy.distanceColor)
-    ESPTColor:SetValue(Sense.teamSettings.enemy.tracerColor)
-    OOFArrowsColor:SetValue(Sense.teamSettings.enemy.offScreenArrowColor)
-    ChamsColor:SetValue(Sense.teamSettings.enemy.chamsOutlineColor)
-    ChamsFillColor:SetValue(Sense.teamSettings.enemy.chamsFillColor)
-    FOV:SetValue(game.Workspace.Camera.FieldOfView)
+while wait() do
+    SpeedSlider:Set(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
+    JumpSlider:Set(game.Players.LocalPlayer.Character.Humanoid.JumpPower)
+    CameraSlider:Set(game.Players.LocalPlayer.CameraMaxZoomDistance)
+    OOFArrowsRadius:Set(Sense.teamSettings.enemy.offScreenArrowRadius)
+    OOFArrowsSize:Set(Sense.teamSettings.enemy.offScreenArrowSize)
+    ESPBoxColor:Set(Sense.teamSettings.enemy.boxColor)
+    ESP3DBoxColor:Set(Sence.teamSettings.enemy.box3dColor)
+    ESPGTColor:Set(Sense.teamSettings.enemy.nameColor)
+    ESPDistColor:Set(Sense.teamSettings.enemy.distanceColor)
+    ESPTColor:Set(Sense.teamSettings.enemy.tracerColor)
+    OOFArrowsColor:Set(Sense.teamSettings.enemy.offScreenArrowColor)
+    ChamsColor:Set(Sense.teamSettings.enemy.chamsOutlineColor)
+    ChamsFillColor:Set(Sense.teamSettings.enemy.chamsFillColor)
+    FOV:Set(game.Workspace.Camera.FieldOfView)
+    FOVSides:Set(Aimbot.FOVSettings.NumSides)
+    FOVCust:Set(Aimbot.FOVSettings.Color)
+    FOVCust2:Set(Aimbot.FOVSettings.LockedColor)
+end
+
+-- this is just 2 refresh the esp cz smtimes Sence likes to have rough sex with the players n how dey respawn n shit so...
+while ESPToggleCheck == true and wait(0.3) do
+    Sence.Unload()
+    Sence.Load()
 end
 -- // Functionality \\ --
