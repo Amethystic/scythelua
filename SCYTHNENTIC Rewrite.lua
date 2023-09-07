@@ -113,7 +113,6 @@ local AntiAim = Window:CreateTab("Anti-Aim") -- Title, Image
 local SS = Window:CreateTab("S-Singer") -- Title, Image
 local Antis = Window:CreateTab("Antis") -- Title, Image
 local Others = Window:CreateTab("Others") -- Title, Image
-local Config = Window:CreateTab("Config") -- Title, Image
 -- // ...
 
 -- // Button API \\ --
@@ -606,8 +605,8 @@ local ESPLabel = Visuals:CreateLabel("Main ESP Options")
 local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = false, Flag = "ESPM2",  Callback = function(ESPToggle) 
     CurrentValue = ESPToggle
     if CurrentValue == true then
-        Sense.Load()
         ESPToggleCheck = true
+        Sense.Load()
         Rayfield:Notify({
             Title = "ESP",
             Content = "Ready for use",
@@ -623,8 +622,8 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
          },
          })
     else
-        Sense.Unload()
         ESPToggleCheck = false
+        Sense.Unload()
         Rayfield:Notify({
             Title = "ESP",
             Content = "fully disabled",
@@ -1652,40 +1651,6 @@ end,
 })
 -- // Others
 
--- Figgy
--- local Input = Config:CreateInput({
---     Name = "Config Name",
---     PlaceholderText = "",
---     RemoveTextAfterFocusLost = false,
---     Callback = function(Text)
---         Text = SceneLoadName
---         print(Text)
---     end,
--- })
---  local Button = Config:CreateButton({
---     Name = "Save",
---     Callback = function()
---         Rayfield:SaveConfigurationName(SaveLoadName)
---     end,
--- })
---  local Button = Config:CreateButton({
---     Name = "Load",
---     Callback = function()
---        Rayfield:LoadConfigurationPath(SaveLoadName)
---     end,
--- })
- local Button = Config:CreateButton({
-    Name = "Save Default",
-    Callback = function()
-        Rayfield:SaveConfiguration()
-    end,
-})
- local Button = Config:CreateButton({
-    Name = "Load Default",
-    Callback = function()
-       Rayfield:LoadConfiguration()
-    end,
-})
  -- End of ButtonApi 
 
 -- // MainPage \\ --
@@ -1728,8 +1693,13 @@ while wait() do
 end
 
 -- this is just 2 refresh the esp cz smtimes Sence likes to have rough sex with the players n how dey respawn n shit so...
-while ESPToggleCheck == true and wait(0.3) do
-    Sence.Unload()
-    Sence.Load()
+if ESPToggleCheck == true then
+    while wait(0.5) do
+        print("ESP: Refreshing")
+        Sence.Unload()
+        wait(0.5)
+        print("ESP: Refreshed")
+        Sence.Load()
+    end
 end
 -- // Functionality \\ --
