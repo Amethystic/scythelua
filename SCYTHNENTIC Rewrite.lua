@@ -43,6 +43,15 @@ getgenv().spinSpeed = 20
 getgenv().SecureMode = true
 -- // ...
 
+-- // Init Requirement \\ --
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
+local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
+local cheatname = "Scythnentic"
+local version = "Version 3.5 | REBIRTH REWRITE"
+local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania"
+-- // ...
+
 -- // Prior Functionality \\ --
 function spin()
 	local Spin = Instance.new("BodyAngularVelocity")
@@ -52,15 +61,6 @@ function spin()
 	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
 end
 -- // Prior Functionality \\ --
-
--- // Init Requirement \\ --
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amethystic/scythelua/main/RayfieldCustom.lua'))()
-local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
-local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
-local cheatname = "Scythnentic"
-local version = "Version 3.5 | REBIRTH REWRITE"
-local Message = "+ Added a game\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania"
--- // ...
 
 Rayfield:Notify({ Title = cheatname, Content = "Injected Script!", Duration = 6.5, Image = 12995567709,
     Actions = { -- Notification Buttons
@@ -607,6 +607,7 @@ local ESP = Visuals:CreateToggle({ Name = "Master Switch - ESP", CurrentValue = 
     if CurrentValue == true then
         ESPToggleCheck = true
         Sense.Load()
+        
         Rayfield:Notify({
             Title = "ESP",
             Content = "Ready for use",
@@ -1493,7 +1494,8 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [8560631822] = "https://pastebin.com/raw/VGdXw3dQ", -- BW2
             [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
             [47324] = "https://pastebin.com/raw/WWGqP02A", -- SVSM D
-            [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua" -- RaGDoLlEnGine
+            [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua", -- RaGDoLlEnGine
+            [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua" -- war crimes
         }
         if Games[game.PlaceId] then
             sound2 = Instance.new("Sound", Workspace)
@@ -1690,16 +1692,5 @@ while wait() do
     FOVSides:Set(Aimbot.FOVSettings.NumSides)
     FOVCust:Set(Aimbot.FOVSettings.Color)
     FOVCust2:Set(Aimbot.FOVSettings.LockedColor)
-end
-
--- this is just 2 refresh the esp cz smtimes Sence likes to have rough sex with the players n how dey respawn n shit so...
-if ESPToggleCheck == true then
-    while wait(0.5) do
-        print("ESP: Refreshing")
-        Sence.Unload()
-        wait(0.5)
-        print("ESP: Refreshed")
-        Sence.Load()
-    end
 end
 -- // Functionality \\ --
