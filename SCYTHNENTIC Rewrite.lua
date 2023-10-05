@@ -351,7 +351,7 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
     CurrentValue = Aimboit
     if CurrentValue == true then
         Aimbot.Load()
-        AimbotToggleCheck = CurrentValue
+        AimbotToggleCheck = true
 
         Aimbot.Settings.Enabled = CurrentValue
         Aimbot.Settings.LockMode = 1
@@ -367,7 +367,7 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
         end
     else
         Aimbot.Settings.Enabled = CurrentValue
-        AimbotToggleCheck = CurrentValue
+        AimbotToggleCheck = false
 
         if AimbotToggleCheck == false then
             Aimbot.FOVSettings.Enabled = false
