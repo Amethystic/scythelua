@@ -1,6 +1,7 @@
 -- // Script made by @athena.software \\ -- 
 -- // Etc Functionality | B4 loading \\ --
-
+print("Checking...")
+wait(5)
 -- Checking...
 if identifyexecutor() == "Valyse" then
     print("Valyse detected")
@@ -10,18 +11,23 @@ end
 
 if IsValyse then
     print('VAYLSE USER????????? My pussy is throb.................')
+    print("loading...")
+    wait(3)
 else
     print('your not vaylse......... yorr on '.. getexecutorname().. ', no crazy hack for you.........................')
+    print("loading anyways...")
+    wait(3)
 end
 -- ... and so on
-
+getgenv().IsValyse = function() return true end
+local Username = game:GetService("Players").LocalPlayer.DisplayName
 local HttpService = game:GetService("HttpService")
 local UIS = game:GetService("UserInputService")
 local Namecall
 local sh = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+local player = game.Players.LocalPlayer
 local Players = game:GetService("Players")
 local p = game:GetService("Players").LocalPlayer
-local Username = game:GetService("Players").LocalPlayer.DisplayName
 local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
 local Click = tick()
@@ -34,7 +40,6 @@ local SaveLoadName = "Config"
 local AimbotToggleCheck = false
 local ESPToggleCheck = false
 
-getgenv().IsValyse = function() return true end
 getgenv().Clipon = false
 getgenv().ToDisable = { Textures = true, VisualEffects = true, Parts = true, Particles = true, Sky = true }
 getgenv().ToEnable = { FullBright = false }
@@ -56,7 +61,7 @@ local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Sp
 function spin()
 	local Spin = Instance.new("BodyAngularVelocity")
 	Spin.Name = "Spinning"
-	Spin.Parent = HumanoidRoot
+	Spin.Parent = player.Character.HumanoidRootPart
 	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
 	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
 end
@@ -133,7 +138,6 @@ local NPC = Rage:CreateButton({
             "That was a cheap shot!",
             "You'll regret that!"
          }
-        local player = game.Players.LocalPlayer
         if player.Character then
             local humanoid = player.Character:WaitForChild("Humanoid")
             local previousHealth = humanoid.Health
@@ -377,63 +381,36 @@ local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentVa
 end,
 })
 local RageLabel21 = Rage:CreateLabel("Aim Related")
-local AimbotV3 = Rage:CreateToggle({ Name = "Master Switch - Exunybot", CurrentValue = false, Flag = "aimbetter",  Callback = function(AB) 
-    CurrentValue = AB
-    if CurrentValue == true then
-        AimbotToggleCheck = true
-        Aimbot.Load()
-        FOVCircle = Drawingnew("Circle")
-        FOVCircleOutline = Drawingnew("Circle")
-        Rayfield:Notify({
-            Title = "Aimbot",
-            Content = "Ready for use",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-    else
-        Rayfield:Notify({
-            Title = "Aimbot",
-            Content = "fully disabled",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
-
-         Aimbot.Exit()
-         AimbotToggleCheck = false
-    end
-end,
-})
-local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = true, Flag = "Aimbot324",  Callback = function(Aimboit) 
+local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Flag = "Aimbot324",  Callback = function(Aimboit) 
     CurrentValue = Aimboit
-    if CurrentValue == true then
+    if CurrentValue then
+        Aimbot.Load()
+        AimbotToggleCheck = true
+
         Aimbot.Settings.Enabled = CurrentValue
         Aimbot.Settings.LockMode = 1
         Aimbot.Settings.LockPart = HumanoidRoot
         Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
         Aimbot.Settings.Sensitivity2 = 3
-        Aimbot.FOVSettings.OutlineColor = Color3fromRGB(0, 0, 0)
+
+        if AimbotToggleCheck == true then
+            Aimbot.FOVSettings.Enabled = true
+            -- FOVCircle = Drawingnew("Circle")
+            -- FOVCircleOutline = Drawingnew("Circle")
+            -- Aimbot.FOVSettings.OutlineColor = Color3fromRGB(0, 0, 0)
+        end
     else
         Aimbot.Settings.Enabled = CurrentValue
+
+        if AimbotToggleCheck == false then
+            Aimbot.FOVSettings.Enabled = false
+        end
+
+        Aimbot.Exit()
     end
 end,
 })
-local Aimbot432 = Rage:CreateToggle({ Name = "AimToggle", CurrentValue = false, Flag = "AimToggle",  Callback = function(AimToggle) 
+local Aimbot432 = Rage:CreateToggle({ Name = "AimType Dif", CurrentValue = false, Flag = "AimToggle",  Callback = function(AimToggle) 
     CurrentValue = AimToggle
     if CurrentValue == true then
         Aimbot.Settings.Toggle = CurrentValue
@@ -564,18 +541,18 @@ local FOVTranny = Rage:CreateSlider({
         Aimbot.FOVSettings.Transparency = CurrentValue
     end,
 })
-local FOVCust = Rage:CreateColorPicker({ Name = "Main Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C327", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Color)
-        Aimbot.FOVSettings.Color = Color
-    end
-})
-local FOVCust2 = Rage:CreateColorPicker({ Name = "Locked Color", Color = Color3.fromRGB(255,255,255),
-    Flag = "C328", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Color)
-        Aimbot.FOVSettings.LockedColor = Color
-    end
-})
+-- local FOVCust = Rage:CreateColorPicker({ Name = "Main Color", Color = Color3.fromRGB(255,255,255),
+--     Flag = "C327", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+--     Callback = function(Color)
+--         Aimbot.FOVSettings.Color = Color
+--     end
+-- })
+-- local FOVCust2 = Rage:CreateColorPicker({ Name = "Locked Color", Color = Color3.fromRGB(255,255,255),
+--     Flag = "C328", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+--     Callback = function(Color)
+--         Aimbot.FOVSettings.LockedColor = Color
+--     end
+-- })
 local Label = Rage:CreateLabel("ETC")
 local EpicHax = Rage:CreateButton({
     Name = "Load EpicHax (Aimbot SilentAim)",
@@ -1145,12 +1122,12 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
      },
      })
 
-    PreviousPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    PreviousPosition = player.Character.HumanoidRootPart.CFrame
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
 	game.Players.LocalPlayer.CharacterAdded:Wait()
 	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = PreviousPosition
+	player.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
 -- // LocalPlayer
@@ -1212,7 +1189,7 @@ local AATog = AntiAim:CreateToggle({
 		if CurrentValue then
 			spin()
 		else
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Spinning:Destroy()
+			player.Character.HumanoidRootPart.Spinning:Destroy()
 		end
 	end,
 })
