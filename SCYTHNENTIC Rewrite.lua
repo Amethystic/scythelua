@@ -12,15 +12,16 @@ end
 if IsValyse then
     print('VAYLSE USER????????? My pussy is throb.................')
     print("loading...")
-    wait(3)
+    repeat wait() until game:IsLoaded()
 else
     print('your not vaylse......... yorr on '.. getexecutorname().. ', no crazy hack for you.........................')
     print("loading anyways...")
-    wait(3)
+    repeat wait() until game:IsLoaded()
 end
 -- ... and so on
 getgenv().IsValyse = function() return true end
 local Username = game:GetService("Players").LocalPlayer.DisplayName
+local RunService = game.RunService
 local HttpService = game:GetService("HttpService")
 local UIS = game:GetService("UserInputService")
 local Namecall
@@ -31,9 +32,9 @@ local p = game:GetService("Players").LocalPlayer
 local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
 local Click = tick()
-local char = game:GetService("Players").LocalPlayer.Character or nil
+local char = game.Players.LocalPlayer.Character or nil
 local humanoid = char.Humanoid
-local HumanoidRoot = char.Humanoid
+local HumanoidRoot = player.Character.HumanoidRootPart
 local Action = false
 local ExecName = getexecutorname()
 local SaveLoadName = "Config"
@@ -59,16 +60,53 @@ local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Sp
 
 -- // Prior Functionality \\ --
 function Crash()
-    game:GetService("CoreGui").PurchasePrompt.Enabled = false
-_G.Lag = true
-while _G.Lag do
-for i,v in pairs(workspace:GetDescendants()) do
-			if v:IsA("ClickDetector") then
-				fireclickdetector(v)
-			end
-end
-		wait(1)
-		end
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+            wait(0.5)
+            char.HumanoidRootPart.Anchored = true
+        end
+
+        while wait(1.5) do --// don't change it's the best
+            game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+            local function getmaxvalue(val)
+               local mainvalueifonetable = 499999
+               if type(val) ~= "number" then return nil end
+               local calculateperfectval = (mainvalueifonetable/(val+2))
+               return calculateperfectval
+            end
+             
+            local function bomb(tableincrease, tries)
+            local maintable = {}
+            local spammedtable = {}
+             
+            table.insert(spammedtable, {})
+            z = spammedtable[1]
+             
+            for i = 1, tableincrease do
+                local tableins = {}
+                table.insert(z, tableins)
+                z = tableins
+            end
+             
+            local calculatemax = getmaxvalue(tableincrease)
+            local maximum
+             
+            if calculatemax then
+                maximum = calculatemax
+            else
+                maximum = 999999
+            end
+             
+            for i = 1, maximum do
+                table.insert(maintable, spammedtable)
+            end
+             
+            for i = 1, tries do
+                game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+            end
+        end
+    bomb(285, 3) --// change values if client crashes
+    end
 end
 
 function spin()
@@ -353,25 +391,24 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
         Aimbot.Load()
         AimbotToggleCheck = true
 
-        Aimbot.Settings.Enabled = CurrentValue
-        Aimbot.Settings.LockMode = 1
-        Aimbot.Settings.LockPart = HumanoidRoot
-        Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
-        Aimbot.Settings.Sensitivity2 = 3
-
         if AimbotToggleCheck == true then
             Aimbot.FOVSettings.Enabled = true
+            Aimbot.Settings.Enabled = CurrentValue
+            Aimbot.Settings.LockMode = 1
+            Aimbot.Settings.LockPart = HumanoidRoot
+            Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
+            Aimbot.Settings.Sensitivity2 = 3
             -- FOVCircle = Drawingnew("Circle")
             -- FOVCircleOutline = Drawingnew("Circle")
             -- Aimbot.FOVSettings.OutlineColor = Color3fromRGB(0, 0, 0)
         end
     else
-        Aimbot.Settings.Enabled = CurrentValue
         AimbotToggleCheck = false
 
         if AimbotToggleCheck == false then
+            Aimbot.Settings.Enabled = CurrentValue
             Aimbot.FOVSettings.Enabled = false
-            Aimbot.Exit()
+            -- Aimbot.Exit()
         end
     end
 end,
