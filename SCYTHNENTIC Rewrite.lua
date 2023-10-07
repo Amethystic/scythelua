@@ -35,7 +35,6 @@ local ts = game:GetService("TeleportService")
 local Click = tick()
 local char = game.Players.LocalPlayer.Character or nil
 local humanoid = char.Humanoid
-local HumanoidRoot = player.Character.HumanoidRootPart
 local Action = false
 local ExecName = getexecutorname()
 local SaveLoadName = "Config"
