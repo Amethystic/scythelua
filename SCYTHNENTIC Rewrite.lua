@@ -13,12 +13,13 @@ end
 if IsValyse then
     print('VAYLSE USER????????? My pussy is throb.................')
     print("loading...")
-    repeat wait() until game:IsLoaded()
+    repeat wait() print("waiting for characther") until game:IsLoaded()
 else
     print('your not vaylse......... yorr on '.. getexecutorname().. ', no crazy hack for you.........................')
     print("loading anyways...")
-    repeat wait() until game:IsLoaded()
+    repeat wait() print("waiting for characther") until game:IsLoaded()
 end
+
 -- ... and so on
 getgenv().IsValyse = function() return true end
 local Username = game:GetService("Players").LocalPlayer.DisplayName
@@ -34,7 +35,7 @@ local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
 local Click = tick()
 local char = game.Players.LocalPlayer.Character or nil
-local humanoid = char.Humanoid
+local humanoid = char.Humanoid or nil
 local Action = false
 local ExecName = getexecutorname()
 local SaveLoadName = "Config"
@@ -54,8 +55,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
-local version = "Version 3.5 | REBIRTH REWRITE"
-local Message = "+2 games\n+ Added Built-In AimbotV3 Script\n+ Added Executor Specification\n~ Improved FPS Unlocker\n~ Copytoclip gameID\n~ Bugfix mania\n~ ETC"
+local version = "Version 3.6 | REBIRTH REWRITE"
+local Message = "+1 game"
 -- // ...
 
 -- // Prior Functionality \\ --
@@ -1666,7 +1667,7 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [6808416928] = "https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua", -- AIMBLOX
             [3956818381] = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua", -- ninjago
             [142823291] = "https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", -- MM2
-            [9559194006] = "https://pastebin.com/raw/5LtLLSFE", -- SE
+            [9559194006] = "https://github.com/Amethystic/SEXperiment-Script/releases/download/rel/SocialExpHaxx.lua", -- SE
             [6872265039] = "https://pastebin.com/raw/VGdXw3dQ", -- BW
             [8560631822] = "https://pastebin.com/raw/VGdXw3dQ", -- BW2
             [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
@@ -1674,6 +1675,7 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua", -- RaGDoLlEnGine
             [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua" -- war crimes
         }
+        
         if Games[game.PlaceId] then
             sound2 = Instance.new("Sound", Workspace)
             sound2.Parent = game.Workspace
