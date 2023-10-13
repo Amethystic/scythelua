@@ -33,7 +33,6 @@ local Players = game:GetService("Players")
 local p = game:GetService("Players").LocalPlayer
 local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
-local Click = tick()
 local char = game.Players.LocalPlayer.Character or nil
 local humanoid = char.Humanoid or nil
 local Action = false
@@ -55,8 +54,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
-local version = "Version 3.6 | REBIRTH REWRITE"
-local Message = "+1 game"
+local version = "Version 3.7 | REBIRTH REWRITE"
+local Message = "+ Added Aimbot Hithox Selection (Testing)\n+ Added KemonoTagSpammer\n+ Code Improvement"
 -- // ...
 
 -- // Prior Functionality \\ --
@@ -235,7 +234,7 @@ local NP2C = Rage:CreateButton({
          })
     end,
 })
-local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem)", CurrentValue = false, Flag = "C432S",  Callback = function(ChatSpammerToggle2) 
+local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem)", CurrentValue = false, Flag = "C432532S",  Callback = function(ChatSpammerToggle2) 
     CurrentValue = ChatSpammerToggle2
 
     getgenv().spammess = {
@@ -337,7 +336,7 @@ local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
-        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n"
+        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
     }
 
     while CurrentValue and wait() do
@@ -345,6 +344,56 @@ local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem
         local message = getgenv().spammess[randomIndex]
         game.TextChatService.TextChannels.RBXGeneral:SendAsync(message)
         print(message)
+    end
+end,
+})
+local ChatSpammer7 = Rage:CreateToggle({ Name = "Chat - KemonoSpammer (Newer RBXSystem)", CurrentValue = false, Flag = "C42456332S",  Callback = function(ChatSpammerToggle7) 
+    CurrentValue = ChatSpammerToggle7
+
+    getgenv().spammess = {
+        "[=== kEm+nohOoks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemxnohOxks.c== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEm+nohooks.=== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoho======= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmon========== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE============= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== =============== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE-============ ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOn|========= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoh0oks.*== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.cO= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnxhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    }
+    local currentIndex = 1
+
+    while CurrentValue and wait() do
+        local message = getgenv().spammess[currentIndex]
+        game.TextChatService.TextChannels.RBXGeneral:SendAsync(message)
+        print(message)
+        
+        currentIndex = currentIndex + 1
+        
+        if currentIndex > #getgenv().spammess then
+            currentIndex = 1
+        end
     end
 end,
 })
@@ -408,7 +457,7 @@ local NPC = Rage:CreateButton({
          })
     end,
 })
-local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem)", CurrentValue = false, Flag = "CS",  Callback = function(ChatSpammerToggle) 
+local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem)", CurrentValue = false, Flag = "C3S",  Callback = function(ChatSpammerToggle) 
     CurrentValue = ChatSpammerToggle
 
     getgenv().spammess = {
@@ -510,7 +559,7 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
         "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
-        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n"
+        "\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n\n\n\n\n\n\n\n\n\n\n\nkemonohooks\n\n",
     }
 
     while CurrentValue and wait() do
@@ -518,6 +567,56 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem
         local message = getgenv().spammess[randomIndex]
         game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
         print(message)
+    end
+end,
+})
+local ChatSpammer8 = Rage:CreateToggle({ Name = "Chat - KemonoSpammer (Older ChatSystem)", CurrentValue = false, Flag = "452dfs",  Callback = function(ChatSpammerToggle8) 
+    CurrentValue = ChatSpammerToggle8
+
+    getgenv().spammess = {
+        "[=== kEm+nohOoks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemxnohOxks.c== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEm+nohooks.=== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoho======= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmon========== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE============= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== =============== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE-============ ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOn|========= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoh0oks.*== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.cO= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnxhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    }
+    local currentIndex = 1
+
+    while CurrentValue and wait() do
+        local message = getgenv().spammess[currentIndex]
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+        print(message)
+        
+        currentIndex = currentIndex + 1
+        
+        if currentIndex > #getgenv().spammess then
+            currentIndex = 1
+        end
     end
 end,
 })
@@ -568,7 +667,6 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
             Aimbot.FOVSettings.Enabled = true
             Aimbot.Settings.Enabled = true
             Aimbot.Settings.LockMode = 1
-            Aimbot.Settings.LockPart = "HumanoidRootPart"
             Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
             Aimbot.Settings.Sensitivity2 = 3
             Aimbot.FOVSettings.Thickness = 0
@@ -582,6 +680,46 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
         end
     end
 end,
+})
+local ABHithoxSettings = Rage:CreateDropdown({
+    Name = "Select Hitbox (Might be kinda funky Idk mane)",
+    Options = {"Head","Torso","Left Arm","Right Arm","Left Leg","Right Leg","UpperTorso","RightLowerArm","LeftLowerArm","LeftLowerLeg","RightLowerLeg","HumanoidRootPart"},
+    CurrentOption = {"HumanoidRootPart"},
+    Callback = function(Option)
+        if Option[1] == "Head" then 
+            Option = 1 
+
+        -- R6
+        elseif Option[1] == "Torso" then
+            Option = 2
+        elseif Option[1] == "Left Arm" then
+            Option = 3
+        elseif Option[1] == "Right Arm" then
+            Option = 4
+        elseif Option[1] == "Left Leg" then
+            Option = 5
+        elseif Option[1] == "Right Leg" then
+            Option = 6
+
+        -- R15
+        elseif Option[1] == "UpperTorso" then
+            Option = 7
+        elseif Option[1] == "RightLowerArm" then
+            Option = 8
+        elseif Option[1] == "LeftLowerArm" then
+            Option = 9
+        elseif Option[1] == "LeftLowerLeg" then
+            Option = 10
+        elseif Option[1] == "RightLowerLeg" then
+            Option = 11
+
+        -- Humanoid
+        elseif Option[1] == "HumanoidRootPart" then
+            Option = 12
+        end
+
+        Aimbot.Settings.LockPart = Option
+    end
 })
 local Aimbot432 = Rage:CreateToggle({ Name = "AimType Dif", CurrentValue = false, Flag = "AimToggle",  Callback = function(AimToggle) 
     CurrentValue = AimToggle
@@ -1129,13 +1267,13 @@ local CameraSlider = Visuals:CreateSlider({
     CurrentValue = 16,
     Flag = "CSlider34",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.CameraMaxZoomDistance = CurrentValue
+        player.CameraMaxZoomDistance = CurrentValue
     end,
 })
 local CamMode = Visuals:CreateToggle({ Name = "Camera Mode", CurrentValue = false, Flag = "CMMMMMM",  Callback = function(CamMode) 
     enabled = CamMode
     if enabled == true then
-        game.Players.LocalPlayer.DevCameraOcclusionMode = "Invisicam"
+        player.DevCameraOcclusionMode = "Invisicam"
 
         Rayfield:Notify({
             Title = "CamMode",
@@ -1152,7 +1290,7 @@ local CamMode = Visuals:CreateToggle({ Name = "Camera Mode", CurrentValue = fals
          },
          })
     else
-        game.Players.LocalPlayer.DevCameraOcclusionMode = "Zoom"
+        player.DevCameraOcclusionMode = "Zoom"
 
         Rayfield:Notify({
             Title = "CamMode",
@@ -1174,7 +1312,7 @@ end,
 -- // Visuals
 
 -- // LocalPlayer
-local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCT",  Callback = function(NCToggle) 
+local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip / Anti-Fling btw", CurrentValue = false, Flag = "NCT",  Callback = function(NCToggle) 
     CurrentValue = NCToggle
     
     if CurrentValue == true then
@@ -1216,13 +1354,12 @@ end,
 
 local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
    Callback = function()
-    player1=game.Players.LocalPlayer
+    player1=player
     q=Instance.new('HopperBin', player1.Backpack)
     q.Name = 'Click Teleport'
     bin = q
 
     function teleportPlayer(pos)
-        local player = game.Players.LocalPlayer
         if player == nil or player.Character == nil then return end
         player.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x, pos.y + 7, pos.z))
     end
@@ -1233,7 +1370,6 @@ local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
         return
     end
     
-    local player = game.Players.LocalPlayer
     if player == nil then return end
     enabled = false
     local cf = mouse.Hit
@@ -1324,10 +1460,10 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
      })
 
     PreviousPosition = player.Character.HumanoidRootPart.CFrame
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
-	game.Players.LocalPlayer.CharacterAdded:Wait()
-	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	player.Character.Humanoid.Health = 0
+	if player.Character:FindFirstChild("Head") then player.Character.Head:Destroy() end
+	player.CharacterAdded:Wait()
+	player.Character:WaitForChild("HumanoidRootPart")
 	player.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
@@ -1342,7 +1478,7 @@ local SpeedSlider = Movement:CreateSlider({
     CurrentValue = 16,
     Flag = "SPEEDl",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = CurrentValue
+        player.Character.Humanoid.WalkSpeed = CurrentValue
     end,
 })
 
@@ -1354,7 +1490,7 @@ local JumpSlider = Movement:CreateSlider({
     CurrentValue = 50,
     Flag = "JPS",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = CurrentValue
+        player.Character.Humanoid.JumpPower = CurrentValue
     end,
 })
 
@@ -1406,10 +1542,10 @@ local AASlider = AntiAim:CreateSlider({
 	end,
 })
 local Jitter = AntiAim:CreateButton({
-    Name = "Load Jitter",
+    Name = "Load Jitter / Wireless Flinger",
     Callback = function()
         Rayfield:Notify({
-            Title = "AA - Jitter",
+            Title = "AA - Jitter / Wireless Flinger",
             Content = "Enabled",
             Duration = 6.5,
             Image = 12995567709,
@@ -1874,5 +2010,6 @@ while wait() do
     FOVSides:Set(Aimbot.FOVSettings.NumSides)
     FOVCust:Set(Aimbot.FOVSettings.Color)
     FOVCust2:Set(Aimbot.FOVSettings.LockedColor)
+    ABHithoxSettings:Set(Aimbot.Settings.LockPart)
 end
 -- // Functionality \\ --
