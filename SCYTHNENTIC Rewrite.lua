@@ -1267,13 +1267,13 @@ local CameraSlider = Visuals:CreateSlider({
     CurrentValue = 16,
     Flag = "CSlider34",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.CameraMaxZoomDistance = CurrentValue
+        player.CameraMaxZoomDistance = CurrentValue
     end,
 })
 local CamMode = Visuals:CreateToggle({ Name = "Camera Mode", CurrentValue = false, Flag = "CMMMMMM",  Callback = function(CamMode) 
     enabled = CamMode
     if enabled == true then
-        game.Players.LocalPlayer.DevCameraOcclusionMode = "Invisicam"
+        player.DevCameraOcclusionMode = "Invisicam"
 
         Rayfield:Notify({
             Title = "CamMode",
@@ -1290,7 +1290,7 @@ local CamMode = Visuals:CreateToggle({ Name = "Camera Mode", CurrentValue = fals
          },
          })
     else
-        game.Players.LocalPlayer.DevCameraOcclusionMode = "Zoom"
+        player.DevCameraOcclusionMode = "Zoom"
 
         Rayfield:Notify({
             Title = "CamMode",
@@ -1354,13 +1354,12 @@ end,
 
 local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
    Callback = function()
-    player1=game.Players.LocalPlayer
+    player1=player
     q=Instance.new('HopperBin', player1.Backpack)
     q.Name = 'Click Teleport'
     bin = q
 
     function teleportPlayer(pos)
-        local player = game.Players.LocalPlayer
         if player == nil or player.Character == nil then return end
         player.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x, pos.y + 7, pos.z))
     end
@@ -1371,7 +1370,6 @@ local CTP = LocalPlayer:CreateButton({ Name = "Grant ClickTP",
         return
     end
     
-    local player = game.Players.LocalPlayer
     if player == nil then return end
     enabled = false
     local cf = mouse.Hit
@@ -1462,10 +1460,10 @@ local Reset = LocalPlayer:CreateButton({ Name = "Reset",
      })
 
     PreviousPosition = player.Character.HumanoidRootPart.CFrame
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
-	if game.Players.LocalPlayer.Character:FindFirstChild("Head") then game.Players.LocalPlayer.Character.Head:Destroy() end
-	game.Players.LocalPlayer.CharacterAdded:Wait()
-	game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	player.Character.Humanoid.Health = 0
+	if player.Character:FindFirstChild("Head") then player.Character.Head:Destroy() end
+	player.CharacterAdded:Wait()
+	player.Character:WaitForChild("HumanoidRootPart")
 	player.Character.HumanoidRootPart.CFrame = PreviousPosition
 end,
 })
@@ -1480,7 +1478,7 @@ local SpeedSlider = Movement:CreateSlider({
     CurrentValue = 16,
     Flag = "SPEEDl",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = CurrentValue
+        player.Character.Humanoid.WalkSpeed = CurrentValue
     end,
 })
 
@@ -1492,7 +1490,7 @@ local JumpSlider = Movement:CreateSlider({
     CurrentValue = 50,
     Flag = "JPS",
     Callback = function(CurrentValue)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = CurrentValue
+        player.Character.Humanoid.JumpPower = CurrentValue
     end,
 })
 
