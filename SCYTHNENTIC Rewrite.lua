@@ -33,7 +33,6 @@ local Players = game:GetService("Players")
 local p = game:GetService("Players").LocalPlayer
 local Spin = Instance.new("BodyAngularVelocity")
 local ts = game:GetService("TeleportService")
-local Click = tick()
 local char = game.Players.LocalPlayer.Character or nil
 local humanoid = char.Humanoid or nil
 local Action = false
@@ -1313,7 +1312,7 @@ end,
 -- // Visuals
 
 -- // LocalPlayer
-local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip", CurrentValue = false, Flag = "NCT",  Callback = function(NCToggle) 
+local Noclip = LocalPlayer:CreateToggle({ Name = "Grant Noclip / Anti-Fling btw", CurrentValue = false, Flag = "NCT",  Callback = function(NCToggle) 
     CurrentValue = NCToggle
     
     if CurrentValue == true then
