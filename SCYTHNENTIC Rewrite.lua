@@ -55,7 +55,7 @@ local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
 local version = "Version 3.7 | REBIRTH REWRITE"
-local Message = "+ Added Aimbot Hithox Selection (Testing)\n+ Added KemonoTagSpammer"
+local Message = "+ Added Aimbot Hithox Selection (Testing)\n+ Added KemonoTagSpammer\n+ Code Improvement"
 -- // ...
 
 -- // Prior Functionality \\ --
