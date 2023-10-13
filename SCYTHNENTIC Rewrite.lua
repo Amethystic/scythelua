@@ -1545,10 +1545,10 @@ local AASlider = AntiAim:CreateSlider({
 	end,
 })
 local Jitter = AntiAim:CreateButton({
-    Name = "Load Jitter",
+    Name = "Load Jitter / Wireless Flinger",
     Callback = function()
         Rayfield:Notify({
-            Title = "AA - Jitter",
+            Title = "AA - Jitter / Wireless Flinger",
             Content = "Enabled",
             Duration = 6.5,
             Image = 12995567709,
