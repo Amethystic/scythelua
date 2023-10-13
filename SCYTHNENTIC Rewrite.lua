@@ -55,8 +55,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
-local version = "Version 3.6 | REBIRTH REWRITE"
-local Message = "+1 game"
+local version = "Version 3.7 | REBIRTH REWRITE"
+local Message = "+ Added Aimbot Hithox Selection (Testing)\n+ Added KemonoTagSpammer"
 -- // ...
 
 -- // Prior Functionality \\ --
@@ -235,7 +235,7 @@ local NP2C = Rage:CreateButton({
          })
     end,
 })
-local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem)", CurrentValue = false, Flag = "C432S",  Callback = function(ChatSpammerToggle2) 
+local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem)", CurrentValue = false, Flag = "C432532S",  Callback = function(ChatSpammerToggle2) 
     CurrentValue = ChatSpammerToggle2
 
     getgenv().spammess = {
@@ -348,6 +348,56 @@ local ChatSpammer2 = Rage:CreateToggle({ Name = "Chat - Spammer (Newer RBXSystem
     end
 end,
 })
+local ChatSpammer7 = Rage:CreateToggle({ Name = "Chat - KemonoSpammer (Newer RBXSystem)", CurrentValue = false, Flag = "C42456332S",  Callback = function(ChatSpammerToggle7) 
+    CurrentValue = ChatSpammerToggle7
+
+    getgenv().spammess = {
+        "[=== kEm+nohOoks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemxnohOxks.c== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEm+nohooks.=== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoho======= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmon========== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE============= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== =============== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE-============ ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOn|========= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoh0oks.*== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.cO= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnxhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    }
+    local currentIndex = 1
+
+    while CurrentValue and wait() do
+        local message = getgenv().spammess[currentIndex]
+        game.TextChatService.TextChannels.RBXGeneral:SendAsync(message)
+        print(message)
+        
+        currentIndex = currentIndex + 1
+        
+        if currentIndex > #getgenv().spammess then
+            currentIndex = 1
+        end
+    end
+end,
+})
 local RageLabel2 = Rage:CreateLabel("Older ChatSystem Related")
 local NPC = Rage:CreateButton({
     Name = "Chat - Become an NPC (Older ChatSystem)",
@@ -408,7 +458,7 @@ local NPC = Rage:CreateButton({
          })
     end,
 })
-local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem)", CurrentValue = false, Flag = "CS",  Callback = function(ChatSpammerToggle) 
+local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem)", CurrentValue = false, Flag = "C3S",  Callback = function(ChatSpammerToggle) 
     CurrentValue = ChatSpammerToggle
 
     getgenv().spammess = {
@@ -521,6 +571,56 @@ local ChatSpammer = Rage:CreateToggle({ Name = "Chat - Spammer (Older ChatSystem
     end
 end,
 })
+local ChatSpammer8 = Rage:CreateToggle({ Name = "Chat - KemonoSpammer (Older ChatSystem)", CurrentValue = false, Flag = "452dfs",  Callback = function(ChatSpammerToggle8) 
+    CurrentValue = ChatSpammerToggle8
+
+    getgenv().spammess = {
+        "[=== kEm+nohOoks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemxnohOxks.c== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEm+nohooks.=== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoho======= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmon========== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE============= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== =============== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kE-============ ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOn|========= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmOnOho/====== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kEmonoh0oks.*== ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.cO= ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnOhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "[=== kemOnxhoOks.c+m ===]",
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    }
+    local currentIndex = 1
+
+    while CurrentValue and wait() do
+        local message = getgenv().spammess[currentIndex]
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+        print(message)
+        
+        currentIndex = currentIndex + 1
+        
+        if currentIndex > #getgenv().spammess then
+            currentIndex = 1
+        end
+    end
+end,
+})
 local RageLabel2 = Rage:CreateLabel("Script Related")
 local Crasher = Rage:CreateButton({ Name = "Crasher",
    Callback = function()
@@ -568,7 +668,6 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
             Aimbot.FOVSettings.Enabled = true
             Aimbot.Settings.Enabled = true
             Aimbot.Settings.LockMode = 1
-            Aimbot.Settings.LockPart = "HumanoidRootPart"
             Aimbot.Settings.TriggerKey = Enum.UserInputType.MouseButton2
             Aimbot.Settings.Sensitivity2 = 3
             Aimbot.FOVSettings.Thickness = 0
@@ -582,6 +681,46 @@ local Aimbot324 = Rage:CreateToggle({ Name = "Toggle", CurrentValue = false, Fla
         end
     end
 end,
+})
+local ABHithoxSettings = Rage:CreateDropdown({
+    Name = "Select Hitbox (Might be kinda funky Idk mane)",
+    Options = {"Head","Torso","Left Arm","Right Arm","Left Leg","Right Leg","UpperTorso","RightLowerArm","LeftLowerArm","LeftLowerLeg","RightLowerLeg","HumanoidRootPart"},
+    CurrentOption = {"HumanoidRootPart"},
+    Callback = function(Option)
+        if Option[1] == "Head" then 
+            Option = 1 
+
+        -- R6
+        elseif Option[1] == "Torso" then
+            Option = 2
+        elseif Option[1] == "Left Arm" then
+            Option = 3
+        elseif Option[1] == "Right Arm" then
+            Option = 4
+        elseif Option[1] == "Left Leg" then
+            Option = 5
+        elseif Option[1] == "Right Leg" then
+            Option = 6
+
+        -- R15
+        elseif Option[1] == "UpperTorso" then
+            Option = 7
+        elseif Option[1] == "RightLowerArm" then
+            Option = 8
+        elseif Option[1] == "LeftLowerArm" then
+            Option = 9
+        elseif Option[1] == "LeftLowerLeg" then
+            Option = 10
+        elseif Option[1] == "RightLowerLeg" then
+            Option = 11
+
+        -- Humanoid
+        elseif Option[1] == "HumanoidRootPart" then
+            Option = 12
+        end
+
+        Aimbot.Settings.LockPart = Option
+    end
 })
 local Aimbot432 = Rage:CreateToggle({ Name = "AimType Dif", CurrentValue = false, Flag = "AimToggle",  Callback = function(AimToggle) 
     CurrentValue = AimToggle
@@ -1874,5 +2013,6 @@ while wait() do
     FOVSides:Set(Aimbot.FOVSettings.NumSides)
     FOVCust:Set(Aimbot.FOVSettings.Color)
     FOVCust2:Set(Aimbot.FOVSettings.LockedColor)
+    ABHithoxSettings:Set(Aimbot.Settings.LockPart)
 end
 -- // Functionality \\ --
