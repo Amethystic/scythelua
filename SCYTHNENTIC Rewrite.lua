@@ -54,11 +54,15 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Amet
 local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
-local version = "Version 3.7 | REBIRTH REWRITE"
-local Message = "+ Added Aimbot Hithox Selection (Testing)\n+ Added KemonoTagSpammer\n+ Code Improvement"
+local version = "Version 3.8 | REBIRTH REWRITE"
+local Message = "+ 1 game\n+ CMD-X"
 -- // ...
 
 -- // Prior Functionality \\ --
+function Reinject()
+    loadstring(game:HttpGet"https://scythe.clan.su/SCYTHNENTIC.lua")()
+end
+
 function Crash()
         if char then
             char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
@@ -1809,7 +1813,8 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [606849621] = "https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua", -- JAILBREAK
             [47324] = "https://pastebin.com/raw/WWGqP02A", -- SVSM D
             [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua", -- RaGDoLlEnGine
-            [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua" -- war crimes
+            [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua", -- war crimes
+            [13772394625] = "https://pastebin.com/raw/S8Snyerb" -- balls w/ Nova
         }
         
         if Games[game.PlaceId] then
@@ -1828,6 +1833,15 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             sound2.Volume = 10
             sound2:Play() 
         end
+    end,
+})
+
+local CMDX = Others:CreateButton({
+    Name = "Load CMD-X",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source'),true))();
+        wait(3)
+        Reinject()
     end,
 })
 
@@ -1873,6 +1887,7 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = tr
 
     if CurrentValue == true then
         setfpscap(9999)
+
         if IsValyse == true then
             setfpsmax(9999)
         end
@@ -1892,6 +1907,7 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = tr
          })
     else
         setfpscap(60)
+
         if IsValyse == true then
             setfpsmax(60)
         end
@@ -1979,17 +1995,13 @@ local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content 
 local MSGBoard = Main:CreateParagraph({Title = "- Update Log -", Content = Message})
 local ExecutorMsg = Main:CreateParagraph({Title = "Executed on: ", Content = ExecName})
 local Discord = Main:CreateButton({ Name = "Join us",
-   Callback = function()
+    Callback = function()
     http.request({ Url = "http://127.0.0.1:6463/rpc?v=1", Method = "POST", Headers = {["Content-Type"] = "application/json", ["origin"] = "https://discord.com", },
         Body = HttpService:JSONEncode({ ["args"] = { ["code"] = "XVb8MjGUcp", }, ["cmd"] = "INVITE_BROWSER", ["nonce"] = "." })
     })
 end,
 })
 -- // MainPage
-
--- // Api End \\ --
-wait(3.5)
-sound:Destroy()
 
 -- // Functionality \\ --
 while wait() do
@@ -2013,3 +2025,7 @@ while wait() do
     ABHithoxSettings:Set(Aimbot.Settings.LockPart)
 end
 -- // Functionality \\ --
+
+-- // Api End \\ --
+wait(3.5)
+sound:Destroy()
