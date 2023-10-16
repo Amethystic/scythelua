@@ -55,10 +55,14 @@ local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
 local cheatname = "Scythnentic"
 local version = "Version 3.8 | REBIRTH REWRITE"
-local Message = "+ 1 game"
+local Message = "+ 1 game\n+ CMD-X"
 -- // ...
 
 -- // Prior Functionality \\ --
+function Reinject()
+    loadstring(game:HttpGet"https://scythe.clan.su/SCYTHNENTIC.lua")()
+end
+
 function Crash()
         if char then
             char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
@@ -1832,6 +1836,15 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
     end,
 })
 
+local CMDX = Others:CreateButton({
+    Name = "Load CMD-X",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source'),true))();
+        wait(3)
+        Reinject()
+    end,
+})
+
 local DomainX = Others:CreateButton({
     Name = "Load Domain-X",
     Callback = function()
@@ -1894,7 +1907,7 @@ local FPSUncapper = Others:CreateToggle({ Name = "Unlock FPS", CurrentValue = tr
          })
     else
         setfpscap(60)
-        
+
         if IsValyse == true then
             setfpsmax(60)
         end
