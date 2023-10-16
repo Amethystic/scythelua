@@ -1814,7 +1814,7 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [47324] = "https://pastebin.com/raw/WWGqP02A", -- SVSM D
             [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua", -- RaGDoLlEnGine
             [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua", -- war crimes
-            [13772394625] = "https://pastebin.com/raw/wUVwedZe" -- balls
+            [13772394625] = "https://raw.githubusercontent.com/Amethystic/balls-battler-script/main/source" -- balls
         }
         
         if Games[game.PlaceId] then
@@ -1995,17 +1995,13 @@ local UserLoginPara = Main:CreateParagraph({Title = "- Logged in as -", Content 
 local MSGBoard = Main:CreateParagraph({Title = "- Update Log -", Content = Message})
 local ExecutorMsg = Main:CreateParagraph({Title = "Executed on: ", Content = ExecName})
 local Discord = Main:CreateButton({ Name = "Join us",
-   Callback = function()
+    Callback = function()
     http.request({ Url = "http://127.0.0.1:6463/rpc?v=1", Method = "POST", Headers = {["Content-Type"] = "application/json", ["origin"] = "https://discord.com", },
         Body = HttpService:JSONEncode({ ["args"] = { ["code"] = "XVb8MjGUcp", }, ["cmd"] = "INVITE_BROWSER", ["nonce"] = "." })
     })
 end,
 })
 -- // MainPage
-
--- // Api End \\ --
-wait(3.5)
-sound:Destroy()
 
 -- // Functionality \\ --
 while wait() do
@@ -2029,3 +2025,7 @@ while wait() do
     ABHithoxSettings:Set(Aimbot.Settings.LockPart)
 end
 -- // Functionality \\ --
+
+-- // Api End \\ --
+wait(3.5)
+sound:Destroy()
