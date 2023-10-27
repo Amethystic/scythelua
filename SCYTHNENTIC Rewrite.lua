@@ -1814,7 +1814,8 @@ local InjectScript = Others:CreateButton({ Name = "Inject Supported Script",
             [47324] = "https://pastebin.com/raw/WWGqP02A", -- SVSM D
             [9848789324] = "https://raw.githubusercontent.com/i4mitty/MysteryHub/main/MysteryHub%20-%20Ragdoll%20Engine.lua", -- RaGDoLlEnGine
             [31490825] = "https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua", -- war crimes
-            [13772394625] = "https://pastebin.com/raw/S8Snyerb" -- balls w/ Nova
+            [13772394625] = "https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua", -- balls
+            [14915220621] = "https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua" -- balls
         }
         
         if Games[game.PlaceId] then
