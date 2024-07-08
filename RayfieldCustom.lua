@@ -12,7 +12,7 @@ iRay  | Programming
 
 local Release = "Custom Beta 8"
 local NotificationDuration = 2.5
-local RayfieldFolder = "athena.software"
+local RayfieldFolder = "meowijuana.lol"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".cfg"
 
