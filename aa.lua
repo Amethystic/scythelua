@@ -10,7 +10,7 @@
 
 
 --]]
-
+local P1000ToggleKey = "x"
 --// Services
 checkcaller = checkcaller
 newcclosure = newcclosure
