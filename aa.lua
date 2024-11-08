@@ -1,6 +1,3 @@
-local P1000ToggleKey = "x" -- Change that to whatever keybind: "t"
-
-
 --[[
 
 	Standing still will trick the hitbox, you won't be able to get hit.
