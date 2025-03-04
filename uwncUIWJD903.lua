@@ -1,5 +1,5 @@
 getgenv().StarterGUI = game:GetService("StarterGui")
-function AntiFallDmg(Value)
+function DatAnticheatToggleForThisGameLOL(Value)
         if Value == true then
             if DeezAC then
                 DeezAC:Disconnect()
@@ -24,4 +24,4 @@ function AntiFallDmg(Value)
         end
     end
 
-    AntiFallDmg(true)
+    DatAnticheatToggleForThisGameLOL(true)
