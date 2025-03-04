@@ -1,4 +1,4 @@
-getgenv().starterCharacterScripts = game:GetService("StarterGui")
+getgenv().StarterGUI = game:GetService("StarterGui")
 function AntiFallDmg(Value)
         if Value == true then
             if fd then
@@ -6,10 +6,10 @@ function AntiFallDmg(Value)
                 fd = nil
             end
             fd = RunService.RenderStepped:Connect(function()
-                local fallDamageScriptInStarter = starterCharacterScripts:FindFirstChild("KnightmareAntiCheatDebugGUI")
+                local AC = StarterGUI:FindFirstChild("KnightmareAntiCheatDebugGUI")
     
-                if fallDamageScriptInStarter then
-                    fallDamageScriptInStarter:Destroy()
+                if AC then
+                    AC:Destroy()
                     print("KnightmareAntiCheatDebugGUI Script removed from StarterGUI.")
                 end
     
