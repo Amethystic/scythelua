@@ -1,11 +1,11 @@
 getgenv().StarterGUI = game:GetService("StarterGui")
 function AntiFallDmg(Value)
         if Value == true then
-            if fd then
-                fd:Disconnect()
-                fd = nil
+            if DeezAC then
+                DeezAC:Disconnect()
+                DeezAC = nil
             end
-            fd = RunService.RenderStepped:Connect(function()
+            DeezAC = RunService.RenderStepped:Connect(function()
                 local AC = StarterGUI:FindFirstChild("KnightmareAntiCheatDebugGUI")
     
                 if AC then
@@ -17,9 +17,9 @@ function AntiFallDmg(Value)
             end)
             print("Finding stupid fucking anticheat.")
         else
-            if fd then
-                fd:Disconnect()
-                fd = nil
+            if DeezAC then
+                DeezAC:Disconnect()
+                DeezAC = nil
             end
         end
     end
