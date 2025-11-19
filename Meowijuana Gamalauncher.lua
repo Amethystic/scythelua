@@ -41,7 +41,7 @@ games = {
     [7406004869] = "https://raw.githubusercontent.com/HackerooMan/HackerooOVRMenu/refs/heads/main/Code%20Stuffs", -- Oppressor VR
     [4924922222] = "https://raw.githubusercontent.com/ProjectSunterium/Project-Sunterium/refs/heads/main/Project%20Sunterium", -- Brookhaven RP
     [185655149] = "https://luxhub.cc/script.lua", -- Bloxburg
-    [13076380114] = "https://gist.githubusercontent.com/Dan7anaan/2a43ab4365ee1de7aadef9d58800b00f/raw/ffa3d2bb91b9389139dd25ba3f40f33b13cd7fbf/gistfile1.txt" -- HB
+    [13076380114] = "https://pastefy.app/uoKTNQ8J/raw" -- HB
 }
 
 if games[game.PlaceId] then
@@ -53,6 +53,7 @@ else
     print("Failed...") -- Text, Time
 
 end
+
 
 
 
