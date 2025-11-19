@@ -40,7 +40,8 @@ games = {
     [8737899170] = "https://raw.githubusercontent.com/mzkv/ps99/refs/heads/main/zapHub", -- Pet sim 99
     [7406004869] = "https://raw.githubusercontent.com/HackerooMan/HackerooOVRMenu/refs/heads/main/Code%20Stuffs", -- Oppressor VR
     [4924922222] = "https://raw.githubusercontent.com/ProjectSunterium/Project-Sunterium/refs/heads/main/Project%20Sunterium", -- Brookhaven RP
-    [185655149] = "https://luxhub.cc/script.lua" -- Bloxburg
+    [185655149] = "https://luxhub.cc/script.lua", -- Bloxburg
+    [13076380114] = "https://raw.githubusercontent.com/rivaINV/hbgs/refs/heads/main/heroes%20battlegroundss.txt" -- HB
 }
 
 if games[game.PlaceId] then
@@ -50,4 +51,5 @@ if games[game.PlaceId] then
 else
     wait(0.5)
     print("Failed...") -- Text, Time
+
 end
