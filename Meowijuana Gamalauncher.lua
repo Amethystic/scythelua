@@ -45,7 +45,7 @@ games = {
 }
 
 if games[game.PlaceId] then
-    loadstring(game:HttpGet(games[game.PlaceId]))()
+    loadstring(game:HttpGetAsync(games[game.PlaceId]))()
     wait(0.3)
     print("Loaded!") -- Text, Time
 else
@@ -53,4 +53,5 @@ else
     print("Failed...") -- Text, Time
 
 end
+
 
