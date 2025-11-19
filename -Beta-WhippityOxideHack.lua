@@ -4777,7 +4777,7 @@ local function PLVSMVWVRE_Menu()
     local MyButton = LeftGroupBox5:AddButton({
         Text = 'Load Supported Script',
         Func = function()
-            loadstring(game:HttpGet("https://catnip.at.ua/Meowijuana_Gamalauncher.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Amethystic/scythelua/refs/heads/main/Meowijuana%20Gamalauncher.lua"))()
         end,
         DoubleClick = false,
         Tooltip = 'This loads a script for this specific game'
@@ -6199,3 +6199,4 @@ end
 
 local success, errorMessage = hookedPcall(function() repeat task.wait() until game:IsLoaded() PlayAnimation() CallBuild() end)
 if success then print("✅ Initialized Build!") else error("🚨 Build Call Failed 2 Initialize: "..tostring(errorMessage)) end
+
