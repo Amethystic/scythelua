@@ -149,7 +149,7 @@ local function PLVSMVWVRE_Menu()
     local EventConnections = {}
     local KillCount = 0
     local OVERKillCount = 0
-    local blacklisted = {"AnnaBypasser", "SurpWare", "-net", "-gh", "/cmds", ".cmds", "/e", "-re", "CONTROLBOTZ!", "#", "[TOOL GIVER]", "BLOXDRO", "Bloxdro", "BLOXDROPE"}
+    local blacklisted = {"AnnaBypasser", "SurpWare", "-net", "-gh", "/cmds", ".cmds", "/e", "-re", "CONTROLBOTZ!", "#", "[TOOL GIVER]", "BLOXDRO", "Bloxdro", "BLOXDROPE", "BLOXDROPO"}
 
     -- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     -- |                                           SETTINGS                                              |
@@ -6199,6 +6199,7 @@ end
 
 local success, errorMessage = hookedPcall(function() repeat task.wait() until game:IsLoaded() PlayAnimation() CallBuild() end)
 if success then print("✅ Initialized Build!") else error("🚨 Build Call Failed 2 Initialize: "..tostring(errorMessage)) end
+
 
 
 
